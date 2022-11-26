@@ -1,0 +1,294 @@
+body {
+  background-color: #141518;
+  margin: 0;
+}
+
+header {
+  height: 100px;
+  width: 100%;
+  background-color: #1d1f25;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logo {
+  height: 90px;
+}
+
+.user {
+  height: 90px;
+  width: 400px;
+  /* background-color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.box {
+  height: 50px;
+  width: 50px;
+  background-color: black;
+}
+
+.mainContainer {
+  height: calc(100vh - 100px);
+  width: 100%;
+  display: flex;
+}
+
+.threadContainer {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #141518;
+}
+
+.threadNavContainer {
+  min-height: 50px;
+  width: 95%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.breadCrumbs {
+  height: 100%;
+  width: 63%;
+  background-color: #008968;
+  border-radius: 10px;
+}
+
+.searchBar {
+  height: 100%;
+  width: 32%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+.searchBarinput{
+  border: 0;
+  outline:none;
+  color: black;
+  width: 90%;
+  
+ }
+
+.searchBarLogo{
+  width: 10%;
+  font-size: larger;
+ 
+  background-color: #008968;
+  padding:20px 0px 20px 20px ;
+  
+  
+ }
+
+
+.threadContentContainer {
+  /* margin-top: 20px; */
+  height: 90%;
+  width: 95%;
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  align-items: center;
+  overflow-y: scroll;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.threadContentContainer::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+
+.threadContent {
+  width: 100%;
+  min-height: 100px;
+  margin: 20px 0px 20px 0px;
+  background-color: #1D1F25;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  justify-content:space-evenly;
+  
+
+}
+
+.thread-Image{
+  background-color: white;
+  min-height: 70%;
+  min-width: 80px;  
+  margin: 10px  10px 10px 30px;
+  border-radius: 50%;
+  
+}
+
+.threadTitle{ 
+  color: white;
+  font-size: large;
+  display: flex;
+  flex-direction:column;
+  padding: 20px;
+  width: calc(100% - 30%);
+}
+
+.threadDate{
+  background-color: white;
+  min-height: 70%;
+  min-width: 70px;  
+  margin: 10px  40px 30px 30px;
+  border-radius: 20%;
+}
+
+
+.rightContainer {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #141518;
+}
+
+.postThreadContainer {
+  min-height: 30%;
+  width: 90%;
+  background-color: #008968;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.postThreadContent {
+  height: 100%;
+}
+
+.h2Container {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.postThreadContent h2 {
+  margin: 10px;
+  background-color: #1d1f25;
+  font-size: small;
+  padding: 5px;
+  border-radius: 5px;
+  color: #ffff;
+}
+
+.category-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 20%;
+  width: 100%;
+}
+
+.selectCategory {
+  width: 40%;
+  font-size: x-small;
+  margin: 0px 5px 0px 10px;
+  border: none;
+  background-color: #282c38;
+  border-radius: 2px;
+  color: #ffff;
+}
+
+.titleInp {
+  width: 60%;
+  margin: 0px 10px 0px 10px;
+  border: none;
+  background-color: #282c38;
+  border-radius: 2px;
+  color: #ffff;
+}
+
+.titleInp::placeholder {
+  color: #FFFF;
+}
+
+.threadInpContainer {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.threadInp {
+  height: 90%;
+  width: 100%;
+  margin: 0px 10px 0px 10px;
+  resize: none;
+  min-height: 40px;
+  border-radius: 5px;
+  background-color: #282c38;
+  color: #ffff;
+  border: none;
+  padding: 5px;
+}
+
+.threadBtnContainer {
+  margin-top: 10px;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.postBtn {
+  margin-right: 10px;
+  width: 100px;
+  border: none;
+  border-radius: 3px;
+  background-color: #1d1f25;
+  color: #ffff;
+}
+
+.expandBtn {
+  margin-right: 10px;
+  width: 100px;
+  border: none;
+  border-radius: 3px;
+  background-color: #1d1f25;
+  color: #ffff;
+}
+
+
+
+
+
+.latestContainer {
+  height: 80%;
+  width: 90%;
+  background-color: #1D1F25;
+  border-radius: 10px;
+}
+
+.creatorContainer {
+  height: 300px;
+  width: 90%;
+  background-color: #008968;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* #1d1f25; */
