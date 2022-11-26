@@ -42,6 +42,7 @@ header {
   width: 70%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   background-color: #141518;
 }
@@ -64,9 +65,30 @@ header {
 .searchBar {
   height: 100%;
   width: 32%;
-  background-color: white;
   border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
 }
+.searchBarinput{
+  border: 0;
+  outline:none;
+  color: black;
+  width: 90%;
+  
+ }
+
+.searchBarLogo{
+  width: 10%;
+  font-size: larger;
+ 
+  background-color: #008968;
+  padding:20px 0px 20px 20px ;
+  
+  
+ }
+
 
 .threadContentContainer {
   /* margin-top: 20px; */
@@ -86,13 +108,50 @@ header {
   display: none;
 }
 
+
+
+
+
 .threadContent {
   width: 100%;
   min-height: 100px;
-  margin-top: 20px;
-  background-color: #1d1f25;
+  margin: 20px 0px 20px 0px;
+  background-color: #1D1F25;
   border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  justify-content:space-evenly;
+  
+
 }
+
+.thread-Image{
+  background-color: white;
+  min-height: 70%;
+  min-width: 80px;  
+  margin: 10px  10px 10px 30px;
+  border-radius: 50%;
+  
+}
+
+.threadTitle{ 
+  color: white;
+  font-size: large;
+  display: flex;
+  flex-direction:column;
+  padding: 20px;
+  width: calc(100% - 30%);
+}
+
+.threadDate{
+  background-color: white;
+  min-height: 70%;
+  min-width: 70px;  
+  margin: 10px  40px 30px 30px;
+  border-radius: 20%;
+}
+
 
 .rightContainer {
   height: 100%;
@@ -212,15 +271,19 @@ header {
   color: #ffff;
 }
 
+
+
+
+
 .latestContainer {
-  min-height: 45%;
+  height: 80%;
   width: 90%;
-  background-color: #1d1f25;
+  background-color: #1D1F25;
   border-radius: 10px;
 }
 
 .creatorContainer {
-  min-height: 10%;
+  height: 300px;
   width: 90%;
   background-color: #008968;
   margin-bottom: 20px;
