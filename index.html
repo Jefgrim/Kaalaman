@@ -11,47 +11,295 @@
 </head>
 
 <body>
-  <header>
-    <img src="images/kaalaman-logo.png" class="logo" alt="">
-    <div class="user">
-      <div class="box"><i class="fa-regular fa-bell"></i></div>
-      <div class="box"></div>
-      <div class="box"></div>
-    </div>
-  </header>
+
   <div class="mainContainer">
-    <div class="threadContainer">
-      <div class="threadNavContainer">
-        <div class="breadCrumbs">
 
-
-
-
-
+    <header>
+      <img src="images/kaalaman-logo.png" class="logo" alt="">
+      <div class="user">
+        <div class="userDropDown">
+          <img src=".//images/3.png" class="avatar">
+          <div class="user-Section" id="userSection" style="display:none;">
+            <span>Username</span>
+            <button>lag-out</button>
+          </div>
         </div>
-        <div class="searchBar">
-
-          <i class="fa-solid fa-magnifying-glass searchBarLogo"></i>
-          <input type="text" class="input searchBarinput" placeholder="search...">
-
-        </div>
-
-
+        <div class="notification"><i class="fa-regular fa-bell"></i></div>
+        <div class="Darkmode"><i class="fa-regular fa-lightbulb"></i></div>
       </div>
-      <div class="threadContentContainer">
+    </header>
+    <div class="subContainer">
+      <div class="sidebar">
+        <h1 class="sidebar-title">Categories</h1>
+
+        <span class="categories-text" id="technologyBtn">Technology</span>
+        <span class="categories-text" id="ecommerceBtn">E-commerce</span>
+        <span class="categories-text" id="healthBtn">Health & lifestyle</span>
+        <span class="categories-text" id="gameBtn">Games</span>
+        <span class="categories-text" id="foodBtn">Food & Beverages</span>
+        <span class="categories-text" id="allBtn">ALL</span>
 
 
+        <button id="hideSidebar" class="hideSidebar-Btn">Close</button>
+      </div>
 
-        <div class="threadContent">
-          <div class="thread-Image"></div>
-          <div class="threadTitle">
-            <span style="font-size: larger;">How to Build Computer</span>
-            <span>Jomarie</span>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Sint quis corrupti ad ,</span>
+      <div class="threadContainer">
+        <div class="threadNavContainer">
+          <div class="breadCrumbs">
+            <div class="showSidebar-btn" id="sideBar-toggle">
+              <span>Categories</span>
+              <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
+            </div>
+          </div>
+          <div class="searchBar">
+            <i class="fa-solid fa-magnifying-glass searchBarLogo"></i>
+            <input type="text" class="input searchBarinput" placeholder="search...">
+          </div>
+        </div>
+        <div class="threadContentContainer">
+
+          <div class="threadContent technology">
+            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
+            <div class="threadTitle">
+              <span style="font-size: larger;">How to Build Computer</span>
+              <span>Technology</span>
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sint quis corrupti ad ,</span>
+
+            </div>
+            <div class="threadDate"></div>
+          </div>
+
+          <div class="threadContent technology">
+            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
+            <div class="threadTitle">
+              <span style="font-size: larger;">How to Build Computer</span>
+              <span>Technology</span>
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sint quis corrupti ad ,</span>
+
+            </div>
+            <div class="threadDate"></div>
+          </div>
+
+          <div class="threadContent technology">
+            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
+            <div class="threadTitle">
+              <span style="font-size: larger;">How to Build Computer</span>
+              <span>Technology</span>
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sint quis corrupti ad ,</span>
+
+            </div>
+            <div class="threadDate"></div>
+          </div>
+
+          <div class="threadContent technology">
+            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
+            <div class="threadTitle">
+              <span style="font-size: larger;">How to Build Computer</span>
+              <span>Technology</span>
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sint quis corrupti ad ,</span>
+
+            </div>
+            <div class="threadDate"></div>
+          </div>
+
+          <div class="threadContent technology">
+            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
+            <div class="threadTitle">
+              <span style="font-size: larger;">How to Build Computer</span>
+              <span>Technology</span>
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sint quis corrupti ad ,</span>
+
+            </div>
+            <div class="threadDate"></div>
+          </div>
+
+          <div class="threadContent technology">
+            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
+            <div class="threadTitle">
+              <span style="font-size: larger;">How to Build Computer</span>
+              <span>Technology</span>
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sint quis corrupti ad ,</span>
+
+            </div>
+            <div class="threadDate"></div>
+          </div>
+
+          <div class="threadContent ecommerce">
+            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
+            <div class="threadTitle">
+              <span style="font-size: larger;">How to Build Computer</span>
+              <span>ecommerce</span>
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sint quis corrupti ad ,</span>
+            </div>
+            <div class="threadDate"></div>
+          </div>
+
+          <div class="threadContent health-lifestyle">
+            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
+            <div class="threadTitle">
+              <span style="font-size: larger;">How to Build Computer</span>
+              <span>health-lifestyle</span>
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sint quis corrupti ad ,</span>
+            </div>
+            <div class="threadDate"></div>
+          </div>
+
+          <div class="threadContent games">
+            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
+            <div class="threadTitle">
+              <span style="font-size: larger;">How to Build Computer</span>
+              <span>Games</span>
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sint quis corrupti ad ,</span>
+            </div>
+            <div class="threadDate"></div>
+          </div>
+
+          <div class="threadContent food-beverages">
+            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
+            <div class="threadTitle">
+              <span style="font-size: larger;">How to Build Computer</span>
+              <span>food-beverage</span>
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sint quis corrupti ad ,</span>
+            </div>
+            <div class="threadDate"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rightContainer">
+        <div class="postThreadContainer">
+          <form class="postThreadContent">
+            <div class="h2Container">
+              <h2>POST A THREAD</h2>
+            </div>
+            <div class="category-title">
+              <select id="selectCategory" class="selectCategory">
+                <option selected disabled>Select Category</option>
+                <option value="technology">Technology</option>
+                <option value="ecommerce">E-Commerce</option>
+                <option value="health-lifestyle">Health & Lifestyle</option>
+                <option value="games">Games</option>
+                <option value="food-beverages">Food & Beverages</option>
+              </select>
+              <input type="text" placeholder="Title" id="titleInp" class="titleInp" />
+            </div>
+            <div class="threadInpContainer">
+              <textarea id="threadInp" class="threadInp"></textarea>
+            </div>
+            <div class="threadBtnContainer">
+              <button type="button" id="postBtn" class="postBtn">Post</button>
+              <button type="button" id="expandBtn" class="expandBtn">
+                Expand
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="latestContainer">
+          <div class="latestContent">
+            <h3 class="latest">Latest post</h3>
+            <div class="content-box1">
+              <img src=".//images/Avatar Users2_1.png" class="avatar">
+              <div class="text-container">
+                <p class="p-1">The quick brown fox jumps over the lazy dog</p>
+                <h3 class="uploader">By: Lexi L</h3>
+              </div>
+            </div>
+
+            <div class="content-box1">
+              <img src=".//images/Avatar Users2_13.png" class="avatar">
+              <div class="text-container">
+                <p class="p-1">The quick brown fox jumps over the lazy dog</p>
+                <h3 class="uploader">By: Lexi L</h3>
+              </div>
+            </div>
+
+            <div class="content-box1">
+              <img src=".//images/Avatar Users2_20.png" class="avatar">
+              <div class="text-container">
+                <p class="p-1">The quick brown fox jumps over the lazy dog</p>
+                <h3 class="uploader">By: Lexi L</h3>
+              </div>
+            </div>
+
+            <div class="content-box1">
+              <img src=".//images/Avatar Users2_29.png" class="avatar">
+              <div class="text-container">
+                <p class="p-1">The quick brown fox jumps over the lazy dog</p>
+                <h3 class="uploader">By: Lexi L</h3>
+              </div>
+            </div>
+
+            <div class="content-box1">
+              <img src=".//images/Avatar Users2_36.png" class="avatar">
+              <div class="text-container">
+                <p class="p-1">The quick brown fox jumps over the lazy dog</p>
+                <h3 class="uploader">By: Lexi L</h3>
+              </div>
+            </div>
+
+            <div class="content-box1">
+              <img src=".//images/Avatar Users2_37.png" class="avatar">
+              <div class="text-container">
+                <p class="p-1">The quick brown fox jumps over the lazy dog</p>
+                <h3 class="uploader">By: Lexi L</h3>
+              </div>
+            </div>
+
+            <div class="content-box1">
+              <img src=".//images/Avatar Users2_38.png" class="avatar">
+              <div class="text-container">
+                <p class="p-1">The quick brown fox jumps over the lazy dog</p>
+                <h3 class="uploader">By: Lexi L</h3>
+              </div>
+            </div>
+
+            <div class="content-box1">
+              <img src=".//images/Avatar Users2_45.png" class="avatar">
+              <div class="text-container">
+                <p class="p-1">The quick brown fox jumps over the lazy dog</p>
+                <h3 class="uploader">By: Lexi L</h3>
+              </div>
+            </div>
+
+            <div class="content-box1">
+              <img src=".//images/Avatar Users2_49.png" class="avatar">
+              <div class="text-container">
+                <p class="p-1">The quick brown fox jumps over the lazy dog</p>
+                <h3 class="uploader">By: Lexi L</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="creatorContainer">
+          <div class="creatorContent">
+            <h2>Creators</h2>
+
+            <div class="creator">
+              <img src=".//images/5.png" class="creator-avatar">
+
+              <img src=".//images/3.png" class="creator-avatar">
+
+              <img src=".//images/6.png" class="creator-avatar">
+            </div>
+
+            <div class="creator-name">
+              <p>Nicky</p>
+              <p>Jeff</p>
+              <p>Joms</p>
+            </div>
 
           </div>
-          <div class="threadDate"></div>
         </div>
 
 
@@ -59,67 +307,12 @@
 
 
 
-
-        <div class="threadContent"></div>
-        <div class="threadContent"></div>
-        <div class="threadContent"></div>
-        <div class="threadContent"></div>
-        <div class="threadContent"></div>
-        <div class="threadContent"></div>
-        <div class="threadContent"></div>
-        <div class="threadContent"></div>
-        <div class="threadContent"></div>
-        <div class="threadContent"></div>
-        <div class="threadContent"></div>
-        <div class="threadContent"></div>
-        <div class="threadContent"></div>
-        <div class="threadContent"></div>
       </div>
     </div>
-    <div class="rightContainer">
-      <div class="postThreadContainer">
-       <form class="postThreadContent">
-          <div class="h2Container">
-            <h2>POST A THREAD</h2>
-          </div>
-          <div class="category-title">
-            <select id="selectCategory" class="selectCategory">
-              <option selected disabled>Select Category</option>
-              <option value="technology">Technology</option>
-              <option value="ecommerce">E-Commerce</option>
-              <option value="health-lifestyle">Health & Lifestyle</option>
-              <option value="games">Games</option>
-              <option value="food-beverages">Food & Beverages</option>
-            </select>
-            <input
-              type="text"
-              placeholder="Title"
-              id="titleInp"
-              class="titleInp"
-            />
-          </div>
-          <div class="threadInpContainer">
-            <textarea id="threadInp" class="threadInp"></textarea>
-          </div>
-          <div class="threadBtnContainer">
-            <button type="button" id="postBtn" class="postBtn">Post</button>
-            <button type="button" id="expandBtn" class="expandBtn">
-              Expand
-            </button>
-          </div>
-        </form>
-      </div>
-      <div class="latestContainer">
-        <div class="latestContent"></div>
-      </div>
-      <div class="creatorContainer">
-        <div class="creatorContent"></div>
-      </div>
-    </div>
+
   </div>
 
-
-
+  <script type="module" src="main.js"></script>
   <script src="https://kit.fontawesome.com/26177573c7.js" crossorigin="anonymous"></script>
 
 </body>

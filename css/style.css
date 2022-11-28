@@ -10,6 +10,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+
 }
 
 .logo {
@@ -31,11 +32,95 @@ header {
   background-color: black;
 }
 
+.userDropDown {
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.userDropDown img {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+
+}
+
+.user-Section {
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fa-regular {
+  height: 50px;
+  width: 50px;
+  font-size: xx-large;
+  color: white;
+
+}
+
 .mainContainer {
-  height: calc(100vh - 100px);
+
   width: 100%;
   display: flex;
+  position: relative;
+  flex-direction: column;
+
 }
+
+.subContainer {
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.sidebar {
+  background-color: #141518;
+  height: 100%;
+  width: 15%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  display: none;
+
+}
+
+.sidebar-title {
+  background-color: #282c38;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+.categories-text {
+
+  background-color: #008968;
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.hideSidebar-Btn {
+  color: white;
+  background-color: #282c38;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0px;
+
+}
+
 
 .threadContainer {
   height: 100%;
@@ -62,6 +147,28 @@ header {
   border-radius: 10px;
 }
 
+.showSidebar-btn {
+  background-color: white;
+  width: 10%;
+  height: 100%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: medium;
+  border-radius: 10px 0px 0px 10px;
+  cursor: pointer;
+
+}
+
+.showSidebar-btn:hover {
+  background-color: #1d1f25;
+  color: white;
+}
+
+
+
 .searchBar {
   height: 100%;
   width: 32%;
@@ -71,23 +178,23 @@ header {
   justify-content: space-evenly;
 
 }
-.searchBarinput{
+
+.searchBarinput {
   border: 0;
-  outline:none;
+  outline: none;
   color: black;
   width: 90%;
-  
- }
 
-.searchBarLogo{
+}
+
+.searchBarLogo {
   width: 10%;
   font-size: larger;
- 
   background-color: #008968;
-  padding:20px 0px 20px 20px ;
-  
-  
- }
+  padding: 20px 0px 20px 20px;
+
+
+}
 
 
 .threadContentContainer {
@@ -121,34 +228,33 @@ header {
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  justify-content:space-evenly;
-  
+  justify-content: space-evenly;
+
 
 }
 
-.thread-Image{
-  background-color: white;
+.thread-Image {
   min-height: 70%;
-  min-width: 80px;  
-  margin: 10px  10px 10px 30px;
+  min-width: 80px;
+  margin: 10px 10px 10px 30px;
   border-radius: 50%;
-  
+
 }
 
-.threadTitle{ 
+.threadTitle {
   color: white;
   font-size: large;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   padding: 20px;
   width: calc(100% - 30%);
 }
 
-.threadDate{
+.threadDate {
   background-color: white;
   min-height: 70%;
-  min-width: 70px;  
-  margin: 10px  40px 30px 30px;
+  min-width: 70px;
+  margin: 10px 40px 30px 30px;
   border-radius: 20%;
 }
 
@@ -171,6 +277,114 @@ header {
   margin-bottom: 20px;
   border-radius: 10px;
 }
+
+
+.latestContainer {
+  height: 80%;
+  width: 90%;
+  background-color: #1D1F25;
+  border-radius: 10px;
+  overflow-y: scroll;
+
+}
+
+.latestContainer::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+.latest {
+  color: whitesmoke;
+  font-size: 24px;
+  margin-left: 25px;
+  background-color: #1D1F25;
+  position: sticky;
+  top: 0;
+
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  margin-left: 25px;
+
+}
+
+.content-box1 {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 15px;
+
+}
+
+.p-1 {
+
+  color: whitesmoke;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.uploader {
+  color: whitesmoke;
+  margin: 0;
+
+}
+
+h3 {
+  font-size: 14px;
+}
+
+.creatorContainer {
+  height: 300px;
+  width: 90%;
+  background-color: #008968;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  display: flex;
+
+
+}
+
+
+h2 {
+  text-align: center;
+}
+
+.creator {
+  justify-content: space-around;
+  display: flex;
+  width: 100%;
+}
+
+.creatorContent {
+  width: 100%;
+}
+
+.creator-avatar {
+  width: 15%;
+  height: 15%;
+  margin-top: -20px;
+  display: flex;
+
+}
+
+.creator-name {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
+
 
 .postThreadContent {
   height: 100%;
