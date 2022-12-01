@@ -9,6 +9,4 @@ const toggleUserSection = () => {
     }
 }
 
-
-
 export  default toggleUserSection
