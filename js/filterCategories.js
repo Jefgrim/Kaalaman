@@ -1,85 +1,3 @@
-// const technologyFilter = () => {
-//     let threadContentContainer = document.querySelector(".threadContentContainer")
-
-//     for (const child of threadContentContainer.children) {
-
-//         if (child.classList.value == "threadContent Technology") {
-//             child.style.display = "flex"
-
-//         }
-//         else {
-//             child.style.display = "none"
-//         }
-//     }
-// }
-
-// const ecommerceFilter = () => {
-//     let threadContentContainer = document.querySelector(".threadContentContainer")
-
-//     for (const child of threadContentContainer.children) {
-
-//         if (child.classList.value == "threadContent E-commerce") {
-//             child.style.display = "flex"
-
-//         }
-//         else {
-//             child.style.display = "none"
-//         }
-//     }
-// }
-
-// const healthFilter = () => {
-//     let threadContentContainer = document.querySelector(".threadContentContainer")
-
-//     for (const child of threadContentContainer.children) {
-
-//         if (child.classList.value == "threadContent Health-Lifestyle") {
-//             child.style.display = "flex"
-
-//         }
-//         else {
-//             child.style.display = "none"
-//         }
-//     }
-// }
-
-// const gamesFilter = () => {
-//     let threadContentContainer = document.querySelector(".threadContentContainer")
-
-//     for (const child of threadContentContainer.children) {
-
-//         if (child.classList.value == "threadContent Games") {
-//             child.style.display = "flex"
-
-//         }
-//         else {
-//             child.style.display = "none"
-//         }
-//     }
-// }
-
-// const foodFilter = () => {
-//     let threadContentContainer = document.querySelector(".threadContentContainer")
-
-//     for (const child of threadContentContainer.children) {
-
-//         if (child.classList.value == "threadContent Food-Beverages") {
-//             child.style.display = "flex"
-
-//         }
-//         else {
-//             child.style.display = "none"
-//         }
-//     }
-// }
-// const allfilter =() =>{
-//     let threadContentContainer = document.querySelector(".threadContentContainer")
-
-//     for (const child of threadContentContainer.children){
-//         child.style.display = "flex"
-//     }
-// }
-
 const filterCategories = (e) => {
 
     let technologyBtn = document.querySelector("#technologyBtn")
@@ -195,6 +113,5 @@ const filterCategories = (e) => {
     }
     
 }
-
 
 export default filterCategories

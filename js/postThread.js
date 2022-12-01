@@ -140,7 +140,6 @@ const displayThread = () => {
     let threadLikes = document.createElement("div");
     threadLikes.classList = "threadLikes";
 
-
     let thumbsUp = document.createElement("div");
     thumbsUp.classList ="thumbs-up";
     
@@ -152,8 +151,6 @@ const displayThread = () => {
   
     let thumbsDownIcon = document.createElement("i")
     thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
-
-
 
     threadContentContainer.insertAdjacentElement("afterbegin", threadContent);
     threadContent.insertAdjacentElement("afterbegin", threadImage);
