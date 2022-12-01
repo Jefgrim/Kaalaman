@@ -51,34 +51,33 @@ const postThread = () => {
     let postContent = document.createElement("span");
     postContent.textContent = thread.postText;
 
-    let threadLikes = document.createElement("div");
-    threadLikes.classList = "threadLikes";
-    
-    let thumbsUp = document.createElement("div");
-    thumbsUp.classList ="thumbs-up";
-    
-    let thumbsUpIcon = document.createElement("i");
-    thumbsUpIcon.classList ="fa-regular fa-thumbs-up";
+  let threadLikes = document.createElement("div");
+  threadLikes.classList = "threadLikes";
+  
+  let thumbsUp = document.createElement("div");
+  thumbsUp.classList ="thumbs-up";
+  
+  let thumbsUpIcon = document.createElement("i");
+  thumbsUpIcon.classList ="fa-regular fa-thumbs-up";
 
-    let thumbsDown = document.createElement("div");
-    thumbsDown.classList = "thumbs-down";
+  let thumbsDown = document.createElement("div");
+  thumbsDown.classList = "thumbs-down";
 
-    let thumbsDownIcon = document.createElement("i")
-    thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
+  let thumbsDownIcon = document.createElement("i")
+  thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
 
-    threadContentContainer.insertAdjacentElement("afterbegin", threadContent);
-    threadContent.insertAdjacentElement("afterbegin", threadImage);
-    threadImage.insertAdjacentElement("afterbegin", userImg);
-    threadContent.insertAdjacentElement("beforeend", threadTitle);
-    threadTitle.insertAdjacentElement("afterbegin", postTitle);
-    threadTitle.insertAdjacentElement("beforeend", category);
-    threadTitle.insertAdjacentElement("beforeend", postContent);
-    threadContent.insertAdjacentElement("beforeend", threadLikes);
-    threadLikes.insertAdjacentElement("afterbegin",thumbsUp);
-    thumbsUp.insertAdjacentElement("afterbegin",thumbsUpIcon);
-    threadLikes.insertAdjacentElement("beforeend",thumbsDown);
-    thumbsDown.insertAdjacentElement("afterbegin",thumbsDownIcon);
-  }
+  threadContentContainer.insertAdjacentElement("afterbegin", threadContent);
+  threadContent.insertAdjacentElement("afterbegin", threadImage);
+  threadImage.insertAdjacentElement("afterbegin", userImg);
+  threadContent.insertAdjacentElement("beforeend", threadTitle);
+  threadTitle.insertAdjacentElement("afterbegin", category);
+  threadTitle.insertAdjacentElement("beforeend", postTitle);
+  threadTitle.insertAdjacentElement("beforeend", postContent);
+  threadContent.insertAdjacentElement("beforeend", threadLikes);
+  threadLikes.insertAdjacentElement("afterbegin",thumbsUp);
+  thumbsUp.insertAdjacentElement("afterbegin",thumbsUpIcon);
+  threadLikes.insertAdjacentElement("beforeend",thumbsDown);
+  thumbsDown.insertAdjacentElement("afterbegin",thumbsDownIcon);
 };
 
 const displayThread = () => {
@@ -164,8 +163,8 @@ const displayThread = () => {
     threadContent.insertAdjacentElement("afterbegin", threadImage);
     threadImage.insertAdjacentElement("afterbegin", userImg);
     threadContent.insertAdjacentElement("beforeend", threadTitle);
-    threadTitle.insertAdjacentElement("afterbegin", postTitle);
-    threadTitle.insertAdjacentElement("beforeend", category);
+    threadTitle.insertAdjacentElement("afterbegin", category);
+    threadTitle.insertAdjacentElement("beforeend", postTitle);
     threadTitle.insertAdjacentElement("beforeend", postContent);
     threadContent.insertAdjacentElement("beforeend", threadLikes);
     threadLikes.insertAdjacentElement("afterbegin",thumbsUp);
