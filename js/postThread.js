@@ -1,51 +1,138 @@
-
 const postThread = () => {
+  let postList = JSON.parse(localStorage.getItem("postList"));
+  if (postList == null) {
+    postList = [];
+  }
+  let n = localStorage.getItem("postId");
+  n = ++n;
 
-let selectedCategory = document.querySelector("#selectCategory").value 
-let titleValue = document.querySelector("#titleInp").value
-let postText = document.querySelector ("#threadInp").value
-let threadContentContainer  = document.querySelector(".threadContentContainer")
+  let thread = {
+    selectedCategory: document.querySelector("#selectCategory").value,
+    titleValue: document.querySelector("#titleInp").value,
+    postText: document.querySelector("#threadInp").value,
+    postId: n,
+  };
 
+  localStorage.setItem("post", JSON.stringify(thread));
+  localStorage.setItem("postId", n);
+  postList.push(thread);
+  localStorage.setItem("postList", JSON.stringify(postList));
 
- let threadContent = document.createElement("div")
- threadContent.classList=`threadContent ${selectedCategory}`
+  let threadContentContainer = document.querySelector(
+    ".threadContentContainer"
+  );
 
- let threadImage = document.createElement("div")
- threadImage.classList="thread-Image"
+  let threadContent = document.createElement("div");
+  threadContent.classList = `threadContent ${thread.selectedCategory}`;
 
- let userImg = document.createElement("img")
- userImg.src = ".//images/Avatar Users2_1.png"
- userImg.classList="avatar"
+  let threadImage = document.createElement("div");
+  threadImage.classList = "thread-Image";
 
- let threadTitle = document.createElement("div")
- threadTitle.classList="threadTitle"
+  let userImg = document.createElement("img");
+  userImg.src = ".//images/Avatar Users2_1.png";
+  userImg.classList = "avatar";
 
- let postTitle =document.createElement("span")
- postTitle.style.fontSize = "larger"
- postTitle.textContent= titleValue
+  let threadTitle = document.createElement("div");
+  threadTitle.classList = "threadTitle";
 
- let category = document.createElement("span")
- category.textContent = selectedCategory
+  let postTitle = document.createElement("span");
+  postTitle.style.fontSize = "larger";
+  postTitle.textContent = thread.titleValue;
 
- let postContent = document.createElement("span")
- postContent.textContent= postText
+  let category = document.createElement("span");
+  category.textContent = thread.selectedCategory;
 
- let threadDate = document.createElement("div")
- threadDate.classList="threadDate"
+  let postContent = document.createElement("span");
+  postContent.textContent = thread.postText;
 
- threadContentContainer.insertAdjacentElement("afterbegin", threadContent)
- threadContent.insertAdjacentElement("afterbegin",threadImage)
- threadImage.insertAdjacentElement("afterbegin",userImg)
- threadContent.insertAdjacentElement("beforeend",threadTitle)
- threadTitle.insertAdjacentElement("afterbegin",postTitle)
- threadTitle.insertAdjacentElement("beforeend",category)
- threadTitle.insertAdjacentElement("beforeend",postContent)
- threadContent.insertAdjacentElement("beforeend",threadDate)
+  let threadDate = document.createElement("div");
+  threadDate.classList = "threadDate";
 
-}
+  threadContentContainer.insertAdjacentElement("afterbegin", threadContent);
+  threadContent.insertAdjacentElement("afterbegin", threadImage);
+  threadImage.insertAdjacentElement("afterbegin", userImg);
+  threadContent.insertAdjacentElement("beforeend", threadTitle);
+  threadTitle.insertAdjacentElement("afterbegin", postTitle);
+  threadTitle.insertAdjacentElement("beforeend", category);
+  threadTitle.insertAdjacentElement("beforeend", postContent);
+  threadContent.insertAdjacentElement("beforeend", threadDate);
+};
 
+const displayThread = () => {
+  let postList = localStorage.getItem("postList");
+  if (postList == null) {
+    let postList = JSON.parse(localStorage.getItem("postList"));
+    if (postList == null) {
+      postList = [];
+    }
 
+    let thread = {
+      selectedCategory: "Technology",
+      titleValue: "Dummy Title",
+      postText: "Dummy Text",
+      postId: 1,
+    };
 
+    localStorage.setItem("post", JSON.stringify(thread));
+    localStorage.setItem("postId", 1);
+    postList.push(thread);
+    localStorage.setItem("postList", JSON.stringify(postList));
 
+    let thread2 = {
+        selectedCategory: "Technology",
+        titleValue: "Dummy Title 2",
+        postText: "Dummy Text 2",
+        postId: 2,
+      };
+  
+      localStorage.setItem("post", JSON.stringify(thread2));
+      localStorage.setItem("postId", 2);
+      postList.push(thread2);
+      localStorage.setItem("postList", JSON.stringify(postList));
+      displayThread();
+  }
+  let parsedPostList = JSON.parse(postList);
 
-export default postThread
+  for (let i in parsedPostList) {
+    let threadContentContainer = document.querySelector(
+      ".threadContentContainer"
+    );
+
+    let threadContent = document.createElement("div");
+    threadContent.classList = `threadContent ${parsedPostList[i].selectedCategory}`;
+
+    let threadImage = document.createElement("div");
+    threadImage.classList = "thread-Image";
+
+    let userImg = document.createElement("img");
+    userImg.src = ".//images/Avatar Users2_1.png";
+    userImg.classList = "avatar";
+
+    let threadTitle = document.createElement("div");
+    threadTitle.classList = "threadTitle";
+
+    let postTitle = document.createElement("span");
+    postTitle.style.fontSize = "larger";
+    postTitle.textContent = parsedPostList[i].titleValue;
+
+    let category = document.createElement("span");
+    category.textContent = parsedPostList[i].selectedCategory;
+
+    let postContent = document.createElement("span");
+    postContent.textContent = parsedPostList[i].postText;
+
+    let threadDate = document.createElement("div");
+    threadDate.classList = "threadDate";
+
+    threadContentContainer.insertAdjacentElement("afterbegin", threadContent);
+    threadContent.insertAdjacentElement("afterbegin", threadImage);
+    threadImage.insertAdjacentElement("afterbegin", userImg);
+    threadContent.insertAdjacentElement("beforeend", threadTitle);
+    threadTitle.insertAdjacentElement("afterbegin", postTitle);
+    threadTitle.insertAdjacentElement("beforeend", category);
+    threadTitle.insertAdjacentElement("beforeend", postContent);
+    threadContent.insertAdjacentElement("beforeend", threadDate);
+  }
+};
+
+export { postThread, displayThread };
