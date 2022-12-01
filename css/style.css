@@ -207,13 +207,13 @@ header {
   flex-direction: row;
   overflow: hidden;
   justify-content: space-evenly;
-
+  padding: 5px;
 
 }
 
 .thread-Image img{
-  width: 70%;
-  height:70%;
+  width: 100px;
+  height:100px;
   padding: 10px 0 10px 50px;
 
 
@@ -224,23 +224,27 @@ header {
   font-size: large;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  min-width:50%;
-  height: 20%;
+  min-width:50px;
+  height: 50px;
+  flex: 1;
+  justify-content: space-between;
+  padding:20px;
+  overflow: hidden;
 }
 
-.threadDate {
-  width: 20%;
+  
+  
+
+.threadLikes {
+  width: 30px;
   margin: 10px 40px 30px 30px;
   border-radius: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
- 
- 
-
-
+  padding: 10px;
+  
 }
 
 .thumbs-up ,.thumbs-down{
@@ -250,6 +254,7 @@ header {
   width: 35px;
   margin: 5px;
   border-radius: 10px;
+  position: relative;
 
   
  
