@@ -78,6 +78,7 @@ const postThread = () => {
   thumbsUp.insertAdjacentElement("afterbegin",thumbsUpIcon);
   threadLikes.insertAdjacentElement("beforeend",thumbsDown);
   thumbsDown.insertAdjacentElement("afterbegin",thumbsDownIcon);
+  }
 };
 
 const displayThread = () => {
@@ -174,4 +175,4 @@ const displayThread = () => {
   }
 };
 
-export { postThread, displayThread };
+export {postThread, displayThread};
