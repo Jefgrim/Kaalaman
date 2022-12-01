@@ -4,23 +4,31 @@ body {
 }
 
 header {
-  height: 100px;
+  height: 10%;
   width: 100%;
   background-color: #1d1f25;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
 
+.headerIcons {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 90% !important;
 }
 
 .logo {
-  height: 90px;
+  height: 90%;
+  margin-left: 20px;
 }
 
 .user {
-  height: 90px;
-  width: 400px;
-  /* background-color: white; */
+  height: 90%;
+  /* width: 400px; */
+  margin-right: 20px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -32,29 +40,11 @@ header {
   background-color: black;
 }
 
-.userDropDown {
-  display: flex;
-  flex-direction: column;
-
-}
-
-
 .userDropDown img {
-  height: 50px;
-  width: 50px;
+  height: 100%;
+  width: 100%;
   cursor: pointer;
-
-}
-
-.user-Section {
-  height: 200px;
-  width: 200px;
-  background-color: white;
-  position: absolute;
-  z-index: 1;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
+  margin-right: 10px;
 }
 
 .fa-regular {
@@ -62,20 +52,18 @@ header {
   width: 50px;
   font-size: xx-large;
   color: white;
-
 }
 
 .mainContainer {
-
   width: 100%;
   display: flex;
   position: relative;
   flex-direction: column;
-
+  height: 100vh;
 }
 
 .subContainer {
-  height: calc(100vh - 100px);
+  height: 90%;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -84,14 +72,31 @@ header {
 .sidebar {
   background-color: #141518;
   height: 100%;
-  width: 15%;
-  position: absolute;
+  width: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  display: none;
+  /* justify-content: space-between; */
+}
 
+.sidebar h2 {
+  background-color: #008968;
+  width: 100%;
+  border-radius: 5px;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+.h2Container {
+  background-color: #008968;
+  display: flex;
+  align-items:flex-start;
+  justify-content: center;
+  width: 100%;
+  height: calc(20% - 10px);
 }
 
 .sidebar-title {
@@ -99,11 +104,29 @@ header {
   color: white;
   padding: 10px;
   border-radius: 10px;
+}
 
+.categoriesContainer {
+  height: 80%;
+  /* background-color: #1D1F25; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.categoryContainer {
+  background-color: #008968;
+  height: 50px;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-top: 10px;
+  border-radius: 5px;
 }
 
 .categories-text {
-
+  cursor: pointer;
   background-color: #008968;
   padding: 10px;
   width: 50%;
@@ -118,7 +141,7 @@ header {
   padding: 10px;
   border-radius: 10px;
   border: 0px;
-
+  cursor: pointer;
 }
 
 
@@ -261,7 +284,7 @@ header {
 
 .rightContainer {
   height: 100%;
-  width: 30%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -292,24 +315,17 @@ header {
   display: none;
 }
 
-
-
-
 .latest {
   color: whitesmoke;
   font-size: 24px;
   margin-left: 25px;
   background-color: #1D1F25;
-  position: sticky;
-  top: 0;
-
 }
 
 .avatar {
   width: 80px;
   height: 80px;
   margin-left: 25px;
-
 }
 
 .content-box1 {
@@ -322,11 +338,9 @@ header {
   flex-direction: column;
   justify-content: space-evenly;
   margin-left: 15px;
-
 }
 
 .p-1 {
-
   color: whitesmoke;
   font-size: 20px;
   text-align: center;
@@ -336,7 +350,6 @@ header {
 .uploader {
   color: whitesmoke;
   margin: 0;
-
 }
 
 h3 {
@@ -351,13 +364,13 @@ h3 {
   margin-top: 20px;
   border-radius: 10px;
   display: flex;
-
-
 }
 
 
 h2 {
-  text-align: center;
+  background-color: #008968;
+  border-radius: 5px;
+  align-items: center;
 }
 
 .creator {
@@ -390,11 +403,12 @@ h2 {
   height: 100%;
 }
 
-.h2Container {
-  height: 20%;
+.h2CategoryContainer {
+  /* height: 20%; */
   width: 100%;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  /* background-color: #008968; */
 }
 
 .postThreadContent h2 {
@@ -485,10 +499,6 @@ h2 {
   color: #ffff;
 }
 
-
-
-
-
 .latestContainer {
   height: 80%;
   width: 90%;
@@ -504,5 +514,3 @@ h2 {
   margin-top: 20px;
   border-radius: 10px;
 }
-
-/* #1d1f25; */

@@ -1,3 +1,4 @@
+import { hideSideBar }  from "./sidebar.js"
 const technologyFilter = () => {
     let threadContentContainer = document.querySelector(".threadContentContainer")
 
@@ -12,6 +13,7 @@ const technologyFilter = () => {
         }
     }
 
+    hideSideBar();
 }
 
 const ecommerceFilter = () => {
@@ -28,6 +30,7 @@ const ecommerceFilter = () => {
         }
     }
 
+    hideSideBar();
 }
 
 const healthFilter = () => {
@@ -44,6 +47,7 @@ const healthFilter = () => {
         }
     }
 
+    hideSideBar();
 }
 
 const gamesFilter = () => {
@@ -60,6 +64,7 @@ const gamesFilter = () => {
         }
     }
 
+    hideSideBar();
 }
 
 const foodFilter = () => {
@@ -76,6 +81,7 @@ const foodFilter = () => {
         }
     }
 
+    hideSideBar();
 }
 const allfilter =() =>{
     let threadContentContainer = document.querySelector(".threadContentContainer")
@@ -84,7 +90,7 @@ const allfilter =() =>{
         child.style.display = "flex"
     }
 
-
+    hideSideBar();
 }
 
 

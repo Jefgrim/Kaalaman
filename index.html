@@ -12,38 +12,46 @@
 
 <body>
 
-  <div class="mainContainer">
+  <div class="mainContainer"> 
 
-    <header>
+    <header> 
       <img src="images/kaalaman-logo.png" class="logo" alt="">
       <div class="user">
-        <div class="userDropDown">
-          <img src=".//images/3.png" class="avatar">
+        <div class="userDropDown headerIcons">
+          <img src=".//images/Avatar Users2_20.png">
           <div class="user-Section" id="userSection" style="display:none;">
             <span>Username</span>
-            <button>lag-out</button>
+            <button>log-out</button>
           </div>
         </div>
-        <div class="notification"><i class="fa-regular fa-bell"></i></div>
-        <div class="Darkmode"><i class="fa-regular fa-lightbulb"></i></div>
+        <i class="fa-regular fa-bell headerIcons"></i>
+        <i class="fa-regular fa-lightbulb headerIcons"></i>
       </div>
     </header>
-    <div class="subContainer">
-      <div class="sidebar">
-        <h1 class="sidebar-title">Categories</h1>
 
+    <div class="subContainer">
+
+      <div class="sidebar">
+        <!-- <h1 class="sidebar-title">Categories</h1>
         <span class="categories-text" id="technologyBtn">Technology</span>
         <span class="categories-text" id="ecommerceBtn">E-commerce</span>
         <span class="categories-text" id="healthBtn">Health & lifestyle</span>
         <span class="categories-text" id="gameBtn">Games</span>
         <span class="categories-text" id="foodBtn">Food & Beverages</span>
         <span class="categories-text" id="allBtn">ALL</span>
-
-
-        <button id="hideSidebar" class="hideSidebar-Btn">Close</button>
+        <button id="hideSidebar" class="hideSidebar-Btn">Close</button> -->
+        <div class="h2CategoryContainer"><h2>Categories</h2></div>
+        <div class="categoriesContainer">
+          <div class="categoryContainer"><input type="checkbox" name="category" id="Technology"><label for="Technology">Technology</label></div>
+          <div class="categoryContainer"><input type="checkbox" name="category" id="E-Commerce"><label for="E-Commerce">E-Commerce</label></div>
+          <div class="categoryContainer"><input type="checkbox" name="category" id="Health & lifestyle"><label for="Health & lifestyle">Health & lifestyle</label></div>
+          <div class="categoryContainer"><input type="checkbox" name="category" id="Games"><label for="Games">Games</label></div>
+          <div class="categoryContainer"><input type="checkbox" name="category" id="Food"><label for="Food">Food</label></div>
+        </div>
       </div>
 
       <div class="threadContainer">
+
         <div class="threadNavContainer">
           <div class="breadCrumbs">
             <div class="showSidebar-btn" id="sideBar-toggle">
@@ -56,127 +64,24 @@
             <input type="text" class="input searchBarinput" placeholder="search...">
           </div>
         </div>
+
         <div class="threadContentContainer">
-
           <div class="threadContent technology">
             <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
             <div class="threadTitle">
               <span style="font-size: larger;">How to Build Computer</span>
               <span>Technology</span>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sint quis corrupti ad ,</span>
-
-            </div>
-            <div class="threadDate"></div>
-          </div>
-
-          <div class="threadContent technology">
-            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
-            <div class="threadTitle">
-              <span style="font-size: larger;">How to Build Computer</span>
-              <span>Technology</span>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sint quis corrupti ad ,</span>
-
-            </div>
-            <div class="threadDate"></div>
-          </div>
-
-          <div class="threadContent technology">
-            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
-            <div class="threadTitle">
-              <span style="font-size: larger;">How to Build Computer</span>
-              <span>Technology</span>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sint quis corrupti ad ,</span>
-
-            </div>
-            <div class="threadDate"></div>
-          </div>
-
-          <div class="threadContent technology">
-            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
-            <div class="threadTitle">
-              <span style="font-size: larger;">How to Build Computer</span>
-              <span>Technology</span>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sint quis corrupti ad ,</span>
-
-            </div>
-            <div class="threadDate"></div>
-          </div>
-
-          <div class="threadContent technology">
-            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
-            <div class="threadTitle">
-              <span style="font-size: larger;">How to Build Computer</span>
-              <span>Technology</span>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sint quis corrupti ad ,</span>
-
-            </div>
-            <div class="threadDate"></div>
-          </div>
-
-          <div class="threadContent technology">
-            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
-            <div class="threadTitle">
-              <span style="font-size: larger;">How to Build Computer</span>
-              <span>Technology</span>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sint quis corrupti ad ,</span>
-
-            </div>
-            <div class="threadDate"></div>
-          </div>
-
-          <div class="threadContent ecommerce">
-            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
-            <div class="threadTitle">
-              <span style="font-size: larger;">How to Build Computer</span>
-              <span>ecommerce</span>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sint quis corrupti ad ,</span>
-            </div>
-            <div class="threadDate"></div>
-          </div>
-
-          <div class="threadContent health-lifestyle">
-            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
-            <div class="threadTitle">
-              <span style="font-size: larger;">How to Build Computer</span>
-              <span>health-lifestyle</span>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sint quis corrupti ad ,</span>
-            </div>
-            <div class="threadDate"></div>
-          </div>
-
-          <div class="threadContent games">
-            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
-            <div class="threadTitle">
-              <span style="font-size: larger;">How to Build Computer</span>
-              <span>Games</span>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sint quis corrupti ad ,</span>
-            </div>
-            <div class="threadDate"></div>
-          </div>
-
-          <div class="threadContent food-beverages">
-            <div class="thread-Image"><img src=".//images/Avatar Users2_1.png" class="avatar"></div>
-            <div class="threadTitle">
-              <span style="font-size: larger;">How to Build Computer</span>
-              <span>food-beverage</span>
               <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Sint quis corrupti ad ,</span>
             </div>
             <div class="threadDate"></div>
           </div>
         </div>
+
       </div>
 
       <div class="rightContainer">
+
         <div class="postThreadContainer">
           <form class="postThreadContent">
             <div class="h2Container">
@@ -204,9 +109,12 @@
             </div>
           </form>
         </div>
+
         <div class="latestContainer">
+
+          <h3 class="latest">Latest post</h3>
+          
           <div class="latestContent">
-            <h3 class="latest">Latest post</h3>
             <div class="content-box1">
               <img src=".//images/Avatar Users2_1.png" class="avatar">
               <div class="text-container">
@@ -214,82 +122,18 @@
                 <h3 class="uploader">By: Lexi L</h3>
               </div>
             </div>
-
-            <div class="content-box1">
-              <img src=".//images/Avatar Users2_13.png" class="avatar">
-              <div class="text-container">
-                <p class="p-1">The quick brown fox jumps over the lazy dog</p>
-                <h3 class="uploader">By: Lexi L</h3>
-              </div>
-            </div>
-
-            <div class="content-box1">
-              <img src=".//images/Avatar Users2_20.png" class="avatar">
-              <div class="text-container">
-                <p class="p-1">The quick brown fox jumps over the lazy dog</p>
-                <h3 class="uploader">By: Lexi L</h3>
-              </div>
-            </div>
-
-            <div class="content-box1">
-              <img src=".//images/Avatar Users2_29.png" class="avatar">
-              <div class="text-container">
-                <p class="p-1">The quick brown fox jumps over the lazy dog</p>
-                <h3 class="uploader">By: Lexi L</h3>
-              </div>
-            </div>
-
-            <div class="content-box1">
-              <img src=".//images/Avatar Users2_36.png" class="avatar">
-              <div class="text-container">
-                <p class="p-1">The quick brown fox jumps over the lazy dog</p>
-                <h3 class="uploader">By: Lexi L</h3>
-              </div>
-            </div>
-
-            <div class="content-box1">
-              <img src=".//images/Avatar Users2_37.png" class="avatar">
-              <div class="text-container">
-                <p class="p-1">The quick brown fox jumps over the lazy dog</p>
-                <h3 class="uploader">By: Lexi L</h3>
-              </div>
-            </div>
-
-            <div class="content-box1">
-              <img src=".//images/Avatar Users2_38.png" class="avatar">
-              <div class="text-container">
-                <p class="p-1">The quick brown fox jumps over the lazy dog</p>
-                <h3 class="uploader">By: Lexi L</h3>
-              </div>
-            </div>
-
-            <div class="content-box1">
-              <img src=".//images/Avatar Users2_45.png" class="avatar">
-              <div class="text-container">
-                <p class="p-1">The quick brown fox jumps over the lazy dog</p>
-                <h3 class="uploader">By: Lexi L</h3>
-              </div>
-            </div>
-
-            <div class="content-box1">
-              <img src=".//images/Avatar Users2_49.png" class="avatar">
-              <div class="text-container">
-                <p class="p-1">The quick brown fox jumps over the lazy dog</p>
-                <h3 class="uploader">By: Lexi L</h3>
-              </div>
-            </div>
           </div>
+
         </div>
 
         <div class="creatorContainer">
+
           <div class="creatorContent">
             <h2>Creators</h2>
 
             <div class="creator">
               <img src=".//images/5.png" class="creator-avatar">
-
               <img src=".//images/3.png" class="creator-avatar">
-
               <img src=".//images/6.png" class="creator-avatar">
             </div>
 
@@ -298,14 +142,8 @@
               <p>Jeff</p>
               <p>Joms</p>
             </div>
-
           </div>
         </div>
-
-
-
-
-
 
       </div>
     </div>
