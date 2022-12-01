@@ -1,15 +1,15 @@
 // import {showSidebar ,hideSideBar} from "./js/sidebar.js";
 // import toggleUserSection from "./js/userdropdown.js";
-// import {technologyFilter, ecommerceFilter ,healthFilter, gamesFilter , foodFilter ,allfilter  } from "./js/filterCategories.js";
+import filterCategories from "./js/filterCategories.js"
 import {postThread, displayThread} from "./js/postThread.js"
 
 
-// //categories btn
-// let technologyBtn = document.querySelector("#technologyBtn")
-// let ecommerceBtn = document.querySelector("#ecommerceBtn")
-// let healthBtn = document.querySelector("#healthBtn")
-// let gameBtn = document.querySelector("#gameBtn")
-// let foodBtn = document.querySelector("#foodBtn")
+//categories btn
+let technologyBtn = document.querySelector("#technologyBtn")
+let ecommerceBtn = document.querySelector("#ecommerceBtn")
+let healthBtn = document.querySelector("#healthBtn")
+let gameBtn = document.querySelector("#gameBtn")
+let foodBtn = document.querySelector("#foodBtn")
 // let allBtn =document.querySelector("#allBtn")
 
 
@@ -34,12 +34,13 @@ let postBtn = document.querySelector("#postBtn")
 // CloseBtn.addEventListener("click",hideSideBar)
 // //event listener dropdown user
 // userdropdown.addEventListener("click",toggleUserSection)
+
 // //event listener categories
-// technologyBtn.addEventListener("click",technologyFilter)
-// ecommerceBtn.addEventListener("click",ecommerceFilter )
-// healthBtn.addEventListener("click",healthFilter)
-// gameBtn.addEventListener("click",gamesFilter)
-// foodBtn.addEventListener("click",foodFilter)
+technologyBtn.addEventListener("change",filterCategories)
+ecommerceBtn.addEventListener("change",filterCategories)
+healthBtn.addEventListener("change",filterCategories)
+gameBtn.addEventListener("change",filterCategories)
+foodBtn.addEventListener("change",filterCategories)
 // allBtn.addEventListener("click" , allfilter)
 
 
