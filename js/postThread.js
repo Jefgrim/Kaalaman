@@ -64,8 +64,8 @@ const postThread = () => {
   threadContent.insertAdjacentElement("afterbegin", threadImage);
   threadImage.insertAdjacentElement("afterbegin", userImg);
   threadContent.insertAdjacentElement("beforeend", threadTitle);
-  threadTitle.insertAdjacentElement("afterbegin", postTitle);
-  threadTitle.insertAdjacentElement("beforeend", category);
+  threadTitle.insertAdjacentElement("afterbegin", category);
+  threadTitle.insertAdjacentElement("beforeend", postTitle);
   threadTitle.insertAdjacentElement("beforeend", postContent);
   threadContent.insertAdjacentElement("beforeend", threadLikes);
   threadLikes.insertAdjacentElement("afterbegin",thumbsUp);
@@ -156,8 +156,8 @@ const displayThread = () => {
     threadContent.insertAdjacentElement("afterbegin", threadImage);
     threadImage.insertAdjacentElement("afterbegin", userImg);
     threadContent.insertAdjacentElement("beforeend", threadTitle);
-    threadTitle.insertAdjacentElement("afterbegin", postTitle);
-    threadTitle.insertAdjacentElement("beforeend", category);
+    threadTitle.insertAdjacentElement("afterbegin", category);
+    threadTitle.insertAdjacentElement("beforeend", postTitle);
     threadTitle.insertAdjacentElement("beforeend", postContent);
     threadContent.insertAdjacentElement("beforeend", threadLikes);
     threadLikes.insertAdjacentElement("afterbegin",thumbsUp);
