@@ -34,14 +34,6 @@
     <div class="subContainer">
 
       <div class="sidebar">
-        <!-- <h1 class="sidebar-title">Categories</h1>
-        <span class="categories-text" id="technologyBtn">Technology</span>
-        <span class="categories-text" id="ecommerceBtn">E-commerce</span>
-        <span class="categories-text" id="healthBtn">Health & lifestyle</span>
-        <span class="categories-text" id="gameBtn">Games</span>
-        <span class="categories-text" id="foodBtn">Food & Beverages</span>
-        <span class="categories-text" id="allBtn">ALL</span>
-        <button id="hideSidebar" class="hideSidebar-Btn">Close</button> -->
         <div class="h2CategoryContainer">
           <h2>Categories</h2>
         </div>
@@ -82,7 +74,7 @@
               <h2>POST A THREAD</h2>
             </div>
             <div class="category-title">
-              <select id="selectCategory" class="selectCategory">
+              <select id="selectCategory" class="selectCategory" required>
                 <option selected disabled>Select Category</option>
                 <option value="Technology">Technology</option>
                 <option value="E-commerce">E-Commerce</option>
@@ -90,13 +82,13 @@
                 <option value="Games">Games</option>
                 <option value="Food-Beverages">Food & Beverages</option>
               </select>
-              <input type="text" placeholder="Title" id="titleInp" class="titleInp" />
+              <input type="text" placeholder="Title" id="titleInp" class="titleInp" required/>
             </div>
             <div class="threadInpContainer">
-              <textarea id="threadInp" class="threadInp"></textarea>
+              <textarea id="threadInp" class="threadInp" required></textarea>
             </div>
             <div class="threadBtnContainer">
-              <button type="button" id="postBtn" class="postBtn">Post</button>
+              <button id="postBtn" class="postBtn">Post</button>
               <button type="button" id="expandBtn" class="expandBtn">
                 Expand
               </button>

@@ -13,65 +13,72 @@ const postThread = () => {
     postId: n,
   };
 
-  localStorage.setItem("post", JSON.stringify(thread));
-  localStorage.setItem("postId", n);
-  postList.push(thread);
-  localStorage.setItem("postList", JSON.stringify(postList));
+  if (thread.selectedCategory == "" || thread.titleValue == "" || thread.postText == "") {
+    console.log("Please Input something")
+    return
+  } else {
 
-  let threadContentContainer = document.querySelector(
-    ".threadContentContainer"
-  );
+    localStorage.setItem("post", JSON.stringify(thread));
+    localStorage.setItem("postId", n);
+    postList.push(thread);
+    localStorage.setItem("postList", JSON.stringify(postList));
 
-  let threadContent = document.createElement("div");
-  threadContent.classList = `threadContent ${thread.selectedCategory}`;
+    let threadContentContainer = document.querySelector(
+        ".threadContentContainer"
+    );
 
-  let threadImage = document.createElement("div");
-  threadImage.classList = "thread-Image";
+    let threadContent = document.createElement("div");
+    threadContent.classList = `threadContent ${thread.selectedCategory}`;
+    threadContent.id = `post${thread.postId}`;
 
-  let userImg = document.createElement("img");
-  userImg.src = ".//images/Avatar Users2_1.png";
-  userImg.classList = "avatar";
+    let threadImage = document.createElement("div");
+    threadImage.classList = "thread-Image";
 
-  let threadTitle = document.createElement("div");
-  threadTitle.classList = "threadTitle";
+    let userImg = document.createElement("img");
+    userImg.src = ".//images/Avatar Users2_1.png";
+    userImg.classList = "avatar";
 
-  let postTitle = document.createElement("span");
-  postTitle.style.fontSize = "larger";
-  postTitle.textContent = thread.titleValue;
+    let threadTitle = document.createElement("div");
+    threadTitle.classList = "threadTitle";
 
-  let category = document.createElement("span");
-  category.textContent = thread.selectedCategory;
+    let postTitle = document.createElement("span");
+    postTitle.style.fontSize = "larger";
+    postTitle.textContent = thread.titleValue;
 
-  let postContent = document.createElement("span");
-  postContent.textContent = thread.postText;
+    let category = document.createElement("span");
+    category.textContent = thread.selectedCategory;
 
-  let threadLikes = document.createElement("div");
-  threadLikes.classList = "threadLikes";
-  
-  let thumbsUp = document.createElement("div");
-  thumbsUp.classList ="thumbs-up";
-  
-  let thumbsUpIcon = document.createElement("i");
-  thumbsUpIcon.classList ="fa-regular fa-thumbs-up";
+    let postContent = document.createElement("span");
+    postContent.textContent = thread.postText;
 
-  let thumbsDown = document.createElement("div");
-  thumbsDown.classList = "thumbs-down";
+    let threadLikes = document.createElement("div");
+    threadLikes.classList = "threadLikes";
+    
+    let thumbsUp = document.createElement("div");
+    thumbsUp.classList ="thumbs-up";
+    
+    let thumbsUpIcon = document.createElement("i");
+    thumbsUpIcon.classList ="fa-regular fa-thumbs-up";
 
-  let thumbsDownIcon = document.createElement("i")
-  thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
+    let thumbsDown = document.createElement("div");
+    thumbsDown.classList = "thumbs-down";
 
-  threadContentContainer.insertAdjacentElement("afterbegin", threadContent);
-  threadContent.insertAdjacentElement("afterbegin", threadImage);
-  threadImage.insertAdjacentElement("afterbegin", userImg);
-  threadContent.insertAdjacentElement("beforeend", threadTitle);
-  threadTitle.insertAdjacentElement("afterbegin", postTitle);
-  threadTitle.insertAdjacentElement("beforeend", category);
-  threadTitle.insertAdjacentElement("beforeend", postContent);
-  threadContent.insertAdjacentElement("beforeend", threadLikes);
-  threadLikes.insertAdjacentElement("afterbegin",thumbsUp);
-  thumbsUp.insertAdjacentElement("afterbegin",thumbsUpIcon);
-  threadLikes.insertAdjacentElement("beforeend",thumbsDown);
-  thumbsDown.insertAdjacentElement("afterbegin",thumbsDownIcon);
+    let thumbsDownIcon = document.createElement("i")
+    thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
+
+    threadContentContainer.insertAdjacentElement("afterbegin", threadContent);
+    threadContent.insertAdjacentElement("afterbegin", threadImage);
+    threadImage.insertAdjacentElement("afterbegin", userImg);
+    threadContent.insertAdjacentElement("beforeend", threadTitle);
+    threadTitle.insertAdjacentElement("afterbegin", postTitle);
+    threadTitle.insertAdjacentElement("beforeend", category);
+    threadTitle.insertAdjacentElement("beforeend", postContent);
+    threadContent.insertAdjacentElement("beforeend", threadLikes);
+    threadLikes.insertAdjacentElement("afterbegin",thumbsUp);
+    thumbsUp.insertAdjacentElement("afterbegin",thumbsUpIcon);
+    threadLikes.insertAdjacentElement("beforeend",thumbsDown);
+    thumbsDown.insertAdjacentElement("afterbegin",thumbsDownIcon);
+  }
 };
 
 const displayThread = () => {
@@ -116,6 +123,7 @@ const displayThread = () => {
 
     let threadContent = document.createElement("div");
     threadContent.classList = `threadContent ${parsedPostList[i].selectedCategory}`;
+    threadContent.id = `post${parsedPostList[i].postId}`;
 
     let threadImage = document.createElement("div");
     threadImage.classList = "thread-Image";
