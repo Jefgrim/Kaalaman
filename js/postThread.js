@@ -13,37 +13,43 @@ const postThread = () => {
     postId: n,
   };
 
-  localStorage.setItem("post", JSON.stringify(thread));
-  localStorage.setItem("postId", n);
-  postList.push(thread);
-  localStorage.setItem("postList", JSON.stringify(postList));
+  if (thread.selectedCategory == "" || thread.titleValue == "" || thread.postText == "") {
+    console.log("Please Input something")
+    return
+  } else {
 
-  let threadContentContainer = document.querySelector(
-    ".threadContentContainer"
-  );
+    localStorage.setItem("post", JSON.stringify(thread));
+    localStorage.setItem("postId", n);
+    postList.push(thread);
+    localStorage.setItem("postList", JSON.stringify(postList));
 
-  let threadContent = document.createElement("div");
-  threadContent.classList = `threadContent ${thread.selectedCategory}`;
+    let threadContentContainer = document.querySelector(
+        ".threadContentContainer"
+    );
 
-  let threadImage = document.createElement("div");
-  threadImage.classList = "thread-Image";
+    let threadContent = document.createElement("div");
+    threadContent.classList = `threadContent ${thread.selectedCategory}`;
+    threadContent.id = `post${thread.postId}`;
 
-  let userImg = document.createElement("img");
-  userImg.src = ".//images/Avatar Users2_1.png";
-  userImg.classList = "avatar";
+    let threadImage = document.createElement("div");
+    threadImage.classList = "thread-Image";
 
-  let threadTitle = document.createElement("div");
-  threadTitle.classList = "threadTitle";
+    let userImg = document.createElement("img");
+    userImg.src = ".//images/Avatar Users2_1.png";
+    userImg.classList = "avatar";
 
-  let postTitle = document.createElement("span");
-  postTitle.style.fontSize = "larger";
-  postTitle.textContent = thread.titleValue;
+    let threadTitle = document.createElement("div");
+    threadTitle.classList = "threadTitle";
 
-  let category = document.createElement("span");
-  category.textContent = thread.selectedCategory;
+    let postTitle = document.createElement("span");
+    postTitle.style.fontSize = "larger";
+    postTitle.textContent = thread.titleValue;
 
-  let postContent = document.createElement("span");
-  postContent.textContent = thread.postText;
+    let category = document.createElement("span");
+    category.textContent = thread.selectedCategory;
+
+    let postContent = document.createElement("span");
+    postContent.textContent = thread.postText;
 
   let threadLikes = document.createElement("div");
   threadLikes.classList = "threadLikes";
@@ -116,6 +122,7 @@ const displayThread = () => {
 
     let threadContent = document.createElement("div");
     threadContent.classList = `threadContent ${parsedPostList[i].selectedCategory}`;
+    threadContent.id = `post${parsedPostList[i].postId}`;
 
     let threadImage = document.createElement("div");
     threadImage.classList = "thread-Image";

@@ -2,7 +2,6 @@ import toggleUserSection from "./js/userdropdown.js";
 import filterCategories from "./js/filterCategories.js"
 import {postThread, displayThread} from "./js/postThread.js"
 
-
 //categories btn
 let technologyBtn = document.querySelector("#technologyBtn")
 let ecommerceBtn = document.querySelector("#ecommerceBtn")
@@ -30,13 +29,3 @@ foodBtn.addEventListener("change",filterCategories)
 postBtn.addEventListener("click",postThread)
 
 displayThread();
-
-
-
-
-
-
-
-
-
-
