@@ -12,9 +12,9 @@
 
 <body>
 
-  <div class="mainContainer"> 
+  <div class="mainContainer">
 
-    <header> 
+    <header>
       <img src="images/kaalaman-logo.png" class="logo" alt="">
       <div class="user">
         <div class="userDropDown headerIcons">
@@ -24,8 +24,10 @@
             <button>log-out</button>
           </div>
         </div>
-        <i class="fa-regular fa-bell headerIcons"></i>
-        <i class="fa-regular fa-lightbulb headerIcons"></i>
+        <div class="headerIcon">
+          <i class="fa-regular fa-bell headerIcons" id="notification"></i>
+          <i class="fa-regular fa-lightbulb headerIcons" id="darkmode"></i>
+        </div>
       </div>
     </header>
 
@@ -40,25 +42,27 @@
         <span class="categories-text" id="foodBtn">Food & Beverages</span>
         <span class="categories-text" id="allBtn">ALL</span>
         <button id="hideSidebar" class="hideSidebar-Btn">Close</button> -->
-        <div class="h2CategoryContainer"><h2>Categories</h2></div>
+        <div class="h2CategoryContainer">
+          <h2>Categories</h2>
+        </div>
         <div class="categoriesContainer">
-          <div class="categoryContainer"><input type="checkbox" name="category" id="Technology"><label for="Technology">Technology</label></div>
-          <div class="categoryContainer"><input type="checkbox" name="category" id="E-Commerce"><label for="E-Commerce">E-Commerce</label></div>
-          <div class="categoryContainer"><input type="checkbox" name="category" id="Health & lifestyle"><label for="Health & lifestyle">Health & lifestyle</label></div>
-          <div class="categoryContainer"><input type="checkbox" name="category" id="Games"><label for="Games">Games</label></div>
-          <div class="categoryContainer"><input type="checkbox" name="category" id="Food"><label for="Food">Food</label></div>
+          <div class="categoryContainer"><input type="checkbox" name="category" id="Technology"><label
+              for="Technology">Technology</label></div>
+          <div class="categoryContainer"><input type="checkbox" name="category" id="E-Commerce"><label
+              for="E-Commerce">E-Commerce</label></div>
+          <div class="categoryContainer"><input type="checkbox" name="category" id="Health & lifestyle"><label
+              for="Health & lifestyle">Health & lifestyle</label></div>
+          <div class="categoryContainer"><input type="checkbox" name="category" id="Games"><label
+              for="Games">Games</label></div>
+          <div class="categoryContainer"><input type="checkbox" name="category" id="Food"><label for="Food">Food</label>
+          </div>
         </div>
       </div>
 
       <div class="threadContainer">
 
         <div class="threadNavContainer">
-          <div class="breadCrumbs">
-            <div class="showSidebar-btn" id="sideBar-toggle">
-              <span>Categories</span>
-              <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
-            </div>
-          </div>
+
           <div class="searchBar">
             <i class="fa-solid fa-magnifying-glass searchBarLogo"></i>
             <input type="text" class="input searchBarinput" placeholder="search...">
@@ -68,7 +72,6 @@
         <div class="threadContentContainer">
           <!-- Thread Content Here From Local Storage -->
         </div>
-
       </div>
 
       <div class="rightContainer">
@@ -104,7 +107,7 @@
         <div class="latestContainer">
 
           <h3 class="latest">Latest post</h3>
-          
+
           <div class="latestContent">
             <div class="content-box1">
               <img src=".//images/Avatar Users2_1.png" class="avatar">
@@ -120,7 +123,7 @@
         <div class="creatorContainer">
 
           <div class="creatorContent">
-            <h2>Creators</h2>
+            <h2 class="creatorH2">Creators</h2>
 
             <div class="creator">
               <img src=".//images/5.png" class="creator-avatar">
