@@ -58,7 +58,7 @@ header {
 }
 
 
-#darkmode ,#notification {
+#darkmodeBtn ,#notification {
   height: 50px;
   width: 50%;
   font-size: xx-large;
@@ -71,9 +71,7 @@ header {
   display: flex;
   position: relative;
   flex-direction: column;
-  height: 100vh;
-  
-  
+  height: 100vh;  
 }
 
 .subContainer {
@@ -231,7 +229,7 @@ header {
 .thread-Image img{
   width: 100px;
   height:100px;
-  padding: 10px 0 10px 50px;
+  padding: 20px 0 10px 50px;
 
 
 }
