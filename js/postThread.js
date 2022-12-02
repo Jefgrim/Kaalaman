@@ -3,14 +3,14 @@ const postThread = () => {
   if (postList == null) {
     postList = [];
   }
-  let n = localStorage.getItem("postId");
+  let n = localStorage.getItem("postId")
   n = ++n;
 
   let thread = {
     selectedCategory: document.querySelector("#selectCategory").value,
     titleValue: document.querySelector("#titleInp").value,
     postText: document.querySelector("#threadInp").value,
-    postId: n,
+    postId: `post${n}`,
   };
 
   if (thread.selectedCategory == "" || thread.titleValue == "" || thread.postText == "") {
@@ -29,7 +29,7 @@ const postThread = () => {
 
     let threadContent = document.createElement("div");
     threadContent.classList = `threadContent ${thread.selectedCategory}`;
-    threadContent.id = `post${thread.postId}`;
+    threadContent.id = thread.postId;
 
     let threadImage = document.createElement("div");
     threadImage.classList = "thread-Image";
@@ -93,7 +93,7 @@ const displayThread = () => {
       selectedCategory: "Technology",
       titleValue: "Dummy Title",
       postText: "Dummy Text",
-      postId: 1,
+      postId: "post1",
     };
 
     localStorage.setItem("post", JSON.stringify(thread));
@@ -105,7 +105,7 @@ const displayThread = () => {
         selectedCategory: "Technology",
         titleValue: "Dummy Title 2",
         postText: "Dummy Text 2",
-        postId: 2,
+        postId: "post2",
       };
   
       localStorage.setItem("post", JSON.stringify(thread2));
@@ -123,7 +123,7 @@ const displayThread = () => {
 
     let threadContent = document.createElement("div");
     threadContent.classList = `threadContent ${parsedPostList[i].selectedCategory}`;
-    threadContent.id = `post${parsedPostList[i].postId}`;
+    threadContent.id = parsedPostList[i].postId;
 
     let threadImage = document.createElement("div");
     threadImage.classList = "thread-Image";
