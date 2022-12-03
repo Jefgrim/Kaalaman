@@ -13,7 +13,7 @@ import ChangeWindowSize from "./js/responsive.js"
 
 
   
-// window.addEventListener("resize",ChangeWindowSize)
+
 
 
 
