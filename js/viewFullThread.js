@@ -103,22 +103,43 @@ const showSelectedPostContent = () => {
 };
 
 const showAllReply = () => {
-    let threadList = JSON.parse(localStorage.getItem("postList"));
-    // let replyList = localStorage.getItem("replyList")
-    // if (replyList == null) {
-    //     let replyList = [];
-    //     let dummyReply = {
-    //         replyId: 1,
-    //         replyToId: "post1",
-    //         replyText: "This is a dummy reply for Post1",
-    //     }
-    // }
-    for (const thread of threadList) {
-        if (thread.postId == event.currentTarget.id){
-            console.log(`Shown all reply in ${thread.postId}`)
+  let threadList = JSON.parse(localStorage.getItem("postList"));
+  let replyList = localStorage.getItem("replyList");
+  if (replyList == null) {
+    let replyList = [];
 
-        }
+    let dummyReply = {
+      replyId: "reply1",
+      replyToId: "post1",
+      replyToText: "Dummy Text",
+      replyText: "This is a dummy reply for Post1",
+    };
+
+    localStorage.setItem("reply", JSON.stringify(dummyReply));
+    localStorage.setItem("replyId", 1);
+    replyList.push(dummyReply);
+    localStorage.setItem("replyList", JSON.stringify(replyList));
+
+    let dummyReply2 = {
+      replyId: "reply2",
+      replyToId: "post2",
+      replyToText: "Dummy Text 2",
+      replyText: "This is a dummy reply for Post2",
+    };
+
+    localStorage.setItem("reply", JSON.stringify(dummyReply2));
+    localStorage.setItem("replyId", 2);
+    replyList.push(dummyReply2);
+    localStorage.setItem("replyList", JSON.stringify(replyList));
+  }
+
+  let parsedReplyList = JSON.parse(replyList)
+  
+  for (const thread of threadList) {
+    if (thread.postId == event.currentTarget.id) {
+      console.log(`Shown all reply in ${thread.postId}`);
     }
-}
+  }
+};
 
 export default viewFullThread;
