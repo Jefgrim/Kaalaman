@@ -9,7 +9,7 @@ const  ChangeWindowSize = () =>{
    
 
  closeSidebar.addEventListener("click",function(){
-        hideSidebar.style.display = "none"
+        hideSidebar.removeAttribute("style")
  })
 
 

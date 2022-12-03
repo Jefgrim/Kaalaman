@@ -1,9 +1,10 @@
-import viewFullThread from "./viewFullThread.js"
+import {viewFullThread} from "./viewFullThread.js"
 
 const addEventListenerToChildrens = () => {
-    let threadContent = document.querySelectorAll(".threadContent")
-    for(let content of threadContent) {
-        content.addEventListener("click", viewFullThread)
+    let threadContent = document.querySelector(".threadContentContainer").children
+    for (let x of threadContent){
+        let threadTextsContainer = x.firstChild.lastChild
+        threadTextsContainer.addEventListener("click", viewFullThread)
     }
 }
 

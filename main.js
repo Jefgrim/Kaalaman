@@ -4,13 +4,12 @@ import {postThread, displayThread} from "./js/postThread.js";
 import Darkmode from "./js/darkmode.js"
 import addEventListenerToChildrens from "./js/addEventListenerToChildrens.js"
 import ChangeWindowSize from "./js/responsive.js"
-
-
-
+import storeDummReply from "./js/storeDummyReply.js"
 
 displayThread();
 addEventListenerToChildrens();
 ChangeWindowSize();
+storeDummReply();
 
 //darkmode
 let darkModeBtn = document.querySelector("#darkmodeBtn");

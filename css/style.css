@@ -460,13 +460,6 @@ header {
   height: 200px;
 }
 
-
-
-
-
-/* test */
-
-
 /* Thread Styles Start*/
 
 .threadContent {
@@ -499,7 +492,20 @@ header {
   margin-bottom: 10px;
 }
 
+.threadUserAvatar span {
+  margin-bottom: 10px;
+}
+
 .threadTextsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  word-break: break-word;
+  width: 400px;
+  cursor: pointer;
+}
+
+.selectedThreadTextsContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

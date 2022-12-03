@@ -13,6 +13,7 @@ const postThread = () => {
     titleValue: document.querySelector("#titleInp").value,
     postText: document.querySelector("#threadInp").value,
     postId: `post${n}`,
+    userName: "Current User"
   };
 
   if (thread.selectedCategory == "" || thread.titleValue == "" || thread.postText == "") {
@@ -31,7 +32,6 @@ const postThread = () => {
 
     let threadContent = document.createElement("div");
     threadContent.classList = `threadContent ${thread.selectedCategory}`;
-    threadContent.id = thread.postId;
 
     let avatarTextsContainer = document.createElement("div")
     avatarTextsContainer.classList = "avatarTextsContainer"
@@ -42,8 +42,12 @@ const postThread = () => {
     let userImg = document.createElement("img");
     userImg.src = ".//images/Avatar Users2_1.png";
 
+    let userName = document.createElement("span")
+    userName.textContent = thread.userName
+
     let threadTextsContainer = document.createElement("div");
     threadTextsContainer.classList = "threadTextsContainer";
+    threadTextsContainer.id = thread.postId;
 
     let threadTexts = document.createElement("div");
     threadTexts.classList = "threadTexts";
@@ -77,6 +81,7 @@ const postThread = () => {
   threadContent.insertAdjacentElement("afterbegin", avatarTextsContainer)
   avatarTextsContainer.insertAdjacentElement("afterbegin", threadUserAvatar)
   threadUserAvatar.insertAdjacentElement("afterbegin", userImg);
+  threadUserAvatar.insertAdjacentElement("beforeend", userName)
   avatarTextsContainer.insertAdjacentElement("beforeend", threadTextsContainer);
   threadTextsContainer.insertAdjacentElement("afterbegin", threadTexts)
   threadTexts.insertAdjacentElement("afterbegin", category);
@@ -105,6 +110,7 @@ const displayThread = () => {
       titleValue: "Dummy Title",
       postText: "Dummy Text",
       postId: "post1",
+      userName: "Dummy Poster 1"
     };
 
     localStorage.setItem("post", JSON.stringify(thread));
@@ -117,6 +123,7 @@ const displayThread = () => {
         titleValue: "Dummy Title 2",
         postText: "Dummy Text 2",
         postId: "post2",
+        userName: "Dummy Poster 2"
       };
   
       localStorage.setItem("post", JSON.stringify(thread2));
@@ -134,7 +141,6 @@ const displayThread = () => {
 
     let threadContent = document.createElement("div");
     threadContent.classList = `threadContent ${parsedPostList[i].selectedCategory}`;
-    threadContent.id = parsedPostList[i].postId;
 
     let avatarTextsContainer = document.createElement("div")
     avatarTextsContainer.classList= "avatarTextsContainer"
@@ -145,8 +151,12 @@ const displayThread = () => {
     let userImg = document.createElement("img");
     userImg.src = ".//images/Avatar Users2_1.png";
 
+    let userName = document.createElement("span")
+    userName.textContent = parsedPostList[i].userName
+
     let threadTextsContainer = document.createElement("div");
     threadTextsContainer.classList = "threadTextsContainer";
+    threadTextsContainer.id = parsedPostList[i].postId;
 
     let threadTexts = document.createElement("div");
     threadTexts.classList = "threadTexts";
@@ -180,6 +190,7 @@ const displayThread = () => {
   threadContent.insertAdjacentElement("afterbegin", avatarTextsContainer)
   avatarTextsContainer.insertAdjacentElement("afterbegin", threadUserAvatar);
   threadUserAvatar.insertAdjacentElement("afterbegin", userImg);
+  threadUserAvatar.insertAdjacentElement("beforeend", userName)
   avatarTextsContainer.insertAdjacentElement("beforeend", threadTextsContainer);
   threadTextsContainer.insertAdjacentElement("afterbegin", threadTexts)
   threadTexts.insertAdjacentElement("afterbegin", category);
