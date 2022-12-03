@@ -31,15 +31,17 @@ const postThread = () => {
     threadContent.classList = `threadContent ${thread.selectedCategory}`;
     threadContent.id = thread.postId;
 
-    let threadImage = document.createElement("div");
-    threadImage.classList = "thread-Image";
+    let threadUserAvatar = document.createElement("div");
+    threadUserAvatar.classList = "threadUserAvatar";
 
     let userImg = document.createElement("img");
     userImg.src = ".//images/Avatar Users2_1.png";
-    userImg.classList = "avatar";
 
-    let threadTitle = document.createElement("div");
-    threadTitle.classList = "threadTitle";
+    let threadTextsContainer = document.createElement("div");
+    threadTextsContainer.classList = "threadTextsContainer";
+
+    let threadTexts = document.createElement("div");
+    threadTexts.classList = "threadTexts";
 
     let postTitle = document.createElement("span");
     postTitle.style.fontSize = "larger";
@@ -51,33 +53,34 @@ const postThread = () => {
     let postContent = document.createElement("span");
     postContent.textContent = thread.postText;
 
-  let threadLikes = document.createElement("div");
-  threadLikes.classList = "threadLikes";
+  let threadReaction = document.createElement("div");
+  threadReaction.classList = "threadReaction";
   
-  let thumbsUp = document.createElement("div");
-  thumbsUp.classList ="thumbs-up";
+  let threadThumbsUp = document.createElement("div");
+  threadThumbsUp.classList ="threadThumbsUp";
   
   let thumbsUpIcon = document.createElement("i");
   thumbsUpIcon.classList ="fa-regular fa-thumbs-up";
 
-  let thumbsDown = document.createElement("div");
-  thumbsDown.classList = "thumbs-down";
+  let threadThumbsDown = document.createElement("div");
+  threadThumbsDown.classList = "threadThumbsDown";
 
   let thumbsDownIcon = document.createElement("i")
   thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
 
   threadContentContainer.insertAdjacentElement("afterbegin", threadContent);
-  threadContent.insertAdjacentElement("afterbegin", threadImage);
-  threadImage.insertAdjacentElement("afterbegin", userImg);
-  threadContent.insertAdjacentElement("beforeend", threadTitle);
-  threadTitle.insertAdjacentElement("afterbegin", category);
-  threadTitle.insertAdjacentElement("beforeend", postTitle);
-  threadTitle.insertAdjacentElement("beforeend", postContent);
-  threadContent.insertAdjacentElement("beforeend", threadLikes);
-  threadLikes.insertAdjacentElement("afterbegin",thumbsUp);
-  thumbsUp.insertAdjacentElement("afterbegin",thumbsUpIcon);
-  threadLikes.insertAdjacentElement("beforeend",thumbsDown);
-  thumbsDown.insertAdjacentElement("afterbegin",thumbsDownIcon);
+  threadContent.insertAdjacentElement("afterbegin", threadUserAvatar);
+  threadUserAvatar.insertAdjacentElement("afterbegin", userImg);
+  threadContent.insertAdjacentElement("beforeend", threadTextsContainer);
+  threadTextsContainer.insertAdjacentElement("afterbegin", threadTexts)
+  threadTexts.insertAdjacentElement("afterbegin", category);
+  threadTexts.insertAdjacentElement("beforeend", postTitle);
+  threadTexts.insertAdjacentElement("beforeend", postContent);
+  threadContent.insertAdjacentElement("beforeend", threadReaction);
+  threadReaction.insertAdjacentElement("afterbegin",threadThumbsUp);
+  threadThumbsUp.insertAdjacentElement("afterbegin",thumbsUpIcon);
+  threadReaction.insertAdjacentElement("beforeend",threadThumbsDown);
+  threadThumbsDown.insertAdjacentElement("afterbegin",thumbsDownIcon);
   }
 };
 
@@ -125,15 +128,17 @@ const displayThread = () => {
     threadContent.classList = `threadContent ${parsedPostList[i].selectedCategory}`;
     threadContent.id = parsedPostList[i].postId;
 
-    let threadImage = document.createElement("div");
-    threadImage.classList = "thread-Image";
+    let threadUserAvatar = document.createElement("div");
+    threadUserAvatar.classList = "threadUserAvatar";
 
     let userImg = document.createElement("img");
     userImg.src = ".//images/Avatar Users2_1.png";
-    userImg.classList = "avatar";
 
-    let threadTitle = document.createElement("div");
-    threadTitle.classList = "threadTitle";
+    let threadTextsContainer = document.createElement("div");
+    threadTextsContainer.classList = "threadTextsContainer";
+
+    let threadTexts = document.createElement("div");
+    threadTexts.classList = "threadTexts";
 
     let postTitle = document.createElement("span");
     postTitle.style.fontSize = "larger";
@@ -145,33 +150,34 @@ const displayThread = () => {
     let postContent = document.createElement("span");
     postContent.textContent = parsedPostList[i].postText;
 
-    let threadLikes = document.createElement("div");
-    threadLikes.classList = "threadLikes";
-
-    let thumbsUp = document.createElement("div");
-    thumbsUp.classList ="thumbs-up";
-    
-    let thumbsUpIcon = document.createElement("i");
-    thumbsUpIcon.classList ="fa-regular fa-thumbs-up";
+  let threadReaction = document.createElement("div");
+  threadReaction.classList = "threadReaction";
   
-    let thumbsDown = document.createElement("div");
-    thumbsDown.classList = "thumbs-down";
+  let threadThumbsUp = document.createElement("div");
+  threadThumbsUp.classList ="threadThumbsUp";
   
-    let thumbsDownIcon = document.createElement("i")
-    thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
+  let thumbsUpIcon = document.createElement("i");
+  thumbsUpIcon.classList ="fa-regular fa-thumbs-up";
 
-    threadContentContainer.insertAdjacentElement("afterbegin", threadContent);
-    threadContent.insertAdjacentElement("afterbegin", threadImage);
-    threadImage.insertAdjacentElement("afterbegin", userImg);
-    threadContent.insertAdjacentElement("beforeend", threadTitle);
-    threadTitle.insertAdjacentElement("afterbegin", category);
-    threadTitle.insertAdjacentElement("beforeend", postTitle);
-    threadTitle.insertAdjacentElement("beforeend", postContent);
-    threadContent.insertAdjacentElement("beforeend", threadLikes);
-    threadLikes.insertAdjacentElement("afterbegin",thumbsUp);
-    thumbsUp.insertAdjacentElement("afterbegin",thumbsUpIcon);
-    threadLikes.insertAdjacentElement("beforeend",thumbsDown);
-    thumbsDown.insertAdjacentElement("afterbegin",thumbsDownIcon);
+  let threadThumbsDown = document.createElement("div");
+  threadThumbsDown.classList = "threadThumbsDown";
+
+  let thumbsDownIcon = document.createElement("i")
+  thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
+
+  threadContentContainer.insertAdjacentElement("afterbegin", threadContent);
+  threadContent.insertAdjacentElement("afterbegin", threadUserAvatar);
+  threadUserAvatar.insertAdjacentElement("afterbegin", userImg);
+  threadContent.insertAdjacentElement("beforeend", threadTextsContainer);
+  threadTextsContainer.insertAdjacentElement("afterbegin", threadTexts)
+  threadTexts.insertAdjacentElement("afterbegin", category);
+  threadTexts.insertAdjacentElement("beforeend", postTitle);
+  threadTexts.insertAdjacentElement("beforeend", postContent);
+  threadContent.insertAdjacentElement("beforeend", threadReaction);
+  threadReaction.insertAdjacentElement("afterbegin",threadThumbsUp);
+  threadThumbsUp.insertAdjacentElement("afterbegin",thumbsUpIcon);
+  threadReaction.insertAdjacentElement("beforeend",threadThumbsDown);
+  threadThumbsDown.insertAdjacentElement("afterbegin",thumbsDownIcon);
   }
 };
 
