@@ -104,6 +104,23 @@ const showSelectedPostContent = () => {
 
 const showAllReply = () => {
   let threadList = JSON.parse(localStorage.getItem("postList"));
+
+  const getUserName = () => {
+    for (const thread of threadList) {
+        if (thread.postId == event.currentTarget.id) {
+          return thread.userName
+        }
+      }
+    }
+
+  const getTextContent = () => {
+    for (const thread of threadList) {
+        if (thread.postId == event.currentTarget.id) {
+          return thread.postText
+        }
+      }
+}   
+
   let replyList = localStorage.getItem("replyList");
   if (replyList == null) {
     let replyList = [];
@@ -137,14 +154,6 @@ const showAllReply = () => {
 
   let parsedReplyList = JSON.parse(replyList)
 
-  const getUserName = () => {
-    for (const thread of threadList) {
-        if (thread.postId == event.currentTarget.id) {
-          return thread.userName
-        }
-      }
-}
-
   for (let i in parsedReplyList) {
     let threadContentContainer = document.querySelector(".threadContentContainer")
 
@@ -173,7 +182,47 @@ const showAllReply = () => {
     let repliedToUserName = document.createElement("span")
     repliedToUserName.textContent =  getUserName()
 
+    let repliedToText = document.createElement("span")
+    repliedToText.textContent = getTextContent()
 
+    let reply = document.createElement("div")
+    reply.classList = "reply"
+
+    let replyText = document.createElement("span")
+    replyText.textContent = parsedReplyList[i].replyText
+
+    let replyReaction = document.createElement("div")
+    replyReaction.classList = "replyReaction"
+
+    let replyThumbsUp = document.createElement("div")
+    replyThumbsUp.classList = "replyThumbsUp"
+
+    let thumbsUpIcon = document.createElement("i")
+    thumbsUpIcon.classList = "fa-regular fa-thumbs-up"
+
+    let replyThumbsDown = document.createElement("div")
+    replyThumbsDown.classList = "replyThumbsUp"
+
+    let thumbsDownIcon = document.createElement("i")
+    thumbsDownIcon.classList = "fa-regular fa-thumbs-down"
+
+
+    threadContentContainer.insertAdjacentElement("beforeend", replyContent)
+    replyContent.insertAdjacentElement("afterbegin", avatarTextsContainer)
+    avatarTextsContainer.insertAdjacentElement("afterbegin", replyUserAvatar)
+    replyUserAvatar.insertAdjacentElement("afterbegin", userImg)
+    replyUserAvatar.insertAdjacentElement("beforeend", userName)
+    avatarTextsContainer.insertAdjacentElement("beforeend", replyTexts)
+    replyTexts.insertAdjacentElement("afterbegin", repliedTo)
+    repliedTo.insertAdjacentElement("afterbegin", repliedToUserName)
+    repliedTo.insertAdjacentElement("beforeend", repliedToText)
+    replyTexts.insertAdjacentElement("beforeend", reply)
+    reply.insertAdjacentElement("afterbegin", replyText)
+    replyContent.insertAdjacentElement("beforeend", replyReaction)
+    replyReaction.insertAdjacentElement("afterbegin", replyThumbsUp)
+    replyThumbsUp.insertAdjacentElement("afterbegin", thumbsUpIcon)
+    replyReaction.insertAdjacentElement("beforeend", replyThumbsDown)
+    replyThumbsDown.insertAdjacentElement("afterbegin", thumbsDownIcon)
 }
 
 };
