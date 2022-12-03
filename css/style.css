@@ -159,7 +159,7 @@ header {
   margin-top: 20px;
 }
 
-.sideBar-toggle{
+.sideBar-toggle {
   background-color: #008968;
   height: 100%;
   width: 50px;
@@ -192,7 +192,7 @@ header {
   display: flex;
 }
 
-.hidePostThreadBtn{
+.hidePostThreadBtn {
   background-color: #008968;
   width: 20%;
   height: 50%;
@@ -401,7 +401,7 @@ header {
 }
 
 .creatorContainer {
-  height: 200px;
+  height: 100px;
   width: 95%;
   background-color: #008968;
   margin-bottom: 20px;
@@ -416,14 +416,34 @@ header {
   height: 200px;
 }
 
+.donation {
+  font-size: 8px;
+  text-align: justify;
+}
+
 .links {
   width: 23.75%;
   height: 200px;
+  margin-top: 0;
 }
+
+.links-2 {
+  text-align: justify;
+  font-size: 12px;
+  margin: 0;
+}
+
+
 
 .about {
   width: 23.75%;
   height: 200px;
+}
+
+.about-kaalaman {
+  text-align: justify;
+  margin-top: 0;
+  font-size: 12px;
 }
 
 .creator {
@@ -573,21 +593,27 @@ header {
 /* Reply Styles End */
 
 @media only screen and (max-width: 800px) {
-  .sidebar , .rightContainer {
+
+  .sidebar,
+  .rightContainer {
     display: none;
   }
+
   .threadContainer {
     width: 100%;
   }
-  .sideBar-toggle{
+
+  .sideBar-toggle {
     display: flex;
     
   }
-  .hidePostThreadBtn{
+
+  .hidePostThreadBtn {
     display: flex;
     
     
   }
+  
   .threadNavContainer{
     display: flex;
     justify-content: space-around;
@@ -611,9 +637,4 @@ header {
    }
 
   }
-  
- 
-
-
-
 
