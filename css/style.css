@@ -3,10 +3,11 @@
 
 :root {
 
-  --primary-color:#1d1f25;
+  --primary-color: #1d1f25;
 }
-.LigthMode{
-  --primary-color:white;
+
+.LigthMode {
+  --primary-color: white;
 }
 
 body {
@@ -106,8 +107,8 @@ header {
 }
 
 .sidebar h2 {
-width: 100%;
-color: whitesmoke;
+  width: 100%;
+  color: whitesmoke;
 }
 
 
@@ -408,38 +409,32 @@ color: whitesmoke;
   margin-top: 20px;
   border-radius: 10px;
   display: flex;
+  justify-content: space-evenly;
 }
 
+.donate {
+  width: 23.75%;
+  height: 200px;
+}
 
-.creatorH2 {
-  display: flex;
-  justify-content: center;
+.links {
+  width: 23.75%;
+  height: 200px;
+}
+
+.about {
+  width: 23.75%;
+  height: 200px;
 }
 
 .creator {
-  justify-content: space-around;
-  display: flex;
-  width: 100%;
+  width: 23.75%;
+  height: 200px;
 }
 
-.creatorContent {
-  width: 100%;
-}
 
-.creator-avatar {
-  width: 50px;
-  height: 50px;
-  margin-top: -20px;
-  display: flex;
 
-}
 
-.creator-name {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  font-weight: bold;
-}
 
 /* test */
 
@@ -451,7 +446,8 @@ color: whitesmoke;
   height: fit-content;
   margin: 20px 0px 20px 0px;
   background-color: #1D1F25;
-  border-radius: 15px;display: flex;
+  border-radius: 15px;
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
@@ -496,7 +492,8 @@ color: whitesmoke;
   align-items: center;
 }
 
-.threadThumbsUp, .threadThumbsDown {
+.threadThumbsUp,
+.threadThumbsDown {
   font-size: 30px;
   margin: 5px;
   color: whitesmoke;
@@ -567,7 +564,8 @@ color: whitesmoke;
   align-items: center;
 }
 
-.replyThumbsUp, .replyThumbsDown {
+.replyThumbsUp,
+.replyThumbsDown {
   font-size: 30px;
   margin: 5px;
   color: whitesmoke;
