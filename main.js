@@ -5,22 +5,6 @@ import Darkmode from "./js/darkmode.js"
 import addEventListenerToChildrens from "./js/addEventListenerToChildrens.js"
 import ChangeWindowSize from "./js/responsive.js"
 
-
-  
-      
-    
-    
-
-
-  
-
-
-
-
-
-
-
-
 displayThread();
 addEventListenerToChildrens();
  ChangeWindowSize();
