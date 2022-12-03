@@ -458,7 +458,7 @@ color: whitesmoke;
   align-items: center;
   flex-direction: column;
   color: white;
-  margin-right: 10px;
+  margin-right: 30px;
 }
 
 .threadUserAvatar img {
@@ -516,6 +516,7 @@ color: whitesmoke;
   justify-content: center;
   flex-direction: column;
   color: white;
+  margin-right: 30px;
 }
 
 .replyUserAvatar img {
