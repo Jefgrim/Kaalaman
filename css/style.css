@@ -109,18 +109,15 @@ header {
 
 .sidebar h2 {
 
-  width: 100%;
-  margin-top: 90px;
-  height: 50px;
-  /* align-items: center;
-  display: flex; */
-  /* justify-content: center; */
-  color: whitesmoke;
+width: 100%;
 
+/* align-items: center;
+  display: flex; */
+
+color: whitesmoke;
 }
 
 .categories-h2 {
-  margin-left: 12px;
 }
 
 
@@ -138,26 +135,17 @@ header {
 
 
 .categoriesContainer {
-  height: 80%;
-  /* background-color: #1D1F25; */
+  height: 100%;
   width: 100%;
   /* display: flex;
   flex-direction: column;
   justify-content: space-evenly; */
-  display: block;
-  margin-left: 10px;
 }
 
 .categoryContainer {
   color: whitesmoke;
-  height: 50px;
-  display: block;
-  /* justify-content: space-between; */
-  align-items: center;
-  /* margin-top: 10px; */
   margin-left: 10px;
-
-
+  margin-bottom: 10px;
 }
 
 .categoryContainer input {
@@ -240,28 +228,6 @@ header {
 
 .threadContentContainer::-webkit-scrollbar {
   display: none;
-}
-
-.threadContent {
-  width: 100%;
-  min-height: 150px;
-  margin: 20px 0px 20px 0px;
-  background-color: #1D1F25;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-  justify-content: space-evenly;
-  padding: 5px;
-
-}
-
-.thread-Image img {
-  width: 100px;
-  height: 100px;
-  padding: 20px 0 10px 50px;
-
-
 }
 
 .threadTitle {
@@ -532,8 +498,130 @@ header {
   font-weight: bold;
 }
 
-
-
-
-
 /* test */
+
+
+/* Thread Styles Start*/
+
+.threadContent {
+  width: 100%;
+  height: fit-content;
+  margin: 20px 0px 20px 0px;
+  background-color: #1D1F25;
+  border-radius: 15px;display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.threadUserAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.threadUserAvatar img {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.threadTextsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 400px;
+}
+
+.threadTexts {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: white;
+}
+
+.threadReaction {
+  display: flex;
+  align-items: center;
+}
+
+.threadThumbsUp, .threadThumbsDown {
+  font-size: 30px;
+  margin: 5px;
+  color: whitesmoke;
+}
+
+/* Thread Style End */
+
+/* Reply Styles Start */
+
+.replyContent {
+  width: 100%;
+  height: fit-content;
+  margin: 20px 0px 20px 0px;
+  background-color: #1D1F25;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.replyUserAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.replyUserAvatar img {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.replyUserAvatar span {
+  margin-bottom: 10px;
+}
+
+.replyTexts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 400px;
+}
+
+.repliedTo {
+  background-color: #141518;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.reply {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: white;
+}
+
+.replyReaction {
+  display: flex;
+  align-items: center;
+}
+
+.replyThumbsUp, .replyThumbsDown {
+  font-size: 30px;
+  margin: 5px;
+  color: whitesmoke;
+}
+
+/* Reply Styles End */

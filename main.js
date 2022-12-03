@@ -2,14 +2,13 @@ import toggleUserSection from "./js/userdropdown.js";
 import filterCategories from "./js/filterCategories.js";
 import {postThread, displayThread} from "./js/postThread.js";
 import Darkmode from "./js/darkmode.js"
+import addEventListenerToChildrens from "./js/addEventListenerToChildrens.js"
 
-
-
-
+displayThread();
+addEventListenerToChildrens();
 
 //darkmode
 let darkModeBtn = document.querySelector("#darkmodeBtn");
-
 
 //categories btn
 let technologyBtn = document.querySelector("#technologyBtn")
@@ -37,9 +36,5 @@ foodBtn.addEventListener("change",filterCategories)
 // //event listener postBtn
 postBtn.addEventListener("click",postThread)
 
-
 //darkmode evemt listener
 darkModeBtn.addEventListener("click" , Darkmode)
-
-
-displayThread();
