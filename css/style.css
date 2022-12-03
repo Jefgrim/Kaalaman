@@ -161,6 +161,14 @@ color: whitesmoke;
 
 }
 
+.sideBar-toggle{
+  background-color: #008968;
+  height: 100%;
+  width: 50px;
+  display: none;
+  border-radius: 10px 0px 0px 10px;
+}
+
 .searchBar {
   height: 100%;
   width: 70%;
