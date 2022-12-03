@@ -108,7 +108,9 @@ const showAllReply = () => {
     // if (replyList == null) {
     //     let replyList = [];
     //     let dummyReply = {
-    //         replyId: 
+    //         replyId: 1,
+    //         replyToId: "post1",
+    //         replyText: "This is a dummy reply for Post1",
     //     }
     // }
     for (const thread of threadList) {
