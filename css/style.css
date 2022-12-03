@@ -157,8 +157,6 @@ color: whitesmoke;
   width: 95%;
   margin-top: 20px;
   display: flex;
-  justify-content: space-between;
-
 }
 
 .sideBar-toggle{
@@ -180,7 +178,7 @@ color: whitesmoke;
   border: 0;
   outline: none;
   color: black;
-  width: 90%;
+  width: 80%;
   border-radius: 10px 0px 0px 10px;
   font-size: 20px;
   padding-left: 25px;
@@ -192,6 +190,15 @@ color: whitesmoke;
   background-color: #008968;
   padding: 20px 0px 20px 20px;
   display: flex;
+}
+
+.hidePostThreadBtn{
+  background-color: #008968;
+  width: 20%;
+  height: 50%;
+  padding: 10px;
+  margin-left: 50px;
+  display: none;
 }
 
 
@@ -567,3 +574,19 @@ color: whitesmoke;
 }
 
 /* Reply Styles End */
+
+@media only screen and (max-width: 800px) {
+  .sidebar , .rightContainer {
+    display: none;
+  }
+  .threadContainer {
+    width: 100%;
+  }
+  .sideBar-toggle{
+    display: flex;
+  }
+  .hidePostThreadBtn{
+    display: flex;
+  }
+}
+
