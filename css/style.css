@@ -156,7 +156,6 @@ color: whitesmoke;
   min-height: 50px;
   width: 95%;
   margin-top: 20px;
-  display: flex;
 }
 
 .sideBar-toggle{
@@ -584,9 +583,39 @@ color: whitesmoke;
   }
   .sideBar-toggle{
     display: flex;
+    
   }
   .hidePostThreadBtn{
     display: flex;
+    
+    
   }
-}
+  .threadNavContainer{
+    display: flex;
+    justify-content: space-around;
+    }
+    .searchBar{
+      flex: 1;
+      padding-left: 5px;
+    }
+    .threadContent{
+      flex-direction:column;
+      
+  }
+  .avatarTextsContainer{
+    justify-content: center;
+  }
+   .threadReaction{
+    justify-content: center;
+   }
+   .threadUserAvatar{
+    margin-left:20px
+   }
+
+  }
+  
+ 
+
+
+
 
