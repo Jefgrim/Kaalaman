@@ -1,3 +1,5 @@
+import addEventListenerToChildrens from "./addEventListenerToChildrens.js";
+
 const postThread = () => {
   let postList = JSON.parse(localStorage.getItem("postList"));
   if (postList == null) {
@@ -30,6 +32,9 @@ const postThread = () => {
     let threadContent = document.createElement("div");
     threadContent.classList = `threadContent ${thread.selectedCategory}`;
     threadContent.id = thread.postId;
+
+    let avatarTextsContainer = document.createElement("div")
+    avatarTextsContainer.classList = "avatarTextsContainer"
 
     let threadUserAvatar = document.createElement("div");
     threadUserAvatar.classList = "threadUserAvatar";
@@ -69,9 +74,10 @@ const postThread = () => {
   thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
 
   threadContentContainer.insertAdjacentElement("afterbegin", threadContent);
-  threadContent.insertAdjacentElement("afterbegin", threadUserAvatar);
+  threadContent.insertAdjacentElement("afterbegin", avatarTextsContainer)
+  avatarTextsContainer.insertAdjacentElement("afterbegin", threadUserAvatar)
   threadUserAvatar.insertAdjacentElement("afterbegin", userImg);
-  threadContent.insertAdjacentElement("beforeend", threadTextsContainer);
+  avatarTextsContainer.insertAdjacentElement("beforeend", threadTextsContainer);
   threadTextsContainer.insertAdjacentElement("afterbegin", threadTexts)
   threadTexts.insertAdjacentElement("afterbegin", category);
   threadTexts.insertAdjacentElement("beforeend", postTitle);
@@ -82,6 +88,8 @@ const postThread = () => {
   threadReaction.insertAdjacentElement("beforeend",threadThumbsDown);
   threadThumbsDown.insertAdjacentElement("afterbegin",thumbsDownIcon);
   }
+
+  addEventListenerToChildrens();
 };
 
 const displayThread = () => {
@@ -128,6 +136,9 @@ const displayThread = () => {
     threadContent.classList = `threadContent ${parsedPostList[i].selectedCategory}`;
     threadContent.id = parsedPostList[i].postId;
 
+    let avatarTextsContainer = document.createElement("div")
+    avatarTextsContainer.classList= "avatarTextsContainer"
+
     let threadUserAvatar = document.createElement("div");
     threadUserAvatar.classList = "threadUserAvatar";
 
@@ -166,9 +177,10 @@ const displayThread = () => {
   thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
 
   threadContentContainer.insertAdjacentElement("afterbegin", threadContent);
-  threadContent.insertAdjacentElement("afterbegin", threadUserAvatar);
+  threadContent.insertAdjacentElement("afterbegin", avatarTextsContainer)
+  avatarTextsContainer.insertAdjacentElement("afterbegin", threadUserAvatar);
   threadUserAvatar.insertAdjacentElement("afterbegin", userImg);
-  threadContent.insertAdjacentElement("beforeend", threadTextsContainer);
+  avatarTextsContainer.insertAdjacentElement("beforeend", threadTextsContainer);
   threadTextsContainer.insertAdjacentElement("afterbegin", threadTexts)
   threadTexts.insertAdjacentElement("afterbegin", category);
   threadTexts.insertAdjacentElement("beforeend", postTitle);
