@@ -6,24 +6,11 @@ import addEventListenerToChildrens from "./js/addEventListenerToChildrens.js"
 import ChangeWindowSize from "./js/responsive.js"
 
 
-  
-      
-    
-    
-
-
-  
-// window.addEventListener("resize",ChangeWindowSize)
-
-
-
-
-
 
 
 displayThread();
 addEventListenerToChildrens();
- ChangeWindowSize();
+ChangeWindowSize();
 
 //darkmode
 let darkModeBtn = document.querySelector("#darkmodeBtn");

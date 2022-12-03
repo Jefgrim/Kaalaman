@@ -646,5 +646,13 @@ header {
    .sideBarBtn{
     display: flex;
    }
+   .sidebar{
+    
+    position:absolute;
+    width :auto;
+    height :auto; 
+
+   }
+
   }
 
