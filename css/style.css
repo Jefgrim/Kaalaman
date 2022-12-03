@@ -513,12 +513,16 @@ color: whitesmoke;
   justify-content: space-around;
 }
 
+.avatarTextsContainer {
+  display: flex;
+}
+
 .threadUserAvatar {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   color: white;
+  margin-right: 10px;
 }
 
 .threadUserAvatar img {
@@ -532,6 +536,7 @@ color: whitesmoke;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  word-break: break-word;
   width: 400px;
 }
 

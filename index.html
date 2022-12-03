@@ -1,152 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaalaman</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kaalaman</title>
-  <link rel="stylesheet" href="css/style.css" />
-
-</head>
-
-<body>
-
-  <div class="mainContainer">
-
-    <header>
-      <img src="images/kaalaman-logo.png" class="logo" alt="">
-      <div class="user">
-        <div class="userDropDown headerIcons">
-          <img src=".//images/Avatar Users2_20.png">
-          <div class="user-Section" id="userSection" style="display:none;">
-            <span>Username</span>
-            <button>log-out</button>
-          </div>
-        </div>
-        <div class="headerIcon">
-          <i class="fa-regular fa-bell headerIcons" id="notification"></i>
-          <i class="fa-regular fa-lightbulb headerIcons" id="darkmodeBtn"></i>
-        </div>
-      </div>
-    </header>
-
-    <div class="subContainer">
-
-
-      <div class="sidebar">
-        
-        
-
-        <div class="categoriesContainer">
-          <div class="categoryContainer"><h2 class="categories-h2">Categories</h2></div>
-          <div class="categoryContainer"><input type="checkbox" name="category" id="technologyBtn"><label
-              for="Technology">Technology</label></div>
-          <div class="categoryContainer"><input type="checkbox" name="category" id="ecommerceBtn"><label
-              for="E-Commerce">E-Commerce</label></div>
-          <div class="categoryContainer"><input type="checkbox" name="category" id="healthBtn"><label
-              for="Health & lifestyle">Health & lifestyle</label></div>
-          <div class="categoryContainer"><input type="checkbox" name="category" id="gameBtn"><label
-              for="Games">Games</label></div>
-          <div class="categoryContainer"><input type="checkbox" name="category" id="foodBtn"><label for="Food">Food</label>
-          </div>
-        </div>
-      </div>
-
-      <div class="threadContainer">
-
-        <div class="threadNavContainer">
-
-          <div class="searchBar">
-            <input type="text" class="input searchBarinput" placeholder="search">
-            <i class="fa-solid fa-magnifying-glass searchBarLogo"></i>
-          </div>
-        </div>
-
-        <div class="threadContentContainer">
-          <!-- Thread Content Here From Local Storage -->
-        </div>
-        <div class="creatorContainer">
-
-          <div class="creatorContent">
-            <h2 class="creatorH2">Creators</h2>
-
-            <div class="creator">
-              <img src=".//images/5.png" class="creator-avatar">
-              <img src=".//images/3.png" class="creator-avatar">
-              <img src=".//images/6.png" class="creator-avatar">
+  <body>
+    <div class="mainContainer">
+      <header>
+        <img src="images/kaalaman-logo.png" class="logo" alt="" />
+        <div class="user">
+          <div class="userDropDown headerIcons">
+            <img src=".//images/Avatar Users2_20.png" />
+            <div class="user-Section" id="userSection" style="display: none">
+              <span>Username</span>
+              <button>log-out</button>
             </div>
+          </div>
+          <div class="headerIcon">
+            <i class="fa-regular fa-bell headerIcons" id="notification"></i>
+            <i class="fa-regular fa-lightbulb headerIcons" id="darkmodeBtn"></i>
+          </div>
+        </div>
+      </header>
 
-            <div class="creator-name">
-              <p>Nicky</p>
-              <p>Jeff</p>
-              <p>Joms</p>
+      <div class="subContainer">
+        <div class="sidebar">
+          <div class="categoriesContainer">
+            <div class="categoryContainer">
+              <h2 class="categories-h2">Categories</h2>
+            </div>
+            <div class="categoryContainer">
+              <input type="checkbox" name="category" id="technologyBtn" /><label
+                for="Technology"
+                >Technology</label
+              >
+            </div>
+            <div class="categoryContainer">
+              <input type="checkbox" name="category" id="ecommerceBtn" /><label
+                for="E-Commerce"
+                >E-Commerce</label
+              >
+            </div>
+            <div class="categoryContainer">
+              <input type="checkbox" name="category" id="healthBtn" /><label
+                for="Health & lifestyle"
+                >Health & lifestyle</label
+              >
+            </div>
+            <div class="categoryContainer">
+              <input type="checkbox" name="category" id="gameBtn" /><label
+                for="Games"
+                >Games</label
+              >
+            </div>
+            <div class="categoryContainer">
+              <input type="checkbox" name="category" id="foodBtn" /><label
+                for="Food"
+                >Food</label
+              >
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="rightContainer">
-
-        <div class="postThreadContainer">
-          <form class="postThreadContent">
-            <div class="h2Container">
-              <h2 class="thread-post">CREATE A THREAD</h2>
+        <div class="threadContainer">
+          <div class="threadNavContainer">
+            <div class="searchBar">
+              <input
+                type="text"
+                class="input searchBarinput"
+                placeholder="search"
+              />
+              <i class="fa-solid fa-magnifying-glass searchBarLogo"></i>
             </div>
-            
-            
-            
-            <div class="category-title">
-              <input type="text" placeholder="Title" id="titleInp" class="titleInp" required/>
-              
-              <select id="selectCategory" class="selectCategory" required>
-                <option value="" selected disabled>Select Category</option>
-                <option value="Technology">Technology</option>
-                <option value="E-commerce">E-Commerce</option>
-                <option value="Health-Lifestyle">Health & Lifestyle</option>
-                <option value="Games">Games</option>
-                <option value="Food-Beverages">Food & Beverages</option>
-              </select>
-              
-            </div>
-            <div class="threadInpContainer">
-              <textarea id="threadInp" class="threadInp" required></textarea>
-            </div>
-            <div class="threadBtnContainer">
-              <button type="button" id="postBtn" class="postBtn">Post</button>
-              <button type="button" id="expandBtn" class="expandBtn">
-                Expand
-              </button>
-            </div>
-          </form>
-        </div>
+          </div>
 
-        <div class="latestContainer">
+          <div class="threadContentContainer">
+            <!-- Thread Content Here From Local Storage -->
+          </div>
+          <div class="creatorContainer">
+            <div class="creatorContent">
+              <h2 class="creatorH2">Creators</h2>
 
-          <h3 class="latest">Latest post</h3>
+              <div class="creator">
+                <img src=".//images/5.png" class="creator-avatar" />
+                <img src=".//images/3.png" class="creator-avatar" />
+                <img src=".//images/6.png" class="creator-avatar" />
+              </div>
 
-          <div class="latestContent">
-            <div class="content-box1">
-              <img src=".//images/Avatar Users2_1.png" class="avatar">
-              <div class="text-container">
-                <p class="p-1">The quick brown fox jumps over the lazy dog</p>
-                <h3 class="uploader">By: Lexi L</h3>
+              <div class="creator-name">
+                <p>Nicky</p>
+                <p>Jeff</p>
+                <p>Joms</p>
               </div>
             </div>
           </div>
-
         </div>
 
-        
+        <div class="rightContainer">
+          <div class="postThreadContainer">
+            <form class="postThreadContent">
+              <div class="h2Container">
+                <h2 class="thread-post">CREATE A THREAD</h2>
+              </div>
 
+              <div class="category-title">
+                <input
+                  type="text"
+                  placeholder="Title"
+                  id="titleInp"
+                  class="titleInp"
+                  required
+                />
+
+                <select id="selectCategory" class="selectCategory" required>
+                  <option value="" selected disabled>Select Category</option>
+                  <option value="Technology">Technology</option>
+                  <option value="E-commerce">E-Commerce</option>
+                  <option value="Health-Lifestyle">Health & Lifestyle</option>
+                  <option value="Games">Games</option>
+                  <option value="Food-Beverages">Food & Beverages</option>
+                </select>
+              </div>
+              <div class="threadInpContainer">
+                <textarea id="threadInp" class="threadInp" required></textarea>
+              </div>
+              <div class="threadBtnContainer">
+                <button type="button" id="postBtn" class="postBtn">Post</button>
+                <button type="button" id="expandBtn" class="expandBtn">
+                  Expand
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="latestContainer">
+            <h3 class="latest">Latest post</h3>
+
+            <div class="latestContent">
+              <div class="content-box1">
+                <img src=".//images/Avatar Users2_1.png" class="avatar" />
+                <div class="text-container">
+                  <p class="p-1">The quick brown fox jumps over the lazy dog</p>
+                  <h3 class="uploader">By: Lexi L</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-  </div>
-
-  <script type="module" src="main.js"></script>
-  <script src="https://kit.fontawesome.com/26177573c7.js" crossorigin="anonymous"></script>
-
-</body>
-
+    <script type="module" src="main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/26177573c7.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
