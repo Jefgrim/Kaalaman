@@ -9,10 +9,6 @@ const  ChangeWindowSize = () =>{
  closeSidebar.addEventListener("click",function(){
         hideSidebar.style.display = "none"
  })
- if (window.innerWidth < 800) {
-    hideSidebar.style.display ="flex"
-
-   }
 
 
 }
