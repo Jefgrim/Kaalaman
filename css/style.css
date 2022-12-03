@@ -111,6 +111,12 @@ header {
   color: whitesmoke;
 }
 
+.sideBarBtn{
+  font-size: 15px;
+  background-color: #008968;
+  margin-left: 20px;
+  display: none;
+}
 
 .h2Container {
   width: 100%;
@@ -159,13 +165,16 @@ header {
   margin-top: 20px;
 }
 
-.sideBar-toggle {
-  background-color: #008968;
+.sideBar-toggle{
+  color:#008968 ;
+
   height: 100%;
   width: 50px;
   display: none;
-  border-radius: 10px 0px 0px 10px;
+  font-size: 45px;
+  margin-top: 5px;
 }
+
 
 .searchBar {
   height: 100%;
@@ -611,7 +620,6 @@ header {
   .hidePostThreadBtn {
     display: flex;
     
-    
   }
   
   .threadNavContainer{
@@ -635,6 +643,8 @@ header {
    .threadUserAvatar{
     margin-left:20px
    }
-
+   .sideBarBtn{
+    display: flex;
+   }
   }
 

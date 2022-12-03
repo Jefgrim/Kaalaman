@@ -3,7 +3,7 @@ import filterCategories from "./js/filterCategories.js";
 import {postThread, displayThread} from "./js/postThread.js";
 import Darkmode from "./js/darkmode.js"
 import addEventListenerToChildrens from "./js/addEventListenerToChildrens.js"
-// import ChangeWindowSize from "./js/responsive.js"
+import ChangeWindowSize from "./js/responsive.js"
 
 
   
@@ -23,7 +23,7 @@ import addEventListenerToChildrens from "./js/addEventListenerToChildrens.js"
 
 displayThread();
 addEventListenerToChildrens();
-// ChangeWindowSize();
+ ChangeWindowSize();
 
 //darkmode
 let darkModeBtn = document.querySelector("#darkmodeBtn");
