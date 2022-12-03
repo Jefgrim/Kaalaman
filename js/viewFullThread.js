@@ -113,6 +113,7 @@ const showAllReply = () => {
       replyToId: "post1",
       replyToText: "Dummy Text",
       replyText: "This is a dummy reply for Post1",
+      userName: "Account 1",
     };
 
     localStorage.setItem("reply", JSON.stringify(dummyReply));
@@ -125,6 +126,7 @@ const showAllReply = () => {
       replyToId: "post2",
       replyToText: "Dummy Text 2",
       replyText: "This is a dummy reply for Post2",
+      userName: "Account 2",
     };
 
     localStorage.setItem("reply", JSON.stringify(dummyReply2));
@@ -134,12 +136,46 @@ const showAllReply = () => {
   }
 
   let parsedReplyList = JSON.parse(replyList)
-  
-  for (const thread of threadList) {
-    if (thread.postId == event.currentTarget.id) {
-      console.log(`Shown all reply in ${thread.postId}`);
-    }
-  }
+
+  const getUserName = () => {
+    for (const thread of threadList) {
+        if (thread.postId == event.currentTarget.id) {
+          return thread.userName
+        }
+      }
+}
+
+  for (let i in parsedReplyList) {
+    let threadContentContainer = document.querySelector(".threadContentContainer")
+
+    let replyContent = document.createElement("div")
+    replyContent.classList = "replyContent"
+    replyContent.id = parsedReplyList[i].replyId
+
+    let avatarTextsContainer = document.createElement("div")
+    avatarTextsContainer.classList = "avatarTextsContainer"
+
+    let replyUserAvatar = document.createElement("div")
+    replyUserAvatar.classList = "replyUserAvatar"
+
+    let userImg = document.createElement("img")
+    userImg.src = ".//images/Avatar Users2_29.png"
+
+    let userName = document.createElement("span")
+    userName.textContent = parsedReplyList[i].userName
+
+    let replyTexts = document.createElement("replyTexts")
+    replyTexts.classList = "replyTexts"
+
+    let repliedTo = document.createElement("div")
+    repliedTo.classList = ("repliedTo")
+
+    let repliedToUserName = document.createElement("span")
+    repliedToUserName.textContent =  getUserName()
+
+
+}
+
 };
 
 export default viewFullThread;
