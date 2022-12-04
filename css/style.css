@@ -49,6 +49,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  background-color: #1d1f25;
 }
 
 
@@ -60,7 +61,7 @@ header {
 }
 
 .user-Section {
-  height: 200px;
+  height: 165px;
   width: 200px;
   background-color: #1d1f25;
   position: absolute;
@@ -69,6 +70,7 @@ header {
   display: flex;
   flex-direction: column;
   color: white;
+
 }
 
 
@@ -79,6 +81,7 @@ header {
   font-size: xx-large;
   color: white;
   padding: 10px;
+  background-color: #1d1f25;
 }
 
 .mainContainer {
@@ -124,6 +127,7 @@ header {
   height: calc(20% - 10px);
   display: block;
   margin-left: 10px;
+
 }
 
 .categoriesContainer {
@@ -201,10 +205,11 @@ header {
 .searchBarLogo {
   width: 5%;
   font-size: larger;
-  background-color: #008968;
+  background-color: #1d1f25;
   padding: 20px 0px 20px 20px;
   display: flex;
 }
+
 
 .hidePostThreadBtn {
   color: #008968;
@@ -246,7 +251,7 @@ header {
 .postThreadContainer {
   height: 275px;
   width: 90%;
-  background-color: #008968;
+  background-color: #1d1f25;
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
@@ -254,6 +259,7 @@ header {
 
 .thread-post {
   margin-left: 0px;
+  color: whitesmoke;
 }
 
 .postThreadContent {
@@ -274,7 +280,7 @@ header {
   padding: 5px;
   margin-left: 0px;
   font-weight: bold;
-  color: black;
+  color: whitesmoke;
 }
 
 .category-title {
