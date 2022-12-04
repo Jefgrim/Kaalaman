@@ -355,6 +355,7 @@ header {
 
 .expandBtn {
   margin-right: 10px;
+  margin-left: 0px;
   width: 100px;
   border: none;
   border-radius: 5px;
@@ -362,6 +363,7 @@ header {
   color: #ffff;
   font-family: 'Montserrat', sans-serif;
 }
+
 
 .latestContainer {
   height: 665px;
@@ -633,6 +635,10 @@ header {
   .searchBarLogo{
     padding: 13px;
   }
+   .postBtn{
+    margin-right: 20px;
+    
+   }
 }
 
 @media  screen and (max-width: 800px) {
@@ -706,6 +712,16 @@ header {
     height: 10px;
   }
 }
+@media screen and (max-width:320px){
 
+  .headerIcons{
+    width: 25px;
+    height: 5px;
+    padding-left: 30px;
+  }
+  .logo{
+    width: 125px;
+  }
+}
 
 
