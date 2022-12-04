@@ -467,13 +467,6 @@ header {
   height: 200px;
 }
 
-
-
-
-
-/* test */
-
-
 /* Thread Styles Start*/
 
 .threadContent {
@@ -506,7 +499,20 @@ header {
   margin-bottom: 10px;
 }
 
+.threadUserAvatar span {
+  margin-bottom: 10px;
+}
+
 .threadTextsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  word-break: break-word;
+  width: 400px;
+  cursor: pointer;
+}
+
+.selectedThreadTextsContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -525,6 +531,12 @@ header {
 .threadReaction {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.thumbsUpDownContainer {
+  display: flex;
 }
 
 .threadThumbsUp,
@@ -532,6 +544,11 @@ header {
   font-size: 30px;
   margin: 5px;
   color: whitesmoke;
+}
+
+.replyBtnContainer {
+  color: #008968;
+  font-size: 30px;
 }
 
 /* Thread Style End */
@@ -597,6 +614,8 @@ header {
 .replyReaction {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .replyThumbsUp,

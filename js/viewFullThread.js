@@ -47,8 +47,11 @@ const showSelectedPostContent = () => {
       let userImg = document.createElement("img");
       userImg.src = ".//images/Avatar Users2_1.png";
 
+      let userName = document.createElement("span")
+      userName.textContent = thread.userName
+
       let threadTextsContainer = document.createElement("div");
-      threadTextsContainer.classList = "threadTextsContainer";
+      threadTextsContainer.classList = "selectedThreadTextsContainer";
 
       let threadTexts = document.createElement("div");
       threadTexts.classList = "threadTexts";
@@ -66,6 +69,9 @@ const showSelectedPostContent = () => {
       let threadReaction = document.createElement("div");
       threadReaction.classList = "threadReaction";
 
+      let thumbsUpDownContainer = document.createElement ("div")
+      thumbsUpDownContainer.classList = "thumbsUpDownContainer"
+
       let threadThumbsUp = document.createElement("div");
       threadThumbsUp.classList = "threadThumbsUp";
 
@@ -78,6 +84,12 @@ const showSelectedPostContent = () => {
       let thumbsDownIcon = document.createElement("i");
       thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
 
+      let replyBtnContainer = document.createElement("div")
+      replyBtnContainer.classList = "replyBtnContainer"
+
+      let replyIcon = document.createElement("i")
+      replyIcon.classList = "fa-solid fa-reply"
+
       threadContentContainer.insertAdjacentElement("afterbegin", threadContent);
       threadContent.insertAdjacentElement("afterbegin", avatarTextsContainer);
       avatarTextsContainer.insertAdjacentElement(
@@ -85,6 +97,7 @@ const showSelectedPostContent = () => {
         threadUserAvatar
       );
       threadUserAvatar.insertAdjacentElement("afterbegin", userImg);
+      threadUserAvatar.insertAdjacentElement("beforeend", userName)
       avatarTextsContainer.insertAdjacentElement(
         "beforeend",
         threadTextsContainer
@@ -94,10 +107,13 @@ const showSelectedPostContent = () => {
       threadTexts.insertAdjacentElement("beforeend", postTitle);
       threadTexts.insertAdjacentElement("beforeend", postContent);
       threadContent.insertAdjacentElement("beforeend", threadReaction);
-      threadReaction.insertAdjacentElement("afterbegin", threadThumbsUp);
+      threadReaction.insertAdjacentElement("afterbegin", thumbsUpDownContainer)
+      thumbsUpDownContainer.insertAdjacentElement("afterbegin", threadThumbsUp);
       threadThumbsUp.insertAdjacentElement("afterbegin", thumbsUpIcon);
-      threadReaction.insertAdjacentElement("beforeend", threadThumbsDown);
+      thumbsUpDownContainer.insertAdjacentElement("beforeend", threadThumbsDown);
       threadThumbsDown.insertAdjacentElement("afterbegin", thumbsDownIcon);
+      threadReaction.insertAdjacentElement("beforeend", replyBtnContainer)
+      replyBtnContainer.insertAdjacentElement("afterbegin", replyIcon)
     }
   }
 };
@@ -119,38 +135,9 @@ const showAllReply = () => {
           return thread.postText
         }
       }
-}   
+    }   
 
   let replyList = localStorage.getItem("replyList");
-  if (replyList == null) {
-    let replyList = [];
-
-    let dummyReply = {
-      replyId: "reply1",
-      replyToId: "post1",
-      replyToText: "Dummy Text",
-      replyText: "This is a dummy reply for Post1",
-      userName: "Account 1",
-    };
-
-    localStorage.setItem("reply", JSON.stringify(dummyReply));
-    localStorage.setItem("replyId", 1);
-    replyList.push(dummyReply);
-    localStorage.setItem("replyList", JSON.stringify(replyList));
-
-    let dummyReply2 = {
-      replyId: "reply2",
-      replyToId: "post2",
-      replyToText: "Dummy Text 2",
-      replyText: "This is a dummy reply for Post2",
-      userName: "Account 2",
-    };
-
-    localStorage.setItem("reply", JSON.stringify(dummyReply2));
-    localStorage.setItem("replyId", 2);
-    replyList.push(dummyReply2);
-    localStorage.setItem("replyList", JSON.stringify(replyList));
-  }
 
   let parsedReplyList = JSON.parse(replyList)
 
@@ -180,7 +167,7 @@ const showAllReply = () => {
     repliedTo.classList = ("repliedTo")
 
     let repliedToUserName = document.createElement("span")
-    repliedToUserName.textContent =  getUserName()
+    repliedToUserName.textContent =  `${getUserName()} said:`
 
     let repliedToText = document.createElement("span")
     repliedToText.textContent = getTextContent()
@@ -194,6 +181,9 @@ const showAllReply = () => {
     let replyReaction = document.createElement("div")
     replyReaction.classList = "replyReaction"
 
+    let thumbsUpDownContainer = document.createElement ("div")
+    thumbsUpDownContainer.classList = "thumbsUpDownContainer"
+
     let replyThumbsUp = document.createElement("div")
     replyThumbsUp.classList = "replyThumbsUp"
 
@@ -206,25 +196,36 @@ const showAllReply = () => {
     let thumbsDownIcon = document.createElement("i")
     thumbsDownIcon.classList = "fa-regular fa-thumbs-down"
 
+    let replyBtnContainer = document.createElement("div")
+    replyBtnContainer.classList = "replyBtnContainer"
 
-    threadContentContainer.insertAdjacentElement("beforeend", replyContent)
-    replyContent.insertAdjacentElement("afterbegin", avatarTextsContainer)
-    avatarTextsContainer.insertAdjacentElement("afterbegin", replyUserAvatar)
-    replyUserAvatar.insertAdjacentElement("afterbegin", userImg)
-    replyUserAvatar.insertAdjacentElement("beforeend", userName)
-    avatarTextsContainer.insertAdjacentElement("beforeend", replyTexts)
-    replyTexts.insertAdjacentElement("afterbegin", repliedTo)
-    repliedTo.insertAdjacentElement("afterbegin", repliedToUserName)
-    repliedTo.insertAdjacentElement("beforeend", repliedToText)
-    replyTexts.insertAdjacentElement("beforeend", reply)
-    reply.insertAdjacentElement("afterbegin", replyText)
-    replyContent.insertAdjacentElement("beforeend", replyReaction)
-    replyReaction.insertAdjacentElement("afterbegin", replyThumbsUp)
-    replyThumbsUp.insertAdjacentElement("afterbegin", thumbsUpIcon)
-    replyReaction.insertAdjacentElement("beforeend", replyThumbsDown)
-    replyThumbsDown.insertAdjacentElement("afterbegin", thumbsDownIcon)
+    let replyIcon = document.createElement("i")
+    replyIcon.classList = "fa-solid fa-reply"
+
+
+    if (parsedReplyList[i].replyToId == event.currentTarget.id) {
+      threadContentContainer.insertAdjacentElement("beforeend", replyContent)
+      replyContent.insertAdjacentElement("afterbegin", avatarTextsContainer)
+      avatarTextsContainer.insertAdjacentElement("afterbegin", replyUserAvatar)
+      replyUserAvatar.insertAdjacentElement("afterbegin", userImg)
+      replyUserAvatar.insertAdjacentElement("beforeend", userName)
+      avatarTextsContainer.insertAdjacentElement("beforeend", replyTexts)
+      replyTexts.insertAdjacentElement("afterbegin", repliedTo)
+      repliedTo.insertAdjacentElement("afterbegin", repliedToUserName)
+      repliedTo.insertAdjacentElement("beforeend", repliedToText)
+      replyTexts.insertAdjacentElement("beforeend", reply)
+      reply.insertAdjacentElement("afterbegin", replyText)
+      replyContent.insertAdjacentElement("beforeend", replyReaction)
+      replyReaction.insertAdjacentElement("afterbegin", thumbsUpDownContainer)
+      thumbsUpDownContainer.insertAdjacentElement("afterbegin", replyThumbsUp)
+      replyThumbsUp.insertAdjacentElement("afterbegin", thumbsUpIcon)
+      thumbsUpDownContainer.insertAdjacentElement("beforeend", replyThumbsDown)
+      replyThumbsDown.insertAdjacentElement("afterbegin", thumbsDownIcon)
+      replyReaction.insertAdjacentElement("beforeend", replyBtnContainer)
+      replyBtnContainer.insertAdjacentElement("afterbegin", replyIcon)
+    }
 }
 
 };
 
-export default viewFullThread;
+export { viewFullThread, showAllReply }
