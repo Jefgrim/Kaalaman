@@ -49,7 +49,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #1d1f25;
 }
 
 
@@ -377,16 +376,14 @@ header {
   height: 70%;
   position: absolute;
   display: none;
+  justify-content: center;
+  align-items: center;
 }
 
 .expandPostThread{
-  display:flex ;
+  display:flex;
   position: absolute;
-  right: 500px;
-  top: 100px;
-  bottom: 100px;
-  left: 500px;
-  height: 100%;
+
 }
 .expandPostThread .postThreadContainer{
   height: 500px;
@@ -404,12 +401,10 @@ header {
 }
 
 .latestContainer {
-  height: 665px;
   width: 90%;
   background-color: #1D1F25;
   border-radius: 10px;
   overflow-y: scroll;
-
 }
 
 .latestContainer::-webkit-scrollbar {
@@ -429,7 +424,7 @@ header {
   margin-left: 25px;
 }
 
-.content-box1 {
+.content-box {
   display: flex;
   margin-bottom: 30px;
 }
@@ -575,7 +570,19 @@ header {
   margin-bottom: 10px;
 }
 
+.threadUserAvatar span {
+  margin-bottom: 10px;
+}
+
 .threadTextsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  word-break: break-word;
+  width: 400px;
+}
+
+.selectedThreadTextsContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -594,6 +601,12 @@ header {
 .threadReaction {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.thumbsUpDownContainer {
+  display: flex;
 }
 
 .threadThumbsUp,
@@ -666,6 +679,8 @@ header {
 .replyReaction {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .replyThumbsUp,
@@ -675,7 +690,22 @@ header {
   color: whitesmoke;
 }
 
+.replyBtnContainer {
+  color: whitesmoke;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 /* Reply Styles End */
+
+.backButtonContainer {
+  width: fit-content;
+  height: fit-content;
+  font-size: 40px;
+  color: whitesmoke;
+}
+
+
 @media screen and (max-width: 1024px) {
 
 
