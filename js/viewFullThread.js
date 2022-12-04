@@ -45,7 +45,11 @@ const showSelectedPostContent = () => {
       threadUserAvatar.classList = "threadUserAvatar";
 
       let userImg = document.createElement("img");
-      userImg.src = ".//images/Avatar Users2_1.png";
+      if (thread.userName == "Current User") {
+        userImg.src = ".//images/Avatar Users2_20.png"
+      } else {
+        userImg.src = ".//images/Avatar Users2_1.png";
+      }
 
       let userName = document.createElement("span")
       userName.textContent = thread.userName
