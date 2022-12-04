@@ -207,12 +207,13 @@ header {
 }
 
 .hidePostThreadBtn {
-  background-color: #008968;
+  color: #008968;
   width: 20%;
   height: 50%;
   padding: 10px;
   margin-left: 50px;
   display: none;
+  font-size: 40px;
 }
 
 
@@ -365,6 +366,36 @@ header {
   font-family: 'Montserrat', sans-serif;
 }
 
+.modular{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+}
+
+.expandPostThread{
+  display:flex ;
+  position: absolute;
+  right: 500px;
+  top: 100px;
+  bottom: 100px;
+  left: 500px;
+  height: 100%;
+}
+.expandPostThread .postThreadContainer{
+  height: 500px;
+  width: 800px;
+}
+.expandPostThread  .postThreadContent{
+  height: 450px;
+  width: 100%;
+}
+.expandPostThread .thread-post{
+  font-size: large;
+}
+.expandPostThread .threadInp{
+  font-size: 20px;
+}
 
 .latestContainer {
   height: 665px;
@@ -499,6 +530,13 @@ header {
   font-size: 12px;
 }
 
+
+
+
+
+/* test */
+
+
 /* Thread Styles Start*/
 
 .threadContent {
@@ -531,20 +569,7 @@ header {
   margin-bottom: 10px;
 }
 
-.threadUserAvatar span {
-  margin-bottom: 10px;
-}
-
 .threadTextsContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  word-break: break-word;
-  width: 400px;
-  cursor: pointer;
-}
-
-.selectedThreadTextsContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -563,12 +588,6 @@ header {
 .threadReaction {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.thumbsUpDownContainer {
-  display: flex;
 }
 
 .threadThumbsUp,
@@ -576,11 +595,6 @@ header {
   font-size: 30px;
   margin: 5px;
   color: whitesmoke;
-}
-
-.replyBtnContainer {
-  color: #008968;
-  font-size: 30px;
 }
 
 /* Thread Style End */
@@ -646,8 +660,6 @@ header {
 .replyReaction {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: space-evenly;
 }
 
 .replyThumbsUp,
@@ -691,7 +703,16 @@ header {
     margin-right: 20px;
 
   }
-}
+
+  .expandPostThread{
+    position: absolute;
+    left: 300px;
+    right: 300px;
+  }
+    
+    
+
+
 
 @media screen and (max-width: 800px) {
 
@@ -756,6 +777,28 @@ header {
     display: none;
   }
 
+  .modular{
+    width: 100%;
+  }
+  .expandPostThread{
+    position: absolute;
+    left: 200px;
+    right: 200px;
+  }
+    
+
+}
+
+@media  screen and (max-width:425px) {
+  .modular{
+    width: 100%;
+  }
+  .expandPostThread{
+    position: absolute;
+    left: 20px;
+    right: 20px;
+  }
+  
 }
 
 @media screen and (max-width: 375px) {
@@ -763,6 +806,14 @@ header {
   .headerIcons {
     width: 25px;
     height: 10px;
+  }
+  .modular{
+    width: 100%;
+  }
+  .expandPostThread{
+    position: absolute;
+    left: 10px;
+    right: 10px;
   }
 }
 
