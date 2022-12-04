@@ -69,6 +69,9 @@ const showSelectedPostContent = () => {
       let threadReaction = document.createElement("div");
       threadReaction.classList = "threadReaction";
 
+      let thumbsUpDownContainer = document.createElement ("div")
+      thumbsUpDownContainer.classList = "thumbsUpDownContainer"
+
       let threadThumbsUp = document.createElement("div");
       threadThumbsUp.classList = "threadThumbsUp";
 
@@ -80,6 +83,12 @@ const showSelectedPostContent = () => {
 
       let thumbsDownIcon = document.createElement("i");
       thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
+
+      let replyBtnContainer = document.createElement("div")
+      replyBtnContainer.classList = "replyBtnContainer"
+
+      let replyIcon = document.createElement("i")
+      replyIcon.classList = "fa-solid fa-reply"
 
       threadContentContainer.insertAdjacentElement("afterbegin", threadContent);
       threadContent.insertAdjacentElement("afterbegin", avatarTextsContainer);
@@ -98,10 +107,13 @@ const showSelectedPostContent = () => {
       threadTexts.insertAdjacentElement("beforeend", postTitle);
       threadTexts.insertAdjacentElement("beforeend", postContent);
       threadContent.insertAdjacentElement("beforeend", threadReaction);
-      threadReaction.insertAdjacentElement("afterbegin", threadThumbsUp);
+      threadReaction.insertAdjacentElement("afterbegin", thumbsUpDownContainer)
+      thumbsUpDownContainer.insertAdjacentElement("afterbegin", threadThumbsUp);
       threadThumbsUp.insertAdjacentElement("afterbegin", thumbsUpIcon);
-      threadReaction.insertAdjacentElement("beforeend", threadThumbsDown);
+      thumbsUpDownContainer.insertAdjacentElement("beforeend", threadThumbsDown);
       threadThumbsDown.insertAdjacentElement("afterbegin", thumbsDownIcon);
+      threadReaction.insertAdjacentElement("beforeend", replyBtnContainer)
+      replyBtnContainer.insertAdjacentElement("afterbegin", replyIcon)
     }
   }
 };
@@ -169,6 +181,9 @@ const showAllReply = () => {
     let replyReaction = document.createElement("div")
     replyReaction.classList = "replyReaction"
 
+    let thumbsUpDownContainer = document.createElement ("div")
+    thumbsUpDownContainer.classList = "thumbsUpDownContainer"
+
     let replyThumbsUp = document.createElement("div")
     replyThumbsUp.classList = "replyThumbsUp"
 
@@ -180,6 +195,12 @@ const showAllReply = () => {
 
     let thumbsDownIcon = document.createElement("i")
     thumbsDownIcon.classList = "fa-regular fa-thumbs-down"
+
+    let replyBtnContainer = document.createElement("div")
+    replyBtnContainer.classList = "replyBtnContainer"
+
+    let replyIcon = document.createElement("i")
+    replyIcon.classList = "fa-solid fa-reply"
 
 
     if (parsedReplyList[i].replyToId == event.currentTarget.id) {
@@ -195,10 +216,13 @@ const showAllReply = () => {
       replyTexts.insertAdjacentElement("beforeend", reply)
       reply.insertAdjacentElement("afterbegin", replyText)
       replyContent.insertAdjacentElement("beforeend", replyReaction)
-      replyReaction.insertAdjacentElement("afterbegin", replyThumbsUp)
+      replyReaction.insertAdjacentElement("afterbegin", thumbsUpDownContainer)
+      thumbsUpDownContainer.insertAdjacentElement("afterbegin", replyThumbsUp)
       replyThumbsUp.insertAdjacentElement("afterbegin", thumbsUpIcon)
-      replyReaction.insertAdjacentElement("beforeend", replyThumbsDown)
+      thumbsUpDownContainer.insertAdjacentElement("beforeend", replyThumbsDown)
       replyThumbsDown.insertAdjacentElement("afterbegin", thumbsDownIcon)
+      replyReaction.insertAdjacentElement("beforeend", replyBtnContainer)
+      replyBtnContainer.insertAdjacentElement("afterbegin", replyIcon)
     }
 }
 
