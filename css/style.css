@@ -368,7 +368,7 @@ header {
 
 .modular{
   width: 100%;
-  height: 100%;
+  height: 80%;
   position: absolute;
   display: none;
 }
@@ -828,4 +828,5 @@ header {
   .logo {
     width: 125px;
   }
+}
 }
