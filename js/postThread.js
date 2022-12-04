@@ -41,7 +41,7 @@ const postThread = () => {
     threadUserAvatar.classList = "threadUserAvatar";
 
     let userImg = document.createElement("img");
-    userImg.src = ".//images/Avatar Users2_1.png";
+    userImg.src = ".//images/Avatar Users2_20.png";
 
     let userName = document.createElement("span")
     userName.textContent = thread.userName
@@ -150,8 +150,12 @@ const displayThread = () => {
     threadUserAvatar.classList = "threadUserAvatar";
 
     let userImg = document.createElement("img");
-    userImg.src = ".//images/Avatar Users2_1.png";
-
+    if (parsedPostList[i].userName == "Current User") {
+      userImg.src = ".//images/Avatar Users2_20.png"
+    } else {
+      userImg.src = ".//images/Avatar Users2_1.png";
+    }
+    
     let userName = document.createElement("span")
     userName.textContent = parsedPostList[i].userName
 

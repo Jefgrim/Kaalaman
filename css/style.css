@@ -136,7 +136,8 @@ header {
   margin-left: 10px;
   margin-bottom: 10px;
 }
-.categories-h2{
+
+.categories-h2 {
   font-size: 20px;
 }
 
@@ -448,54 +449,85 @@ header {
 }
 
 .creatorContainer {
-  height: 100px;
+  height: 130px;
   width: 95%;
-  background-color: #008968;
+  background-color: #1d1f25;
   margin-bottom: 20px;
   margin-top: 20px;
   border-radius: 10px;
   display: flex;
   justify-content: space-evenly;
+  color: whitesmoke;
+  padding: 10px;
 }
+
 
 .donate {
   width: 23.75%;
-  height: 200px;
+  height: 120px;
 }
 
 .donation {
-  font-size: 8px;
+  font-size: 12px;
   text-align: justify;
+  margin-top: 5px;
+}
+
+.gcash {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  border-radius: 20px;
 }
 
 .links {
   width: 23.75%;
-  height: 200px;
+  height: 120px;
   margin-top: 0;
+  display: flex;
+  margin: 0;
+  justify-content: space-evenly;
+  color: whitesmoke;
 }
 
 .links-2 {
-  text-align: justify;
+
   font-size: 12px;
   margin: 0;
+  padding-top: 5px;
 }
 
+.other-links {
+  padding-top: 18px;
+}
 
 
 .about {
   width: 23.75%;
-  height: 200px;
+  height: 120px;
 }
 
 .about-kaalaman {
   text-align: justify;
-  margin-top: 0;
+  margin-top: 5px;
   font-size: 12px;
 }
 
 .creator {
   width: 23.75%;
-  height: 200px;
+  height: 120px;
+
+}
+
+.pic-creator {
+  width: 30px;
+  height: 30px;
+  /* display: flex; */
+}
+
+.name {
+  margin-top: 5px;
+  font-size: 12px;
 }
 
 
@@ -638,12 +670,12 @@ header {
 }
 
 /* Reply Styles End */
-@media  screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
 
-  
+
   .sidebar,
   .rightContainer {
-   width: 25%;
+    width: 25%;
   }
 
   .threadContent {
@@ -663,11 +695,13 @@ header {
     margin-left: 20px
   }
 
-  .searchBarLogo{
+  .searchBarLogo {
     padding: 13px;
   }
-   .postBtn{
+
+  .postBtn {
     margin-right: 20px;
+
   }
 
   .expandPostThread{
@@ -677,9 +711,10 @@ header {
   }
     
     
-}
 
-@media  screen and (max-width: 800px) {
+
+
+@media screen and (max-width: 800px) {
 
   .sidebar,
   .rightContainer {
@@ -709,7 +744,7 @@ header {
     flex: 1;
     padding-left: 5px;
   }
-  
+
 
   .threadContent {
     flex-direction: column;
@@ -765,9 +800,10 @@ header {
   }
   
 }
-@media  screen and (max-width: 375px) { 
 
-  .headerIcons{
+@media screen and (max-width: 375px) {
+
+  .headerIcons {
     width: 25px;
     height: 10px;
   }
@@ -780,16 +816,16 @@ header {
     right: 10px;
   }
 }
-@media screen and (max-width:320px){
 
-  .headerIcons{
+@media screen and (max-width:320px) {
+
+  .headerIcons {
     width: 25px;
     height: 5px;
     padding-left: 30px;
   }
-  .logo{
+
+  .logo {
     width: 125px;
   }
 }
-
-
