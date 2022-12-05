@@ -384,11 +384,14 @@ header {
   display: flex;
   position: absolute;
 
+
+
 }
 
 .expandPostThread .postThreadContainer {
   height: 500px;
   width: 800px;
+  background-color:#1c1c1de8;
 }
 
 .expandPostThread .postThreadContent {
@@ -715,24 +718,35 @@ header {
 
   .sidebar,
   .rightContainer {
-    width: 25%;
+    width: 20%;
   }
 
   .threadContent {
-    flex-direction: column;
+    flex-direction: row;
     font-size: 15px;
+
+  }
+
+  .threadContainer{
+    width: 65%;
+    
   }
 
   .avatarTextsContainer {
     justify-content: center;
+    width: 400px;
+    
   }
 
   .threadReaction {
     justify-content: center;
+    
+    width: auto;
   }
 
   .threadUserAvatar {
-    margin-left: 20px
+    
+    width: auto;
   }
 
   .searchBarLogo {
