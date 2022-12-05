@@ -10,8 +10,8 @@ import expandedPostThread from"./js/expandedPostThread.js";
 import searchBar from "./js/searchbar.js"
 
 
-searchBar()
 
+// searchBar()
 displayThread();
 addEventListenerToChildrens();
 ChangeWindowSize();
@@ -21,6 +21,10 @@ ExpandPostThread();
 //darkmode
 let darkModeBtn = document.querySelector("#darkmodeBtn");
 
+
+//searchBtn
+ const searchInput = document.querySelector("#seacrhInput")
+ const searchBtn = document.querySelector(".searchBarLogo")
 //categories btn
 let technologyBtn = document.querySelector("#technologyBtn")
 let ecommerceBtn = document.querySelector("#ecommerceBtn")
@@ -51,3 +55,8 @@ expandedPostBtn.addEventListener("click",expandedPostThread)
 
 //darkmode evemt listener
 darkModeBtn.addEventListener("click" , Darkmode)
+
+//event listener search bar
+searchBtn.addEventListener("click", searchBar)
+ searchInput.addEventListener("input",searchBar)
+
