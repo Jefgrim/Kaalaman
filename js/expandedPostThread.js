@@ -12,6 +12,7 @@ const expandedPostThread = () => {
       selectedCategory: document.querySelector("#expandedSelectCategory").value,
       titleValue: document.querySelector("#expandedTitleInp").value,
       postText: document.querySelector("#expandedThreadInp").value,
+      batchClass: `post${n}Batch`,
       postId: `post${n}`,
       userName: "Current User"
     };
@@ -80,7 +81,7 @@ const expandedPostThread = () => {
     thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
 
     let replyBtnContainer = document.createElement("div")
-    replyBtnContainer.classList = "replyBtnContainer"
+    replyBtnContainer.classList = `replyBtnContainer ${thread.batchClass}`
     replyBtnContainer.id = thread.postId;
 
     let replyIcon = document.createElement("i")
