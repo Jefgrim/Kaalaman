@@ -42,6 +42,7 @@ header {
 .logo {
   height: 50px;
   margin-left: 20px;
+
 }
 
 .user {
@@ -351,13 +352,14 @@ header {
 }
 
 .postBtn {
-  margin-right: 10px;
+  margin-left: 117px;
   width: 100px;
   border: none;
   border-radius: 5px;
-  background-color: #282c38;
+  background-color: #008968;
   color: #ffff;
   font-family: 'Montserrat', sans-serif;
+
 }
 
 .expandBtn {
