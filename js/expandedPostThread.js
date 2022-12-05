@@ -118,11 +118,11 @@ const expandedPostThread = () => {
     latestContentAvatar.classList = "avatar"
     let textContainer = document.createElement("div")
     textContainer.classList = "text-container"
-    let textTitle = document.createElement("p")
-    textTitle.classList = "p-1"
+    let textTitle = document.createElement("h3")
+    textTitle.classList = "latestTitle"
     textTitle.textContent = thread.titleValue
-    let uploader = document.createElement("h3")
-    uploader.classList = "uploader"
+    let uploader = document.createElement("p")
+    uploader.classList = "p-1"
     uploader.textContent = `By: ${thread.userName}`
 
     latestContent.insertAdjacentElement("afterbegin", contentbox)

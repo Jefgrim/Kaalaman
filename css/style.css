@@ -117,9 +117,10 @@ header {
 
 .sideBarBtn {
   font-size: 15px;
-  background-color: #008968;
+  background-color: white;
   margin-left: 20px;
   display: none;
+  border-radius: 10px;
 }
 
 .h2Container {
@@ -175,13 +176,12 @@ header {
 }
 
 .sideBar-toggle {
-  color: #008968;
-
+  color: white;
   height: 100%;
   width: 50px;
   display: none;
   font-size: 45px;
-  margin-top: 5px;
+
 }
 
 
@@ -212,10 +212,9 @@ header {
 
 
 .hidePostThreadBtn {
-  color: #008968;
+  color: white;
   width: 20%;
   height: 50%;
-  padding: 10px;
   margin-left: 50px;
   display: none;
   font-size: 40px;
@@ -452,7 +451,7 @@ header {
   flex: 1;
 }
 
-.uploader {
+.latestTitle {
   color: whitesmoke;
   margin: 0;
   font-size: medium;
@@ -576,6 +575,7 @@ header {
   flex-direction: column;
   color: white;
   margin-right: 30px;
+  text-align: center;
 }
 
 .threadUserAvatar img {
@@ -653,6 +653,7 @@ header {
   flex-direction: column;
   color: white;
   margin-right: 30px;
+  text-align: center;
 }
 
 .replyUserAvatar img {
@@ -827,7 +828,7 @@ header {
 
   .threadNavContainer {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
   }
 
   .searchBar {
@@ -837,7 +838,7 @@ header {
 
 
   .threadContent {
-    flex-direction: column;
+    flex-direction: row;
     font-size: 15px;
   }
 
@@ -847,10 +848,6 @@ header {
 
   .threadReaction {
     justify-content: center;
-  }
-
-  .threadUserAvatar {
-    margin-left: 20px
   }
 
   .sideBarBtn {
@@ -873,8 +870,10 @@ header {
 
   .expandPostThread {
     position: absolute;
-    left: 200px;
-    right: 200px;
+
+    justify-content: center;
+    right: 100px;
+    left: 100px;
   }
 
 
@@ -893,31 +892,20 @@ header {
     right: 20px;
   }
 
-  .donation {
-    font-size: 7px;
+  .threadUserAvatar {
+    margin-left: 20px
   }
 
-  .links-2 {
-    font-size: 7px;
+  .replyUserAvatar {
+    margin-left: 20px
   }
 
-  .about-kaalaman {
-    font-size: 7px;
+  .threadContent {
+    flex-direction: column;
   }
 
-  .pic-creator {
-    width: 15px;
-    height: 15px;
-
-  }
-
-  .name {
-    font-size: 6px;
-  }
-
-  .gcash {
-    width: 15px;
-    height: 15px;
+  .replyContent {
+    flex-direction: column;
   }
 
 }
@@ -937,6 +925,14 @@ header {
     position: absolute;
     left: 10px;
     right: 10px;
+  }
+
+  .avatarTextsContainer {
+    width: 100%;
+  }
+
+  .replyTexts {
+    margin-right: 10px;
   }
 }
 
