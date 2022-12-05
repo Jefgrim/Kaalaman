@@ -40,10 +40,6 @@ const getReplyToText = () => {
     }
 }
 
-const getPostId = () => {
-    return event.currentTarget.id
-}
-
 const showReplyInput = () => {
     let mainContainer = document.querySelector(".mainContainer")
     let replyInputMainContainer = document.createElement("div")
@@ -78,8 +74,6 @@ const showReplyInput = () => {
 }
 
 const submitReply = () => {
- console.log("Submitted Reply")
- console.log(event.currentTarget.classList[1])
  let replyList = JSON.parse(localStorage.getItem("replyList"));
  let replyInp = document.querySelector(".replyInp").value
  let n = localStorage.getItem("replyId")
@@ -103,6 +97,92 @@ const submitReply = () => {
     replyList.push(reply);
     localStorage.setItem("replyList", JSON.stringify(replyList));
   }
+
+  let threadContentContainer = document.querySelector(".threadContentContainer")
+
+    let replyContent = document.createElement("div")
+    replyContent.classList = "replyContent"
+
+    let avatarTextsContainer = document.createElement("div")
+    avatarTextsContainer.classList = "avatarTextsContainer"
+
+    let replyUserAvatar = document.createElement("div")
+    replyUserAvatar.classList = "replyUserAvatar"
+
+    let userImg = document.createElement("img")
+    if (reply.userName == "Current User") {
+      userImg.src = ".//images/Avatar Users2_20.png"
+    } else {
+      userImg.src = ".//images/Avatar Users2_29.png";
+    }
+
+    let userName = document.createElement("span")
+    userName.textContent = reply.userName
+
+    let replyTexts = document.createElement("replyTexts")
+    replyTexts.classList = "replyTexts"
+
+    let repliedTo = document.createElement("div")
+    repliedTo.classList = ("repliedTo")
+
+    let repliedToUserName = document.createElement("span")
+    repliedToUserName.textContent =  `${getUserName()} said:`
+
+    let repliedToText = document.createElement("span")
+    repliedToText.textContent = reply.replyToText
+    
+    let replyDiv = document.createElement("div")
+    replyDiv.classList = "reply"
+
+    let replyText = document.createElement("span")
+    replyText.textContent = reply.replyText
+
+    let replyReaction = document.createElement("div")
+    replyReaction.classList = "replyReaction"
+
+    let thumbsUpDownContainer = document.createElement ("div")
+    thumbsUpDownContainer.classList = "thumbsUpDownContainer"
+
+    let replyThumbsUp = document.createElement("div")
+    replyThumbsUp.classList = "replyThumbsUp"
+
+    let thumbsUpIcon = document.createElement("i")
+    thumbsUpIcon.classList = "fa-regular fa-thumbs-up"
+
+    let replyThumbsDown = document.createElement("div")
+    replyThumbsDown.classList = "replyThumbsUp"
+
+    let thumbsDownIcon = document.createElement("i")
+    thumbsDownIcon.classList = "fa-regular fa-thumbs-down"
+
+    let replyBtnContainer = document.createElement("div")
+    replyBtnContainer.classList = `replyBtnContainer ${reply.replyToBatchClass}`
+    replyBtnContainer.id = reply.replyId
+    replyBtnContainer.addEventListener("click", replyFn)
+
+    let replyIcon = document.createElement("i")
+    replyIcon.classList = "fa-solid fa-reply"
+
+    threadContentContainer.insertAdjacentElement("beforeend", replyContent)
+    replyContent.insertAdjacentElement("afterbegin", avatarTextsContainer)
+    avatarTextsContainer.insertAdjacentElement("afterbegin", replyUserAvatar)
+    replyUserAvatar.insertAdjacentElement("afterbegin", userImg)
+    replyUserAvatar.insertAdjacentElement("beforeend", userName)
+    avatarTextsContainer.insertAdjacentElement("beforeend", replyTexts)
+    replyTexts.insertAdjacentElement("afterbegin", repliedTo)
+    repliedTo.insertAdjacentElement("afterbegin", repliedToUserName)
+    repliedTo.insertAdjacentElement("beforeend", repliedToText)
+    replyTexts.insertAdjacentElement("beforeend", replyDiv)
+    replyDiv.insertAdjacentElement("afterbegin", replyText)
+    replyContent.insertAdjacentElement("beforeend", replyReaction)
+    replyReaction.insertAdjacentElement("afterbegin", thumbsUpDownContainer)
+    thumbsUpDownContainer.insertAdjacentElement("afterbegin", replyThumbsUp)
+    replyThumbsUp.insertAdjacentElement("afterbegin", thumbsUpIcon)
+    thumbsUpDownContainer.insertAdjacentElement("beforeend", replyThumbsDown)
+    replyThumbsDown.insertAdjacentElement("afterbegin", thumbsDownIcon)
+    replyReaction.insertAdjacentElement("beforeend", replyBtnContainer)
+    replyBtnContainer.insertAdjacentElement("afterbegin", replyIcon)
+
     closeReplyInputField()
 }
 

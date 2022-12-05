@@ -47,7 +47,7 @@
       localStorage.setItem("replyList", JSON.stringify(replyList));
 
       let dummyReply4 = {
-        replyId: "reply3",
+        replyId: "reply4",
         replyToId: "post3",
         replyToBatchClass: "post3Batch",
         replyToText: "Dummy Text 4",
