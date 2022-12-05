@@ -355,13 +355,12 @@ header {
 }
 
 .postBtn {
-
   background-color: #008968;
   color: #ffff;
   font-family: 'Montserrat', sans-serif;
   width: 80px;
   border-radius: 5px;
-
+  border: 0px;
 }
 
 .expandBtn {
@@ -635,7 +634,7 @@ header {
 .threadReaction {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
 }
 
@@ -714,7 +713,7 @@ header {
 .replyReaction {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
 }
 
@@ -729,6 +728,7 @@ header {
   color: whitesmoke;
   font-size: 30px;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 /* Reply Styles End */
@@ -754,7 +754,7 @@ header {
 .replyInputSubContainer {
   height: fit-content;
   width: 500px;
-  background-color: blue;
+  background-color: #1c1c1de8;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -779,11 +779,13 @@ header {
   width: fit-content;
   padding: 10px;
   border-radius: 10px;
+  background-color: #008968;
   margin-top: 20px;
 }
 
 .replyCancelBtn {
-  background-color: red;
+  margin-left: 10px;
+  background-color: red!important;
 }
 
 .replySubmitBtn {
