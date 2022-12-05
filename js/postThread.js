@@ -149,8 +149,8 @@ const displayThread = () => {
 
     let thread = {
       selectedCategory: "Technology",
-      titleValue: "Dummy Title",
-      postText: "Dummy Text",
+      titleValue: "What is the best android smartphone today?",
+      postText: "Any idea what is the best android smartphone I can get? I want the best camera system and the best screen. Software  experience is important for me as well. Thanks in advance!",
       batchClass: `post1Batch`,
       postId: "post1",
       userName: "Dummy Poster 1"
@@ -162,9 +162,9 @@ const displayThread = () => {
     localStorage.setItem("postList", JSON.stringify(postList));
 
     let thread2 = {
-      selectedCategory: "Technology",
-      titleValue: "Dummy Title 2",
-      postText: "Dummy Text 2",
+      selectedCategory: "E-commerce",
+      titleValue: "How can I source a product overseas?",
+      postText: "Hi, I am an aspiring entrepreneur and I wanted to source products overseas. I'm a bit skeptical with some of the websites I've found. I'm hoping someone can help me.",
       batchClass: `post2Batch`,
       postId: "post2",
       userName: "Dummy Poster 2"
@@ -173,6 +173,48 @@ const displayThread = () => {
     localStorage.setItem("post", JSON.stringify(thread2));
     localStorage.setItem("postId", 2);
     postList.push(thread2);
+    localStorage.setItem("postList", JSON.stringify(postList));
+
+    let thread3 = {
+      selectedCategory: "Health-Lifestyle",
+      titleValue: "I need a 24hr gym",
+      postText: "I'm new to this city and I wanted to enroll in a 24hr gym. Any recommendations guys? Thanks!",
+      batchClass: `post3Batch`,
+      postId: "post3",
+      userName: "Dummy Poster 3"
+    };
+
+    localStorage.setItem("post", JSON.stringify(thread3));
+    localStorage.setItem("postId", 3);
+    postList.push(thread3);
+    localStorage.setItem("postList", JSON.stringify(postList));
+
+    let thread4 = {
+      selectedCategory: "Games",
+      titleValue: "Recommend any new FPS games today similar to Counter-Strike",
+      postText: `I'm a "tito" and been playing Counter Strike for the longest time. Any FPS games you can recommend that's modernize?`,
+      batchClass: `post4Batch`,
+      postId: "post4",
+      userName: "Dummy Poster 4"
+    };
+
+    localStorage.setItem("post", JSON.stringify(thread4));
+    localStorage.setItem("postId", 4);
+    postList.push(thread4);
+    localStorage.setItem("postList", JSON.stringify(postList));
+
+    let thread5 = {
+      selectedCategory: "Food-Beverages",
+      titleValue: "What is the best fast food chicken here?",
+      postText: "My wife and I been debating which fast food chain offers the best tasting chicken. I say KFC and she says Jolibee. What do you think guys? haha!",
+      batchClass: `post5Batch`,
+      postId: "post5",
+      userName: "Dummy Poster 5"
+    };
+
+    localStorage.setItem("post", JSON.stringify(thread5));
+    localStorage.setItem("postId", 5);
+    postList.push(thread5);
     localStorage.setItem("postList", JSON.stringify(postList));
     displayThread();
   }
