@@ -262,7 +262,11 @@ header {
 }
 
 .postThreadContent {
-  height: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
 
 .h2CategoryContainer {
@@ -346,30 +350,30 @@ header {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  margin-left: 10px;
+  justify-content: space-between;
+
 }
 
 .postBtn {
-  margin-left: 117px;
-  width: 100px;
-  border: none;
-  border-radius: 5px;
+
   background-color: #008968;
   color: #ffff;
   font-family: 'Montserrat', sans-serif;
+  width: 80px;
+  border-radius: 5px;
 
 }
 
 .expandBtn {
-  margin-right: 10px;
-  margin-left: 0px;
-  width: px;
-  border: none;
-  border-radius: 5px;
-  background-color: #1d1f25;
-  color: #ffff;
-  font-family: 'Montserrat', sans-serif;
+
+
+  color: rgb(255, 253, 253);
+  font-size: 22px;
+
+}
+
+.expandPostThread .thread-post {
+  margin-left: 10px;
 }
 
 .modular {
@@ -384,9 +388,19 @@ header {
 .expandPostThread {
   display: flex;
   position: absolute;
+}
+
+.expandPostThread .h2Container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0px;
 
 
 
+}
+
+.expandPostThread .expandBtn {
+  font-size: 25px;
 }
 
 .expandPostThread .postThreadContainer {
@@ -465,10 +479,11 @@ header {
   margin-top: 20px;
   border-radius: 10px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   color: whitesmoke;
   padding: 10px;
   flex-wrap: wrap;
+  text-align: center;
 
 
 }
@@ -477,6 +492,9 @@ header {
 .donate {
   width: 23.75%;
   height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .donation {
@@ -491,6 +509,7 @@ header {
   height: 40px;
   display: flex;
   border-radius: 20px;
+  justify-self: center;
 }
 
 .links {
@@ -815,10 +834,10 @@ header {
     padding: 13px;
   }
 
-  .postBtn {
-    margin-right: 20px;
+  .postBtn {}
 
-  }
+
+
 
   .expandPostThread {
     position: absolute;
