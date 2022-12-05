@@ -116,9 +116,10 @@ header {
 
 .sideBarBtn {
   font-size: 15px;
-  background-color: #008968;
+  background-color: white;
   margin-left: 20px;
   display: none;
+  border-radius: 10px;
 }
 
 .h2Container {
@@ -174,8 +175,7 @@ header {
 }
 
 .sideBar-toggle {
-  color: #008968;
-
+  color:white;
   height: 100%;
   width: 50px;
   display: none;
@@ -211,7 +211,7 @@ header {
 
 
 .hidePostThreadBtn {
-  color: #008968;
+  color: white;
   width: 20%;
   height: 50%;
   padding: 10px;
@@ -835,8 +835,10 @@ header {
 
     .expandPostThread {
       position: absolute;
-      left: 200px;
-      right: 200px;
+      
+      justify-content: center;
+      right: 100px;
+      left: 100px;
     }
 
 
