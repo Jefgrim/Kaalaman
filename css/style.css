@@ -556,7 +556,6 @@ header {
   font-size: 12px;
 }
 
-
 /* Thread Styles Start*/
 
 .threadContent {
@@ -967,6 +966,33 @@ header {
     flex-direction: column;
   }
 
+  .donation {
+    font-size: 8px;
+  }
+
+  .links-2 {
+    font-size: 8px;
+  }
+
+  .about-kaalaman {
+    font-size: 8px;
+  }
+
+  .pic-creator {
+    width: 15px;
+    height: 15px;
+
+  }
+
+  .name {
+    font-size: 8px;
+  }
+
+  .gcash {
+    width: 15px;
+    height: 15px;
+  }
+
 }
 
 @media screen and (max-width: 375px) {
@@ -993,22 +1019,6 @@ header {
   .replyTexts {
     margin-right: 10px;
   }
-}
-
-@media screen and (max-width:320px) {
-
-  .headerIcons {
-    width: 5px;
-    height: 5px;
-    padding-left: 30px;
-  }
-  .headerIcons img{
-    width:35px;
-  }
-
-  .logo {
-    width: 125px;
-  }
 
   .donation {
     font-size: 7px;
@@ -1030,6 +1040,49 @@ header {
 
   .name {
     font-size: 7px;
+  }
+
+  .gcash {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media screen and (max-width:320px) {
+
+  .headerIcons {
+    width: 5px;
+    height: 5px;
+    padding-left: 30px;
+  }
+  .headerIcons img{
+    width:35px;
+  }
+
+  .logo {
+    width: 125px;
+  }
+
+  .donation {
+    font-size: 6px;
+  }
+
+  .links-2 {
+    font-size: 6px;
+  }
+
+  .about-kaalaman {
+    font-size: 6px;
+  }
+
+  .pic-creator {
+    width: 12px;
+    height: 12px;
+
+  }
+
+  .name {
+    font-size: 6px;
   }
 
   .gcash {
