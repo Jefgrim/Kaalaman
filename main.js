@@ -7,6 +7,10 @@ import ChangeWindowSize from "./js/responsive.js";
 import storeDummReply from "./js/storeDummyReply.js";
 import {ExpandPostThread}   from "./js/expandBtn.js";
 import expandedPostThread from"./js/expandedPostThread.js";
+import searchBar from "./js/searchbar.js"
+
+
+searchBar()
 
 displayThread();
 addEventListenerToChildrens();
