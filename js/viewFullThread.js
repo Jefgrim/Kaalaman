@@ -1,8 +1,13 @@
+import { displayThread } from "./postThread.js";
+import addEventListenerToChildrens from "./addEventListenerToChildrens.js";
+
 const viewFullThread = () => {
   removeThreadContent();
-  removethreadNavContainer();
+  removethreadNavChildren();
+  addBackButton();
   showSelectedPostContent();
   showAllReply();
+  hideSideElements()
 };
 
 const removeThreadContent = () => {
@@ -15,11 +20,78 @@ const removeThreadContent = () => {
   );
 };
 
-const removethreadNavContainer = () => {
+const removethreadNavChildren = () => {
   let threadNavContainer = document.querySelector(".threadNavContainer");
-  threadNavContainer.remove();
+  while (threadNavContainer.hasChildNodes()) {
+    threadNavContainer.removeChild(threadNavContainer.firstChild);
+  }
   console.log("removed searchbar");
 };
+
+const addBackButton = () => {
+  let threadNavContainer = document.querySelector(".threadNavContainer");
+  let backButtonContainer = document.createElement("div")
+  backButtonContainer.classList = "backButtonContainer"
+  backButtonContainer.addEventListener("click", reRenderHome)
+  let backButtonIcon = document.createElement("i")
+  backButtonIcon.classList = "fa-solid fa-circle-left"
+
+  threadNavContainer.insertAdjacentElement("afterbegin", backButtonContainer)
+  backButtonContainer.insertAdjacentElement("afterbegin", backButtonIcon)
+}
+
+const addSearchBar = () => {
+  let threadNavContainer = document.querySelector(".threadNavContainer")
+  let sideBarToggle = document.createElement("div")
+  sideBarToggle.classList = "sideBar-toggle"
+  let sideBarToggleIcon = document.createElement("i")
+  sideBarToggleIcon.classList = "fa-solid fa-bars"
+  let searchBar = document.createElement("div")
+  searchBar.classList = "searchBar"
+  let searchBarInp = document.createElement("input")
+  searchBarInp.type = "text"
+  searchBarInp.classList = "input searchBarinput"
+  searchBarInp.placeholder = "search"
+  let searchBarMagnifyingIcon = document.createElement("i")
+  searchBarMagnifyingIcon.classList = "fa-solid fa-magnifying-glass searchBarLogo"
+  searchBarMagnifyingIcon.style = "color:whitesmoke"
+  let hidePostThreadBtn = document.createElement("div")
+  hidePostThreadBtn.classList = "hidePostThreadBtn"
+  let hidePostThreadBtnSpan = document.createElement("span")
+
+  threadNavContainer.insertAdjacentElement("afterbegin",sideBarToggle)
+  sideBarToggle.insertAdjacentElement("afterbegin", sideBarToggleIcon)
+  threadNavContainer.insertAdjacentElement("beforeend", searchBar)
+  searchBar.insertAdjacentElement("afterbegin", searchBarInp)
+  searchBar.insertAdjacentElement("beforeend", searchBarMagnifyingIcon)
+  searchBar.insertAdjacentElement("beforeend", hidePostThreadBtn)
+  hidePostThreadBtn.insertAdjacentElement("afterbegin", hidePostThreadBtnSpan)
+}
+
+const reRenderHome = () => {
+  removethreadNavChildren()
+  addSearchBar()
+  removeThreadContent()
+  displayThread()
+  addEventListenerToChildrens()
+  showSideElements()
+}
+
+const showSideElements = () => {
+  let categoriesContainer = document.querySelector(".categoriesContainer")
+  categoriesContainer.removeAttribute("style")
+
+  let rightContainer = document.querySelector(".rightContainer")
+  rightContainer.removeAttribute("style")
+}
+
+const hideSideElements = () => {
+  let categoriesContainer = document.querySelector(".categoriesContainer")
+  categoriesContainer.style.display = "none"
+
+  let rightContainer = document.querySelector(".rightContainer")
+  rightContainer.style.display = "none"
+}
 
 const showSelectedPostContent = () => {
   let threadContentContainer = document.querySelector(
