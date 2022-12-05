@@ -42,10 +42,14 @@ const addBackButton = () => {
 }
 
 const addSearchBar = () => {
+  let hideSidebar = document.querySelector(".sidebar");
   let showPostThread = document.querySelector(".modular")
   let threadNavContainer = document.querySelector(".threadNavContainer")
   let sideBarToggle = document.createElement("div")
   sideBarToggle.classList = "sideBar-toggle"
+  sideBarToggle.addEventListener("click" ,function(){
+    hideSidebar.style.display = "flex"
+ })
   let sideBarToggleIcon = document.createElement("i")
   sideBarToggleIcon.classList = "fa-solid fa-bars"
   let searchBar = document.createElement("div")
