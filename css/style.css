@@ -568,6 +568,7 @@ header {
   flex-direction: column;
   color: white;
   margin-right: 30px;
+  text-align: center;
 }
 
 .threadUserAvatar img {
@@ -645,6 +646,7 @@ header {
   flex-direction: column;
   color: white;
   margin-right: 30px;
+  text-align: center;
 }
 
 .replyUserAvatar img {
@@ -791,7 +793,7 @@ header {
 
     .threadNavContainer {
       display: flex;
-      justify-content: space-around;
+      justify-content: flex-end;
     }
 
     .searchBar {
@@ -801,7 +803,7 @@ header {
 
 
     .threadContent {
-      flex-direction: column;
+      flex-direction: row;
       font-size: 15px;
     }
 
@@ -811,10 +813,6 @@ header {
 
     .threadReaction {
       justify-content: center;
-    }
-
-    .threadUserAvatar {
-      margin-left: 20px
     }
 
     .sideBarBtn {
@@ -855,6 +853,22 @@ header {
       right: 20px;
     }
 
+    .threadUserAvatar {
+      margin-left: 20px
+    }
+
+    .replyUserAvatar {
+      margin-left: 20px
+    }
+
+    .threadContent {
+      flex-direction: column;
+    }
+
+    .replyContent {
+      flex-direction: column;
+    }
+
   }
 
   @media screen and (max-width: 375px) {
@@ -872,6 +886,14 @@ header {
       position: absolute;
       left: 10px;
       right: 10px;
+    }
+
+    .avatarTextsContainer{
+      width: 100%;
+    }
+
+    .replyTexts {
+      margin-right: 10px;
     }
   }
 
