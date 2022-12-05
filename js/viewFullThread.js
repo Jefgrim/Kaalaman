@@ -42,6 +42,7 @@ const addBackButton = () => {
 }
 
 const addSearchBar = () => {
+  let showPostThread = document.querySelector(".modular")
   let threadNavContainer = document.querySelector(".threadNavContainer")
   let sideBarToggle = document.createElement("div")
   sideBarToggle.classList = "sideBar-toggle"
@@ -58,7 +59,11 @@ const addSearchBar = () => {
   searchBarMagnifyingIcon.style = "color:whitesmoke"
   let hidePostThreadBtn = document.createElement("div")
   hidePostThreadBtn.classList = "hidePostThreadBtn"
-  let hidePostThreadBtnSpan = document.createElement("span")
+  let hidePostThreadBtnIcon = document.createElement("i")
+  hidePostThreadBtnIcon.classList = "fa-solid fa-pen-to-square"
+  hidePostThreadBtnIcon.addEventListener("click",function(){
+    showPostThread.style.display ="flex"
+})
 
   threadNavContainer.insertAdjacentElement("afterbegin",sideBarToggle)
   sideBarToggle.insertAdjacentElement("afterbegin", sideBarToggleIcon)
@@ -66,7 +71,7 @@ const addSearchBar = () => {
   searchBar.insertAdjacentElement("afterbegin", searchBarInp)
   searchBar.insertAdjacentElement("beforeend", searchBarMagnifyingIcon)
   searchBar.insertAdjacentElement("beforeend", hidePostThreadBtn)
-  hidePostThreadBtn.insertAdjacentElement("afterbegin", hidePostThreadBtnSpan)
+  hidePostThreadBtn.insertAdjacentElement("afterbegin", hidePostThreadBtnIcon)
 }
 
 const reRenderHome = () => {
@@ -197,9 +202,11 @@ const showSelectedPostContent = () => {
 };
 
 const showAllReply = () => {
+  let replyList = localStorage.getItem("replyList");
+
   let threadList = JSON.parse(localStorage.getItem("postList"));
 
-  const getUserName = () => {
+  const getPostUserName = () => {
     for (const thread of threadList) {
         if (thread.postId == event.currentTarget.id) {
           return thread.userName
@@ -207,19 +214,37 @@ const showAllReply = () => {
       }
     }
 
-  const getTextContent = () => {
-    for (const thread of threadList) {
-        if (thread.postId == event.currentTarget.id) {
-          return thread.postText
-        }
-      }
-    }   
-
-  let replyList = localStorage.getItem("replyList");
+    const getPostTextContent = () => {
+      for (const thread of threadList) {
+          if (thread.postId == event.currentTarget.id) {
+            return thread.postText
+          }
+      }   
+    }
 
   let parsedReplyList = JSON.parse(replyList)
 
   for (let i in parsedReplyList) {
+
+  let replyLists = JSON.parse(localStorage.getItem("replyList"));
+
+  const getReplyTextContent = () => {
+    for (const thread of replyLists) {
+        if (thread.replyId == parsedReplyList[i].replyToId) {
+          return thread.replyText
+        }
+    }   
+  }
+
+  const getReplyUserName = () => {
+    for (const thread of replyLists) {
+        if (thread.replyId == parsedReplyList[i].replyToId) {
+          return thread.userName
+        }
+      }
+    }
+
+
     let threadContentContainer = document.querySelector(".threadContentContainer")
 
     let replyContent = document.createElement("div")
@@ -248,11 +273,19 @@ const showAllReply = () => {
     repliedTo.classList = ("repliedTo")
 
     let repliedToUserName = document.createElement("span")
-    repliedToUserName.textContent =  `${getUserName()} said:`
+    if(parsedReplyList[i].replyToId.includes("reply")){
+      repliedToUserName.textContent =  `${getReplyUserName()} said:`
+    } else if(parsedReplyList[i].replyToId.includes("post")){
+      repliedToUserName.textContent =  `${getPostUserName()} said:`
+    }
 
     let repliedToText = document.createElement("span")
-    repliedToText.textContent = getTextContent()
-
+    if(parsedReplyList[i].replyToId.includes("reply")){
+      repliedToText.textContent = getReplyTextContent()
+    } else if(parsedReplyList[i].replyToId.includes("post")){
+      repliedToText.textContent = getPostTextContent()
+    }
+    
     let reply = document.createElement("div")
     reply.classList = "reply"
 
@@ -308,7 +341,6 @@ const showAllReply = () => {
       replyBtnContainer.insertAdjacentElement("afterbegin", replyIcon)
     }
 }
-
 };
 
 export { viewFullThread, showAllReply }
