@@ -1,5 +1,6 @@
 import { displayThread } from "./postThread.js";
 import addEventListenerToChildrens from "./addEventListenerToChildrens.js";
+import replyFn from "./replyFn.js";
 
 const viewFullThread = () => {
   removeThreadContent();
@@ -108,7 +109,6 @@ const showSelectedPostContent = () => {
 
       let threadContent = document.createElement("div");
       threadContent.classList = `threadContent ${thread.selectedCategory}`;
-      threadContent.id = thread.postId;
 
       let avatarTextsContainer = document.createElement("div");
       avatarTextsContainer.classList = "avatarTextsContainer";
@@ -161,7 +161,9 @@ const showSelectedPostContent = () => {
       thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
 
       let replyBtnContainer = document.createElement("div")
-      replyBtnContainer.classList = "replyBtnContainer"
+      replyBtnContainer.classList = `replyBtnContainer ${thread.batchClass}`
+      replyBtnContainer.id = thread.postId;
+      replyBtnContainer.addEventListener("click", replyFn)
 
       let replyIcon = document.createElement("i")
       replyIcon.classList = "fa-solid fa-reply"
@@ -222,7 +224,6 @@ const showAllReply = () => {
 
     let replyContent = document.createElement("div")
     replyContent.classList = "replyContent"
-    replyContent.id = parsedReplyList[i].replyId
 
     let avatarTextsContainer = document.createElement("div")
     avatarTextsContainer.classList = "avatarTextsContainer"
@@ -231,7 +232,11 @@ const showAllReply = () => {
     replyUserAvatar.classList = "replyUserAvatar"
 
     let userImg = document.createElement("img")
-    userImg.src = ".//images/Avatar Users2_29.png"
+    if (parsedReplyList[i].userName == "Current User") {
+      userImg.src = ".//images/Avatar Users2_20.png"
+    } else {
+      userImg.src = ".//images/Avatar Users2_29.png";
+    }
 
     let userName = document.createElement("span")
     userName.textContent = parsedReplyList[i].userName
@@ -273,13 +278,15 @@ const showAllReply = () => {
     thumbsDownIcon.classList = "fa-regular fa-thumbs-down"
 
     let replyBtnContainer = document.createElement("div")
-    replyBtnContainer.classList = "replyBtnContainer"
+    replyBtnContainer.classList = `replyBtnContainer ${parsedReplyList[i].replyToBatchClass}`
+    replyBtnContainer.id = parsedReplyList[i].replyId
+    replyBtnContainer.addEventListener("click", replyFn)
 
     let replyIcon = document.createElement("i")
     replyIcon.classList = "fa-solid fa-reply"
 
 
-    if (parsedReplyList[i].replyToId == event.currentTarget.id) {
+    if (parsedReplyList[i].replyToBatchClass == event.currentTarget.classList[1]) {
       threadContentContainer.insertAdjacentElement("beforeend", replyContent)
       replyContent.insertAdjacentElement("afterbegin", avatarTextsContainer)
       avatarTextsContainer.insertAdjacentElement("afterbegin", replyUserAvatar)

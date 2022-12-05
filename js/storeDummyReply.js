@@ -7,6 +7,7 @@
       let dummyReply = {
         replyId: "reply1",
         replyToId: "post1",
+        replyToBatchClass: "post1Batch",
         replyToText: "Dummy Text",
         replyText: "This is a dummy reply for Post1",
         userName: "Dummy Replier 1",
@@ -20,6 +21,7 @@
       let dummyReply2 = {
         replyId: "reply2",
         replyToId: "post2",
+        replyToBatchClass: "post2Batch",
         replyToText: "Dummy Text 2",
         replyText: "This is a dummy reply for Post2",
         userName: "Dummy Replier 2",
@@ -33,6 +35,7 @@
       let dummyReply3 = {
         replyId: "reply3",
         replyToId: "post2",
+        replyToBatchClass: "post2Batch",
         replyToText: "Dummy Text 3",
         replyText: "This is a dummy reply for Post2",
         userName: "Dummy Replier 3",
@@ -46,6 +49,7 @@
       let dummyReply4 = {
         replyId: "reply3",
         replyToId: "post3",
+        replyToBatchClass: "post3Batch",
         replyToText: "Dummy Text 4",
         replyText: "This is a dummy reply for Post3",
         userName: "Dummy Replier 4",

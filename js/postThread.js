@@ -13,6 +13,7 @@ const postThread = () => {
     selectedCategory: document.querySelector("#selectCategory").value,
     titleValue: document.querySelector("#titleInp").value,
     postText: document.querySelector("#threadInp").value,
+    batchClass: `post${n}Batch`,
     postId: `post${n}`,
     userName: "Current User"
   };
@@ -81,7 +82,7 @@ const postThread = () => {
     thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
 
     let replyBtnContainer = document.createElement("div")
-    replyBtnContainer.classList = "replyBtnContainer"
+    replyBtnContainer.classList = `replyBtnContainer ${thread.batchClass}`
     replyBtnContainer.id = thread.postId;
 
     let replyIcon = document.createElement("i")
@@ -150,6 +151,7 @@ const displayThread = () => {
       selectedCategory: "Technology",
       titleValue: "Dummy Title",
       postText: "Dummy Text",
+      batchClass: `post1Batch`,
       postId: "post1",
       userName: "Dummy Poster 1"
     };
@@ -163,6 +165,7 @@ const displayThread = () => {
       selectedCategory: "Technology",
       titleValue: "Dummy Title 2",
       postText: "Dummy Text 2",
+      batchClass: `post2Batch`,
       postId: "post2",
       userName: "Dummy Poster 2"
     };
@@ -234,7 +237,7 @@ const displayThread = () => {
     thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
 
     let replyBtnContainer = document.createElement("div")
-    replyBtnContainer.classList = "replyBtnContainer"
+    replyBtnContainer.classList = `replyBtnContainer ${parsedPostList[i].batchClass}`
     replyBtnContainer.id = parsedPostList[i].postId;
 
     let replyIcon = document.createElement("i")
