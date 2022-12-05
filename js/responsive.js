@@ -14,9 +14,4 @@ const  ChangeWindowSize = () =>{
     })
  }
 
-
-
-
-       
-
 export default ChangeWindowSize 
