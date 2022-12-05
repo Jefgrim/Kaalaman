@@ -42,6 +42,7 @@ header {
 .logo {
   height: 50px;
   margin-left: 20px;
+
 }
 
 .user {
@@ -350,13 +351,14 @@ header {
 }
 
 .postBtn {
-  margin-right: 10px;
+  margin-left: 117px;
   width: 100px;
   border: none;
   border-radius: 5px;
-  background-color: #282c38;
+  background-color: #008968;
   color: #ffff;
   font-family: 'Montserrat', sans-serif;
+
 }
 
 .expandBtn {
@@ -456,7 +458,7 @@ header {
 }
 
 .creatorContainer {
-  height: 130px;
+  /* height: 130px; */
   width: 95%;
   background-color: #1d1f25;
   margin-bottom: 20px;
@@ -466,6 +468,9 @@ header {
   justify-content: space-evenly;
   color: whitesmoke;
   padding: 10px;
+  flex-wrap: wrap;
+
+
 }
 
 
@@ -476,8 +481,9 @@ header {
 
 .donation {
   font-size: 12px;
-  text-align: justify;
+  /* text-align: justify; */
   margin-top: 5px;
+
 }
 
 .gcash {
@@ -502,6 +508,7 @@ header {
   font-size: 12px;
   margin: 0;
   padding-top: 5px;
+
 }
 
 .other-links {
@@ -515,9 +522,10 @@ header {
 }
 
 .about-kaalaman {
-  text-align: justify;
+  /* text-align: justify; */
   margin-top: 5px;
   font-size: 12px;
+
 }
 
 .creator {
@@ -529,7 +537,7 @@ header {
 .pic-creator {
   width: 30px;
   height: 30px;
-  /* display: flex; */
+
 }
 
 .name {
@@ -765,149 +773,205 @@ header {
     right: 300px;
   }
 
+  .donation {
+    font-size: 10px;
+  }
 
+  .links-2 {
+    font-size: 10px;
+  }
 
+  .about-kaalaman {
+    font-size: 10px;
+  }
 
-
-  @media screen and (max-width: 800px) {
-
-    .sidebar,
-    .rightContainer {
-      display: none;
-    }
-
-    .threadContainer {
-      width: 100%;
-    }
-
-    .sideBar-toggle {
-      display: flex;
-
-    }
-
-    .hidePostThreadBtn {
-      display: flex;
-
-    }
-
-    .threadNavContainer {
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    .searchBar {
-      flex: 1;
-      padding-left: 5px;
-    }
-
-
-    .threadContent {
-      flex-direction: row;
-      font-size: 15px;
-    }
-
-    .avatarTextsContainer {
-      justify-content: center;
-    }
-
-    .threadReaction {
-      justify-content: center;
-    }
-
-    .sideBarBtn {
-      display: flex;
-    }
-
-    .sidebar {
-      position: absolute;
-      width: auto;
-      height: auto;
-    }
-
-    .hide {
-      display: none;
-    }
-
-    .modular {
-      width: 100%;
-    }
-
-    .expandPostThread {
-      position: absolute;
-
-      justify-content: center;
-      right: 100px;
-      left: 100px;
-    }
-
+  .pic-creator {
+    width: 20px;
+    height: 20px;
 
   }
 
-  @media screen and (max-width:425px) {
-    .modular {
-      width: 100%;
-    }
+  .name {
+    font-size: 10px;
+  }
 
-    .expandPostThread {
-      position: absolute;
-      left: 20px;
-      right: 20px;
-    }
+  .gcash {
+    width: 20px;
+    height: 20px;
+  }
 
-    .threadUserAvatar {
-      margin-left: 20px
-    }
+}
 
-    .replyUserAvatar {
-      margin-left: 20px
-    }
 
-    .threadContent {
-      flex-direction: column;
-    }
 
-    .replyContent {
-      flex-direction: column;
-    }
+
+@media screen and (max-width: 800px) {
+
+  .sidebar,
+  .rightContainer {
+    display: none;
+  }
+
+  .threadContainer {
+    width: 100%;
+  }
+
+  .sideBar-toggle {
+    display: flex;
 
   }
 
-  @media screen and (max-width: 375px) {
+  .hidePostThreadBtn {
+    display: flex;
 
-    .headerIcons {
-      width: 25px;
-      height: 10px;
-    }
-
-    .modular {
-      width: 100%;
-    }
-
-    .expandPostThread {
-      position: absolute;
-      left: 10px;
-      right: 10px;
-    }
-
-    .avatarTextsContainer {
-      width: 100%;
-    }
-
-    .replyTexts {
-      margin-right: 10px;
-    }
   }
 
-  @media screen and (max-width:320px) {
+  .threadNavContainer {
+    display: flex;
+    justify-content: flex-end;
+  }
 
-    .headerIcons {
-      width: 25px;
-      height: 5px;
-      padding-left: 30px;
-    }
+  .searchBar {
+    flex: 1;
+    padding-left: 5px;
+  }
 
-    .logo {
-      width: 125px;
-    }
+
+  .threadContent {
+    flex-direction: row;
+    font-size: 15px;
+  }
+
+  .avatarTextsContainer {
+    justify-content: center;
+  }
+
+  .threadReaction {
+    justify-content: center;
+  }
+
+  .sideBarBtn {
+    display: flex;
+  }
+
+  .sidebar {
+    position: absolute;
+    width: auto;
+    height: auto;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .modular {
+    width: 100%;
+  }
+
+  .expandPostThread {
+    position: absolute;
+
+    justify-content: center;
+    right: 100px;
+    left: 100px;
+  }
+
+
+
+
+}
+
+@media screen and (max-width:425px) {
+  .modular {
+    width: 100%;
+  }
+
+  .expandPostThread {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+  }
+
+  .threadUserAvatar {
+    margin-left: 20px
+  }
+
+  .replyUserAvatar {
+    margin-left: 20px
+  }
+
+  .threadContent {
+    flex-direction: column;
+  }
+
+  .replyContent {
+    flex-direction: column;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+
+  .headerIcons {
+    width: 25px;
+    height: 10px;
+  }
+
+  .modular {
+    width: 100%;
+  }
+
+  .expandPostThread {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+  }
+
+  .avatarTextsContainer {
+    width: 100%;
+  }
+
+  .replyTexts {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width:320px) {
+
+  .headerIcons {
+    width: 5px;
+    height: 5px;
+    padding-left: 30px;
+  }
+
+  .logo {
+    width: 125px;
+  }
+
+  .donation {
+    font-size: 7px;
+  }
+
+  .links-2 {
+    font-size: 7px;
+  }
+
+  .about-kaalaman {
+    font-size: 7px;
+  }
+
+  .pic-creator {
+    width: 15px;
+    height: 15px;
+
+  }
+
+  .name {
+    font-size: 7px;
+  }
+
+  .gcash {
+    width: 15px;
+    height: 15px;
   }
 }
