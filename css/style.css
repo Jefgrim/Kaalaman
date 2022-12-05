@@ -364,10 +364,10 @@ header {
 .expandBtn {
   margin-right: 10px;
   margin-left: 0px;
-  width: 100px;
+  width: px;
   border: none;
   border-radius: 5px;
-  background-color: #282c38;
+  background-color: #1d1f25;
   color: #ffff;
   font-family: 'Montserrat', sans-serif;
 }
