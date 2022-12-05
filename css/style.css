@@ -175,12 +175,12 @@ header {
 }
 
 .sideBar-toggle {
-  color:white;
+  color: white;
   height: 100%;
   width: 50px;
   display: none;
   font-size: 45px;
-  margin-top: 5px;
+
 }
 
 
@@ -214,7 +214,6 @@ header {
   color: white;
   width: 20%;
   height: 50%;
-  padding: 10px;
   margin-left: 50px;
   display: none;
   font-size: 40px;
@@ -391,7 +390,7 @@ header {
 .expandPostThread .postThreadContainer {
   height: 500px;
   width: 800px;
-  background-color:#1c1c1de8;
+  background-color: #1c1c1de8;
 }
 
 .expandPostThread .postThreadContent {
@@ -729,25 +728,25 @@ header {
 
   }
 
-  .threadContainer{
+  .threadContainer {
     width: 65%;
-    
+
   }
 
   .avatarTextsContainer {
     justify-content: center;
     width: 400px;
-    
+
   }
 
   .threadReaction {
     justify-content: center;
-    
+
     width: auto;
   }
 
   .threadUserAvatar {
-    
+
     width: auto;
   }
 
@@ -835,7 +834,7 @@ header {
 
     .expandPostThread {
       position: absolute;
-      
+
       justify-content: center;
       right: 100px;
       left: 100px;
@@ -890,7 +889,7 @@ header {
       right: 10px;
     }
 
-    .avatarTextsContainer{
+    .avatarTextsContainer {
       width: 100%;
     }
 
