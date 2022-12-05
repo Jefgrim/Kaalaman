@@ -1,6 +1,7 @@
 import { displayThread } from "./postThread.js";
 import addEventListenerToChildrens from "./addEventListenerToChildrens.js";
 import replyFn from "./replyFn.js";
+import searchBar from "./searchbar.js";
 
 const viewFullThread = () => {
   removeThreadContent();
@@ -52,12 +53,14 @@ const addSearchBar = () => {
  })
   let sideBarToggleIcon = document.createElement("i")
   sideBarToggleIcon.classList = "fa-solid fa-bars"
-  let searchBar = document.createElement("div")
-  searchBar.classList = "searchBar"
+  let searchbar = document.createElement("div")
+  searchbar.classList = "searchBar"
   let searchBarInp = document.createElement("input")
   searchBarInp.type = "text"
   searchBarInp.classList = "input searchBarinput"
+  searchBarInp.id = "seacrhInput"
   searchBarInp.placeholder = "search"
+  searchBarInp.addEventListener("input",searchBar)
   let searchBarMagnifyingIcon = document.createElement("i")
   searchBarMagnifyingIcon.classList = "fa-solid fa-magnifying-glass searchBarLogo"
   searchBarMagnifyingIcon.style = "color:whitesmoke"
@@ -71,10 +74,10 @@ const addSearchBar = () => {
 
   threadNavContainer.insertAdjacentElement("afterbegin",sideBarToggle)
   sideBarToggle.insertAdjacentElement("afterbegin", sideBarToggleIcon)
-  threadNavContainer.insertAdjacentElement("beforeend", searchBar)
-  searchBar.insertAdjacentElement("afterbegin", searchBarInp)
-  searchBar.insertAdjacentElement("beforeend", searchBarMagnifyingIcon)
-  searchBar.insertAdjacentElement("beforeend", hidePostThreadBtn)
+  threadNavContainer.insertAdjacentElement("beforeend", searchbar)
+  searchbar.insertAdjacentElement("afterbegin", searchBarInp)
+  searchbar.insertAdjacentElement("beforeend", searchBarMagnifyingIcon)
+  searchbar.insertAdjacentElement("beforeend", hidePostThreadBtn)
   hidePostThreadBtn.insertAdjacentElement("afterbegin", hidePostThreadBtnIcon)
 }
 
