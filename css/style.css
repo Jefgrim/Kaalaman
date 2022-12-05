@@ -681,13 +681,13 @@ header {
 }
 
 .repliedTo {
-  background-color: #141518;
+  background-color: var(--secondary-color);
   margin-top: 10px;
   border-radius: 10px;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: var(--third-color);
 }
 
 .reply {
@@ -695,7 +695,7 @@ header {
   flex-direction: column;
   margin-bottom: 10px;
   margin-top: 10px;
-  color: white;
+  color: var(--third-color);
 }
 
 .replyReaction {
@@ -742,7 +742,7 @@ header {
 .replyInputSubContainer {
   height: fit-content;
   width: 500px;
-  background-color: #1c1c1de8;
+  background-color: var(--fifth-color);
   display: flex;
   flex-direction: column;
   border-radius: 10px;
