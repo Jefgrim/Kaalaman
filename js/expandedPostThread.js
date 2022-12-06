@@ -1,5 +1,8 @@
 import addEventListenerToChildrens from "./addEventListenerToChildrens.js";
 import {closeThreadPost} from "./expandBtn.js";
+import { disliked, liked } from "./likeDislike.js";
+import categoriesCounter from "./categoriesCounter.js";
+
 const expandedPostThread = () => {
     let postList = JSON.parse(localStorage.getItem("postList"));
     if (postList == null) {
@@ -73,12 +76,16 @@ const expandedPostThread = () => {
 
     let thumbsUpIcon = document.createElement("i");
     thumbsUpIcon.classList = "fa-regular fa-thumbs-up";
+    thumbsUpIcon.id = `like${thread.postId}`
+    thumbsUpIcon.addEventListener("click", liked)
 
     let threadThumbsDown = document.createElement("div");
     threadThumbsDown.classList = "threadThumbsDown";
 
     let thumbsDownIcon = document.createElement("i")
     thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
+    thumbsDownIcon.id = `dislike${thread.postId}`
+    thumbsDownIcon.addEventListener("click", disliked)
 
     let replyBtnContainer = document.createElement("div")
     replyBtnContainer.classList = `replyBtnContainer ${thread.batchClass}`
@@ -134,6 +141,7 @@ const expandedPostThread = () => {
     }
   
     addEventListenerToChildrens();
+    categoriesCounter()
     closeThreadPost();
   
 

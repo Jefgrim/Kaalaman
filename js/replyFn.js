@@ -1,3 +1,4 @@
+import { disliked, liked } from "./likeDislike.js"
 import { showAllReply } from "./viewFullThread.js"
 // let selectedPostId = ""
 const replyFn = () => {
@@ -148,12 +149,16 @@ const submitReply = () => {
 
     let thumbsUpIcon = document.createElement("i")
     thumbsUpIcon.classList = "fa-regular fa-thumbs-up"
+    thumbsUpIcon.id = `like${reply.replyId}`
+    thumbsUpIcon.addEventListener("click", liked)
 
     let replyThumbsDown = document.createElement("div")
     replyThumbsDown.classList = "replyThumbsUp"
 
     let thumbsDownIcon = document.createElement("i")
     thumbsDownIcon.classList = "fa-regular fa-thumbs-down"
+    thumbsDownIcon.id = `dislike${reply.replyId}`
+    thumbsDownIcon.addEventListener("click", disliked)
 
     let replyBtnContainer = document.createElement("div")
     replyBtnContainer.classList = `replyBtnContainer ${reply.replyToBatchClass}`
