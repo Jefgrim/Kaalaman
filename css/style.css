@@ -4,18 +4,18 @@
 :root {
 
   --primary-color: #1d1f25;
-  --secondary-color:#141518;
-  --third-color:whitesmoke;
-  --fourth-color:#282c38;
+  --secondary-color: #141518;
+  --third-color: whitesmoke;
+  --fourth-color: #282c38;
   --fifth-color: #1c1c1de8;
 }
 
 .LigthMode {
   --primary-color: white;
-  --secondary-color:rgba(245, 245, 245, 0.555);
-  --third-color:black;
-  --fourth-color:#F3EFE0;
-  --fifth-color:rgb(196, 196, 196);
+  --secondary-color: rgba(245, 245, 245, 0.555);
+  --third-color: black;
+  --fourth-color: #F3EFE0;
+  --fifth-color: rgb(196, 196, 196);
 }
 
 body {
@@ -87,7 +87,7 @@ header {
   height: 50px;
   width: 50%;
   font-size: xx-large;
-  color:var(--third-color);
+  color: var(--third-color);
   padding: 10px;
   background-color: var(--primary-color);
 }
@@ -126,7 +126,7 @@ header {
 
 .sideBarBtn {
   font-size: 15px;
-  background-color:var(--fourth-color);
+  background-color: var(--fourth-color);
   margin-left: 20px;
   display: none;
   border-radius: 10px;
@@ -166,7 +166,7 @@ header {
   padding: 10px;
   width: 50%;
   text-align: center;
-  color:var(--third-color);
+  color: var(--third-color);
   border-radius: 10px;
 }
 
@@ -186,7 +186,7 @@ header {
 }
 
 .sideBar-toggle {
-  color:var(--third-color);
+  color: var(--third-color);
   height: 100%;
   width: 50px;
   display: none;
@@ -261,7 +261,7 @@ header {
 .postThreadContainer {
   height: 275px;
   width: 90%;
-  background-color:var(--primary-color);
+  background-color: var(--primary-color);
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
@@ -294,7 +294,7 @@ header {
   padding: 5px;
   margin-left: 0px;
   font-weight: bold;
-  color:var(--third-color);
+  color: var(--third-color);
 }
 
 .category-title {
@@ -312,7 +312,7 @@ header {
   border: none;
   background-color: var(--fourth-color);
   border-radius: 5px;
-  color:var(--third-color);
+  color: var(--third-color);
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -329,7 +329,7 @@ header {
 }
 
 .titleInp::placeholder {
-  color:var(--third-color);
+  color: var(--third-color);
 }
 
 .threadInpContainer {
@@ -348,7 +348,7 @@ header {
   min-height: 40px;
   border-radius: 5px;
   background-color: var(--fourth-color);
-  color:var(--third-color);
+  color: var(--third-color);
   border: none;
   padding: 5px;
 }
@@ -364,7 +364,7 @@ header {
 
 .postBtn {
   background-color: #008968;
-  color:var(--third-color);
+  color: var(--third-color);
   font-family: 'Montserrat', sans-serif;
   width: 80px;
   border-radius: 5px;
@@ -408,7 +408,7 @@ header {
 .expandPostThread .postThreadContainer {
   height: 500px;
   width: 800px;
-  background-color:var(--fifth-color);
+  background-color: var(--fifth-color);
 }
 
 .expandPostThread .postThreadContent {
@@ -563,12 +563,12 @@ header {
   width: 100%;
   height: fit-content;
   margin: 20px 0px 20px 0px;
-  background-color:var(--primary-color);
+  background-color: var(--primary-color);
   border-radius: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  color:var(--third-color);
+  color: var(--third-color);
 }
 
 .avatarTextsContainer {
@@ -579,7 +579,7 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  color:var(--third-color);
+  color: var(--third-color);
   margin-right: 30px;
   text-align: center;
 }
@@ -616,7 +616,7 @@ header {
   flex-direction: column;
   margin-bottom: 10px;
   margin-top: 10px;
-  color:var(--third-color);
+  color: var(--third-color);
 }
 
 .threadReaction {
@@ -714,7 +714,7 @@ header {
 }
 
 .replyBtnContainer {
-  color:var(--third-color);
+  color: var(--third-color);
   font-size: 30px;
   cursor: pointer;
   margin-left: 10px;
@@ -774,7 +774,7 @@ header {
 
 .replyCancelBtn {
   margin-left: 10px;
-  background-color: red!important;
+  background-color: red !important;
 }
 
 .replySubmitBtn {
@@ -1056,8 +1056,9 @@ header {
     height: 5px;
     padding-left: 30px;
   }
-  .headerIcons img{
-    width:35px;
+
+  .headerIcons img {
+    width: 35px;
   }
 
   .logo {
