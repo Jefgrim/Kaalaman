@@ -2,6 +2,7 @@ import { displayThread } from "./postThread.js";
 import addEventListenerToChildrens from "./addEventListenerToChildrens.js";
 import replyFn from "./replyFn.js";
 import searchBar from "./searchbar.js";
+import { disliked, liked } from "./likeDislike.js";
 
 const viewFullThread = () => {
   removeThreadContent();
@@ -165,12 +166,17 @@ const showSelectedPostContent = () => {
 
       let thumbsUpIcon = document.createElement("i");
       thumbsUpIcon.classList = "fa-regular fa-thumbs-up";
+      thumbsUpIcon.id = `like${thread.replyId}`
+      thumbsUpIcon.addEventListener("click", liked)
 
       let threadThumbsDown = document.createElement("div");
       threadThumbsDown.classList = "threadThumbsDown";
+      
 
       let thumbsDownIcon = document.createElement("i");
       thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
+      thumbsDownIcon.id = `dislike${thread.replyId}`
+      thumbsDownIcon.addEventListener("click", disliked)
 
       let replyBtnContainer = document.createElement("div")
       replyBtnContainer.classList = `replyBtnContainer ${thread.batchClass}`
@@ -310,12 +316,16 @@ const showAllReply = () => {
 
     let thumbsUpIcon = document.createElement("i")
     thumbsUpIcon.classList = "fa-regular fa-thumbs-up"
+    thumbsUpIcon.id = `like${parsedReplyList[i].replyId}`
+    thumbsUpIcon.addEventListener("click", liked)
 
     let replyThumbsDown = document.createElement("div")
     replyThumbsDown.classList = "replyThumbsUp"
 
     let thumbsDownIcon = document.createElement("i")
     thumbsDownIcon.classList = "fa-regular fa-thumbs-down"
+    thumbsDownIcon.id = `dislike${parsedReplyList[i].replyId}`
+    thumbsDownIcon.addEventListener("click", disliked)
 
     let replyBtnContainer = document.createElement("div")
     replyBtnContainer.classList = `replyBtnContainer ${parsedReplyList[i].replyToBatchClass}`

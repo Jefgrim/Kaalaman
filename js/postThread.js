@@ -1,5 +1,6 @@
 import addEventListenerToChildrens from "./addEventListenerToChildrens.js";
-
+import { disliked, liked } from "./likeDislike.js";
+import categoriesCounter from "./categoriesCounter.js";
 
 const postThread = () => {
   let postList = JSON.parse(localStorage.getItem("postList"));
@@ -74,12 +75,16 @@ const postThread = () => {
 
     let thumbsUpIcon = document.createElement("i");
     thumbsUpIcon.classList = "fa-regular fa-thumbs-up";
+    thumbsUpIcon.id = `like${thread.postId}`
+    thumbsUpIcon.addEventListener("click", liked)
 
     let threadThumbsDown = document.createElement("div");
     threadThumbsDown.classList = "threadThumbsDown";
 
     let thumbsDownIcon = document.createElement("i")
     thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
+    thumbsDownIcon.id = `dislike${thread.postId}`
+    thumbsDownIcon.addEventListener("click", disliked)
 
     let replyBtnContainer = document.createElement("div")
     replyBtnContainer.classList = `replyBtnContainer ${thread.batchClass}`
@@ -137,6 +142,7 @@ const postThread = () => {
   }
 
   addEventListenerToChildrens();
+  categoriesCounter()
 };
 
 const displayThread = () => {
@@ -271,12 +277,16 @@ const displayThread = () => {
 
     let thumbsUpIcon = document.createElement("i");
     thumbsUpIcon.classList = "fa-regular fa-thumbs-up";
+    thumbsUpIcon.id = `like${parsedPostList[i].postId}`
+    thumbsUpIcon.addEventListener("click", liked)
 
     let threadThumbsDown = document.createElement("div");
     threadThumbsDown.classList = "threadThumbsDown";
 
     let thumbsDownIcon = document.createElement("i")
     thumbsDownIcon.classList = "fa-regular fa-thumbs-down";
+    thumbsDownIcon.id = `dislike${parsedPostList[i].postId}`
+    thumbsDownIcon.addEventListener("click", disliked)
 
     let replyBtnContainer = document.createElement("div")
     replyBtnContainer.classList = `replyBtnContainer ${parsedPostList[i].batchClass}`
@@ -303,6 +313,7 @@ const displayThread = () => {
     threadThumbsDown.insertAdjacentElement("afterbegin", thumbsDownIcon);
     threadReaction.insertAdjacentElement("beforeend", replyBtnContainer)
     replyBtnContainer.insertAdjacentElement("afterbegin", replyIcon)
+
   }
 
   try {
@@ -338,7 +349,6 @@ const displayThread = () => {
     location.reload();
   }
 
-  
 };
 
 export { postThread, displayThread };
